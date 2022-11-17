@@ -1,0 +1,209 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mushroom Celery Curry</title>
+
+	<link rel="icon" href="Images/favicon-32x32.png" />
+	<link rel="apple-touch-icon" href="Images/apple-touch-icon.png" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+	<link rel="stylesheet" href="../../Reset.css">
+	<link rel="stylesheet" href="../Recipe.css">
+	<link rel="stylesheet" href="../../header.css">
+
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+</head>
+
+<body>
+
+<header>
+	<div class="topnav" id="myTopnav">
+		<div id="headerLogo"><a href="#home"><img src="../../Images/mwmHeader.png"></a></div>
+		<a href="#home">Home</a>
+		<a href="#recipes">Recipes</a>
+		<a href="#tutorials">Tutorials</a>
+		<a href="#contact">Contact</a>
+		<a href="#about">About</a>
+		<a href = "https://www.instagram.com/munch_with_mae/" target="_blank" class="socialMedia"><i class="fab fa-instagram fa-2x"></i></a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+	</div>
+</header>
+
+<div id="content">
+	<br>
+	<br>
+
+	<h1>Mushroom <span class="at">&</span> Celery Curry</h1>
+
+	<div id="mainImageHolder">
+
+		<div class="mySlides fade">
+			<img src="image1.jpg" id="mainImage">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="image2.jpg" id="mainImage">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="image3.png" id="mainImage">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="image4.jpg" id="mainImage">
+		</div>
+
+		<!-- Next and previous buttons -->
+		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+
+	<br>
+
+	<!-- The dots/circles -->
+	<div style="text-align:center">
+	  <span class="dot" onclick="currentSlide(1)"></span>
+	  <span class="dot" onclick="currentSlide(2)"></span>
+	  <span class="dot" onclick="currentSlide(3)"></span>
+	  <span class="dot" onclick="currentSlide(4)"></span>
+	</div>
+
+	<br>
+	<br>
+
+	<section id="descriptionContainer">
+		<blockquote>Let me start off by saying that this probably does not qualify as "curry". However, I've struggled for years to come up with a name for this meal. It's a hearty, stick-to-your-ribs kind of meal that will always leave you satisfied on a hungry, cold night. Occasionally instead of the mushrooms, i'll use celery instead for an extra crunch. Often, I'll also add corn, once more for the texture and also for the color. I always like to finish this one off with a healthy topping of freshly ground black pepper for the spicy aroma.</blockquote>
+	</section>
+
+	<br>
+
+	<div id="ingredientsContainer">
+		<h2>Ingredients</h2>
+
+		<div class="tableContainer">
+			<table class="tableStyle">
+				<tr>
+					<td><span class="number">1</span> lb</td>
+					<td>Ground beef</td>
+				</tr>
+
+				<tr>
+					<td><span class="number">2</span> Cups</td>
+					<td>Cooked rice of your choosing</td>
+				</tr>
+
+				<tr>
+					<td><span class="number">2</span> Cans</td>
+					<td>Condensed cream of mushroom soup</td>
+				</tr>
+
+				<tr>
+					<td><span class="number">3</span> Cloves </td>
+					<td>Garlic, minced</td>
+				</tr>
+
+				<tr>
+					<td><span class="number">2</span> Cups</td>
+					<td>Mushrooms - brown, sliced</td>
+				</tr>
+
+				<tr>
+					<td class="fraction"><span class="number">¾</span></td>
+					<td>White onion, sliced into strips</td>
+				</tr>
+
+				<tr>
+					<td><span class="number">2</span> tsp</td>
+					<td>Liquid smoke</td>
+				</tr>
+
+				<tr>
+					<td><span class="number">1</span> tsp</td>
+					<td>Worcestershire sauce</td>
+				</tr>
+
+				<tr>
+					<td>Seasonings</td>
+					<td>Salt, Pepper, Garlic powder, Onion powder, Cayenne pepper</td>
+				</tr>
+				
+			</table>
+		</div>
+	</div>
+
+	<br>
+	<br>
+
+	<div id="directionsContainer">
+		<h2>Directions</h2>
+
+		<div class="tableContainer directions">
+		<table>
+			<tr>
+				<td><label class="container">1.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>Cook your <span class="highlight">rice</span> in a rice cooker, adding your <span class="highlight">seasonings</span>: salt, pepper, garlic powder, and cayenne to the water.</td>
+			</tr>
+
+			<tr>
+				<td><label class="container">2.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>In a <span class="highlight">medium - high heat pan</span>, add ground <span class="highlight">beef</span>, let sear off for a minute or two, then add your sliced <span class="highlight">onions</span></td>
+			</tr>
+
+			<tr>
+				<td><label class="container">3.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>Once the onions have cooked for around 1 minute, push them to the side and add a little extra butter and your <span class="highlight">mushrooms</span> to the pan. <span class="disclaimer">( Amount of butter is dependent on the fat ratio of your beef )</span></td>
+			</tr>
+
+			<tr>
+				<td><label class="container">4.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td><span class="highlight">Season</span> with salt, pepper, garlic powder, cayenne, liquid smoke, and Worcestershire sauce.</td>
+			</tr>
+
+			<tr>
+				<td><label class="container">5.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>Let <span class="highlight">cook for 3 - 5 minutes</span> or until the mushrooms are browned, the onions have softened, and the beef has browned.</td>
+			</tr>
+
+			<tr>
+				<td><label class="container">6.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>Add the two cans of <span class="highlight">cream of mushroom soup</span>, add a bit of water into the can to get the rest of the soup out and dump it in.</td>
+			</tr>
+
+			<tr>
+				<td><label class="container">7.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<!-- <td>7.</td> -->
+				<td><span class="highlight">Season</span> with salt and pepper to taste.</td>
+			</tr>
+
+			<tr>
+				<td><label class="container">8.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>Allow to <span class="highlight">simmer</span> for <span class="highlight">15 - 20 minutes</span>, stirring occasionally, until the mixture has <span class="highlight">thickened and darkened in color.</span></td>
+			</tr>
+
+			<tr>
+				<td><label class="container">9.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>Turn off the heat and <span class="highlight">let rest</span> for at least 10 minutes in order to cool & thicken.</td>
+			</tr>
+
+			<tr>
+				<td><label class="container">10.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td><span class="highlight">Serve</span> over a bed of rice - pairs well with corn and roasted vegetables.</td>
+			</tr>
+
+
+		</table>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript" src="../Recipe.js"></script>
+</body>

@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@font-face 
+{
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face 
+{
+    font-family: 'Bubblegum';
+    src: url('../Fonts/Bubblegum.ttf');
+}
+
+@font-face 
+{
+    font-family: 'CreamCake';
+    src: url('../Fonts/CreamCake.otf');
+}
+
+@font-face 
+{
+    font-family: 'MilkyBoba';
+    src: url('../Fonts/MilkyBoba.otf');
+}
+
+:root {
+    --main: #f46fa5;
+    --almostMain: #f598be;
+    --alt: #ffbdd8;
+    --altlight: #f3eafa;
+    --dark: #eb4f8e;
+    --darker: #f9609e;
+    --darkest: #ff418e;
+    --mostdark: #6b1035;
+    --light: #ffbdd857;
+    --text: #8e217f;
+    --lightt: #45103e36;
+    --lighter: #d7b8f2;
+    --lightdark: #a91d95;
+    --opacity: #f598be8c;
+    --alty: #ffd8e8;
+    --trans:transparent;
+}
+
+
+#content
+{
+	margin: 0 auto;
+	width:70%;
+	/*background: #ffe1f1;*/
+	background-color: #f2f2f2;
+	padding:0 3em;
+	position: relative;
+	top:0;
+	bottom: 0;
+	padding-bottom:5em;
+	border:.0125em solid #F69B9A;
+	border-top:none;
+	border-bottom:none;
+	box-shadow:inset 0 -50px 75px var(--alty);
+	margin-top: 48px;
+	z-index: 2;
+}
+
+h1
+{
+	text-align: center;
+	font-size:4rem;
+	font-weight: bold;
+	padding: .3em 0;
+	font-family: MilkyBoba;
+	color:var(--main);
+	font-weight:bold;
+	text-shadow:.01em .01em var(--mostdark);
+	
+}
+
+h2
+{
+	font-family: MilkyBoba;
+	color:var(--main);
+	font-weight:bold;
+	text-shadow:.025em .025em var(--mostdark);
+	letter-spacing:.1rem;
+}
+
+.at
+{
+	font-family: Bubblegum;
+	font-size:3rem;
+}
+
+
+img 
+{
+	max-width: 100%;
+}
+
+#mainImage
+{
+	max-height: 75vh;
+	border-radius:.5em;
+	box-shadow: .15em .15em .4em #2b2b2b, 0 0 1em var(--darkest);
+}
+
+#mainImageHolder
+{
+	display: flex;
+	justify-content: center;
+}
+
+#ingredientsContainer h2,
+#directionsContainer h2
+{
+	text-align:center;
+	font-size: 2.5rem;
+	font-weight: bold;
+	padding: .3em 0;
+	margin:.5em auto;
+	margin-bottom: 0;
+
+}
+
+#ingredientsContainer td
+{
+	border: 1px solid var(--darker);
+	padding:.75em;
+	padding-left:1em;
+	vertical-align: middle;
+}
+
+table 
+{
+	width:fit-content;
+	background: #faf5f8;
+	box-shadow:.25em .25em .5em var(--almostMain);
+	
+}
+
+.tableContainer
+{
+	width:100%;
+	display:flex;
+	justify-content: center;
+	padding-top:.5em;
+}
+
+td:first-child
+{
+	font-weight:bold;
+	color:var(--darkest);
+	background-color:  var(--alty);
+}
+
+.tableStyle
+{
+	display:flex;
+	justify-content: center;
+}
+
+.number
+{
+	color: red;
+	font-weight: bold;
+}
+
+
+
+
+
+.fraction
+{
+	font-size:1.2rem;
+	font-family: 'Montserrat', sans-serif;
+}
+
+#directionsListContainer
+{
+	display: flex;
+	justify-content: center;
+}
+
+
+.highlight
+{
+	color: var(--darkest);
+	font-weight:bold;
+}
+
+.disclaimer
+{
+	color:red;
+	font-size:.75rem;
+	font-style: italic;
+	font-weight:bold;
+}
+
+
+#mainImageHolder{
+	position:relative;
+}
+
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -1.3750em;
+	padding: 1em;
+	color: var(--darkest);
+	font-weight: bold;
+	font-size: 1.375rem;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+
+
+.mySlides img
+{
+	max-width: 85%;
+}
+
+.mySlides{
+	text-align: center;
+}
+
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev
+{
+	left: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px)
+{
+    .prev{
+    	left:-9%;
+
+    }
+
+    .next{
+    	right:-9%;
+    }
+
+    h1
+    {
+    	font-size:2rem;
+    	line-height: 2rem;
+    }
+
+    body
+    {
+    	font-size: .75rem;
+    	line-height: 1.125rem;
+    }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 1020px)
+{
+    .prev{
+    	left:-6%;
+
+    }
+
+    .next{
+    	right: -6%;
+    }
+
+}
+
+.prev:hover, .next:hover,
+.prev:focus, .next:focus {
+  background-color: var(--main);
+  color:white;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 1em;
+  width: 1em;
+  margin: 0 2px;
+  background-color: var(--alt);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: var(--darkest);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+/* Hide the browser's default checkbox */
+td input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: -6px;
+  left: -3em;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  margin-left: .75em;
+  border: 1px solid var(--darkest);
+  box-shadow: .05em .05em .1em var(--darkest);
+}
+
+.container
+{
+	display: flex;
+	justify-content: center;
+	position: relative;
+	top: 0;
+	left: 0;
+	padding: 0 .75em;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: var(--main);
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: var(--main);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after,
+.container input:hover ~ .checkmark:after {
+  display: block;
+}
+
+.container *{
+	transition: .3s;
+	transition-timing-function: ease-in-out;
+}
+
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+
+
+
+
+
+
+#directionsContainer td
+{
+	padding:1.25em;
+	padding-left:1em;
+}
+
+#directionsContainer td:first-child
+{
+	background-color:  var(--alty);
+	border-right: 1px solid var(--dark);
+	vertical-align: middle;
+}
+
+#directionsContainer table
+{
+	border:  1px solid var(--dark);
+}
+
+#directionsContainer tr:nth-child(even)
+{
+	background-color:  var(--light);
+	border-top: 1px solid var(--darkest);
+	border-bottom:  1px solid var(--darkest);
+}
+
+#directionsContainer td:first-child
+{
+	padding: 0;
+	width: 32px;
+}
+
+.completed
+{
+	opacity: .35;
+	text-decoration: line-through;
+}
+
+
+#descriptionContainer
+{
+	width: 100%;
+	
+	display: flex;
+	justify-content: center;
+}
+
+#descriptionContainer blockquote
+{
+	width: 75%;
+	background:  var(--light);
+	padding: 1.5em 2em;
+	line-height: 1.35rem;
+	box-shadow: 0 0 1em var(--main);
+	border: 1px solid var(--almostMain);
+}
+
+#descriptionContainer blockquote::first-letter{
+	font-size: 2.5rem;
+	font-family: creamCake;
+	letter-spacing: .25rem;
+	color: var(--darkest);
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px)
+{
+
+	.checkmark{
+		display:  none; 
+	}
+}
+
+
+
+
+
