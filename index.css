@@ -15,6 +15,19 @@
     src: url('Fonts/Bubblegum.ttf');
 }
 
+@font-face 
+{
+    font-family: 'BeautyAndTheBeast';
+    src: url('Fonts/Beauty and the Beast Sample.otf');
+    src: url('Fonts/Beauty and the Beast Sample.ttf');
+}
+
+@font-face 
+{
+    font-family: 'CreamCake';
+    src: url('Fonts/CreamCake.otf');
+}
+
 
 :root {
     --main: #f46fa5;
@@ -49,7 +62,7 @@
 	border:.0125em solid #F69B9A;
 	border-top:none;
 	border-bottom:none;
-	/*box-shadow:inset 0 -50px 75px var(--alty);*/
+	box-shadow: 0 0 175px var(--almostMain);
 	margin-top: 48px;
 	z-index: 2;
 }
@@ -57,15 +70,11 @@
 img
 {
 	max-width: 100%;
-	max-height: 70vh;
+	
 }
 
 #mainImageHolder{
 	position:relative;
-}
-
-.mySlides {
-  display: none;
 }
 
 /* Next & previous buttons */
@@ -89,10 +98,17 @@ img
 .mySlides img
 {
 	max-width: 85%;
+  margin-bottom: -3px;
+  max-height: 70vh;
 }
 
 .mySlides{
+  display: none;
 	text-align: center;
+  background:  var(--alt);
+  border: .15em solid var(--main);
+  box-shadow: inset 1em -1em 3em var(--almostMain), 0 .5em 1em var(--dark);
+
 }
 
 
@@ -108,15 +124,44 @@ img
 	border-radius: 3px 0 0 3px;
 }
 
+h1
+{
+  text-align: center;
+  font-size: 4rem;
+  font-family: Bubblegum;
+  color: var(--main);
+  padding: .5em 0;
+  width: 100%;}
+
+.name img{
+  height: 75px;
+  position: absolute;
+}
+
+#imgOne
+{
+  top: 2em;
+  left: 1em;
+}
+
+#imgTwo
+{
+  top: 2em;
+  right: 1em;
+}
+
+
+
+
 @media screen and (min-width: 0px) and (max-width: 600px)
 {
     .prev{
-    	left:-9%;
+    	left:-2%;
 
     }
 
     .next{
-    	right:-9%;
+    	right:-2%;
     }
 
     h1
@@ -131,17 +176,42 @@ img
     	line-height: 1.125rem;
     }
 
+    .mySlides img
+    {
+      max-width: 85%;
+      margin-bottom: -5px;
+    }
+
+    .name img
+    {
+      display:  none; 
+    }
+
+}
+
+@media screen and (max-width: 900px)
+{
+  .name img
+  {
+    display:  none; 
+  }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1020px)
 {
     .prev{
-    	left:-6%;
+    	left:0;
 
     }
 
     .next{
-    	right: -6%;
+    	right: 0;
+    }
+
+    h1
+    {
+      font-size:3rem;
+      line-height: 4rem;
     }
 
 }
@@ -179,11 +249,91 @@ img
   to {opacity: 1}
 }
 
-h1
+
+
+.ornament
 {
-	text-align: center;
-	font-size: 4rem;
-	font-family: Bubblegum;
-	color: var(--main);
-	padding: .5em 0;
+  font-family: BeautyAndTheBeast;
+  padding: 0 .5rem;
 }
+
+#siteDescription
+{
+  margin-top: 2.5em;
+  line-height: 1.2rem;
+  
+}
+
+#siteDescription p
+{
+  border: .15em solid var(--main);
+  border-width: 0 .15em .15em .15em ;
+  padding: 1em;
+  box-shadow: inset -1.3em -1em 2em var(--alty);
+  height: 85%;
+  border-bottom-right-radius: 10px;
+
+  
+}
+
+.contentBox h2
+{
+  padding-top: .5em;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--darkest);
+  font-family: "BubbleGum";
+  background:  var(--alty);
+  padding-bottom: .35em;
+  border: .08em solid var(--main);
+  letter-spacing: .1rem;
+  box-shadow:  inset -.5em -.5em 1em var(--almostMain);
+  border-top-left-radius: 10px;
+}
+
+.contentBox
+{
+  min-width: 350px;
+  flex-basis: 45%;
+  flex-grow: 5;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px)
+{
+  .contentBox
+{
+  min-width: 200px;
+}
+}
+
+
+#siteDescription p .websiteTitle{
+  font-size: 2rem;
+  font-family: creamCake;
+  color: var(--darkest);
+  padding-right: .25rem;
+}
+
+#descriptionContainer
+{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+
+#descriptionContainer .fab
+{
+  padding-right: .15em;
+}
+
+.noWrap
+{
+  white-space: nowrap;
+}
+
+

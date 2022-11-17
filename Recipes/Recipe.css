@@ -61,7 +61,7 @@
 	border:.0125em solid #F69B9A;
 	border-top:none;
 	border-bottom:none;
-	box-shadow:inset 0 -50px 75px var(--alty);
+	box-shadow:inset 0 -50px 75px var(--alty), 0 0 175px var(--almostMain);;
 	margin-top: 48px;
 	z-index: 2;
 }
