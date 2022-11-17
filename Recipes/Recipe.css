@@ -104,7 +104,7 @@ img
 {
 	max-height: 75vh;
 	border-radius:.5em;
-	box-shadow: .15em .15em .4em #2b2b2b, 0 0 1em var(--darkest);
+	box-shadow: .15em .15em .4em var(--mostdark), 0 0 2em var(--mostdark);
 }
 
 #mainImageHolder

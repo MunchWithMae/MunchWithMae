@@ -55,7 +55,51 @@ function showSlides(n) {
       clearTimeout(timer);
       timer = setTimeout(() => plusSlides(1), 5000);
   });
-
-  
 }
 
+
+let recipe = {
+  name : "",
+  link : "",
+  description : "",
+  image : ""
+}
+
+function recipeObject(name, link, description, image) {
+  this.name = name;
+  this.link = link;
+  this.description = description;
+  this.image = image;
+}
+
+
+
+let recipeNames = ["Massaman Curry", "Mushroom Celery Curry"]
+let recipeDescriptions = ["A hearty, earthy curry that can be made in 25 minutes with minimal prep.", 
+"a hearty, stick-to-your-ribs kind of meal that will always leave you satisfied on a hungry, cold night"]
+let recipeImage = []
+let recipeLink = [];
+
+for (let i = 0; i < recipeNames.length; i++)
+{
+  let linky = recipeNames[i].replace(/ /g,"_");;
+  recipeLink[i] = "Recipes\\"+recipeNames[i]+"\\"+linky+".html";
+  console.log(recipeLink[i]);
+}
+
+for (let i = 0; i < recipeNames.length; i++)
+{
+  let linky2 = recipeNames[i].replace(/ /g,"_");;
+  recipeImage[i] = "Recipes\\"+recipeNames[i]+"\\"+linky2+"\\image1.jpg";
+  console.log(recipeImage[i]);
+}
+
+
+for (let i = 0; i < recipeNames.length; i++)
+{
+  recipeObject[i] = new recipeObject(recipeNames[i], recipeLink[i], recipeDescriptions[i], recipeImage[i])
+}
+
+
+
+console.log(recipeObject[1])
