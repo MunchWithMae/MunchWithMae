@@ -516,9 +516,10 @@ td input {
 }
 
 
-#scrollToTopBtn {
-  background-color: black;
-  border: none;
+.scrollToTopBtn {
+  background-color: var(--alt);
+  border: 1px solid var(--main);
+  box-shadow: inset .25em .25em .5em var(--main), 0 0 2em #fff;
   border-radius: 50%;
   color: white;
   cursor: pointer;
@@ -530,7 +531,8 @@ td input {
   position: fixed;
  	opacity: 0;
  	transform: translateY(100px);
- 	transition: all .5s ease
+ 	transition: all .5s ease;
+ 	text-shadow:  0 .1rem black;
 }
 
 .showBtn {

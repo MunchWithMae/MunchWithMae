@@ -480,3 +480,27 @@ a
   transition timing function:  ease-in-out;
   box-shadow: 0 0 .75em red;
 }
+
+.scrollToTopBtn {
+  background-color: var(--alt);
+  border: 1px solid var(--main);
+  box-shadow: inset .25em .25em .5em var(--main), 0 0 2em #fff;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 48px;
+  width: 48px;
+  bottom: 30px;
+  right: 30px;
+  position: fixed;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all .5s ease;
+  text-shadow:  0 .1rem black;
+}
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0)
+}
