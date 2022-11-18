@@ -385,9 +385,14 @@ a
   width: 100%;
   gap: .25em;
   overflow: scroll;
+  border-bottom-right-radius: 10px;
 
 
 
+}
+
+#recipeBox::-webkit-scrollbar{
+  display:  none; 
 }
 
 
