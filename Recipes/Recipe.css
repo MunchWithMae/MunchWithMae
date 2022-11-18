@@ -479,6 +479,15 @@ td input {
 	}
 }
 
+@media screen and (min-width: 0px) and (max-width: 750px)
+{
+
+	#buttonContainer
+	{
+		display:  none; 
+	}
+}
+
 
 #btn--back
 {
@@ -503,6 +512,32 @@ td input {
   border:  1px solid var(--main);
   cursor: pointer;
   user-select: none;
+  z-index: 100;
 }
+
+
+#scrollToTopBtn {
+  background-color: black;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 48px;
+  width: 48px;
+  bottom: 30px;
+  right: 30px;
+  position: fixed;
+ 	opacity: 0;
+ 	transform: translateY(100px);
+ 	transition: all .5s ease
+}
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0)
+}
+
+
 
 
