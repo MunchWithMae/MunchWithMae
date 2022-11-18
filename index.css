@@ -386,6 +386,7 @@ a
   gap: .25em;
   overflow: scroll;
   border-bottom-right-radius: 10px;
+  box-shadow: inset -2em 2em 6em var(--alt);
 
 
 

@@ -1,3 +1,7 @@
+document.getElementById('buttonContainer').addEventListener('click', () => {
+  history.back();
+});
+
 let slideIndex = 1;
 var timer;
 showSlides(slideIndex);
@@ -36,4 +40,5 @@ function showSlides(n) {
 function boxChecked(element){
   element.closest("tr").classList.toggle("completed")
 }
+
 

@@ -34,7 +34,7 @@
 
   #text
   {
-    font-size: .8em;
+    font-size: 1.25em;
   }
 
 }
@@ -51,7 +51,7 @@
 
   #text
   {
-    font-size: 1em;
+    font-size: 2em;
   }
 }
 
@@ -141,6 +141,7 @@ body{
   border-bottom-right-radius: 50px;
   border: 2px solid var(--main);
 
+
 }
 
 
@@ -168,4 +169,37 @@ body{
 @keyframes petals {
   0% { background-position: 0 0, 0 0 }
   to { background-position: 150px 300px, 300px 600px }
+}
+
+#btn--back
+{
+  position: absolute;
+  z-index: 100;
+  top: 22px;
+  left: 28px;
+  font-size: 50px;
+  color: white;
+  text-shadow: .3rem 0 black;
+}
+
+#buttonContainer{
+  background:  var(--alt);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  border-radius: 150px;
+  box-shadow: inset .5em .5em 1em var(--main), 0 0 2em #fff;
+  border:  1px solid var(--main);
+  cursor: pointer;
+  user-select: none;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px)
+{
+  #buttonContainer
+  {
+    display:  none; 
+  }
 }
