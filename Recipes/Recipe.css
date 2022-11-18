@@ -199,6 +199,14 @@ td:first-child
 	font-weight:bold;
 }
 
+.disclaimer::before{
+	content: "( ";
+}
+
+.disclaimer::after{
+	content: " )";
+}
+
 
 #mainImageHolder{
 	position:relative;

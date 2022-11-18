@@ -384,10 +384,11 @@ a
   border-top: none;
   width: 100%;
   gap: .25em;
-  overflow: scroll;
   border-bottom-right-radius: 10px;
   box-shadow: inset -2em 2em 6em var(--alt);
   padding: 2em 0;
+  flex-wrap: wrap;
+  justify-content: center;
 
 
 
@@ -445,7 +446,7 @@ a
   box-shadow: inset -.5em -.5em 1.5em var(--alty);
   font-weight: normal;
   color: var(--mostdark);
-  height: 60px;
+  height: 70px;
   border-bottom-right-radius: 10px;
   overflow-y: hidden;
 
@@ -465,11 +466,6 @@ a
 .recipe
 {
   margin: .75em;
-}
-
-.recipe:first-child
-{
-  margin-left: 2em;
 }
 
 .recipe:hover,

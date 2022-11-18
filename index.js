@@ -67,9 +67,10 @@ function recipeObject(name, link, description, image) {
 
 
 
-let recipeNames = ["Massaman Curry", "Mushroom Celery Curry"]
+let recipeNames = ["Massaman Curry", "Mushroom Celery Curry", "Chicken Alfredo"]
 let recipeDescriptions = ["A hearty, earthy curry that can be made in 25 minutes with minimal prep.", 
-"a hearty, stick-to-your-ribs kind of meal that will always leave you satisfied on a hungry, cold night"]
+"a hearty, stick-to-your-ribs kind of meal that will always leave you satisfied on a hungry, cold night",
+"You can never go wrong with a classic chicken alfredo. It comes together quick, it's nearly impossible to mess up, and it takes just about as long as heating up a jar of store bought sauce would."]
 let recipeImage = []
 let recipeLink = [];
 

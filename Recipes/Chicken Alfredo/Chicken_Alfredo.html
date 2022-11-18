@@ -1,0 +1,249 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mushroom Celery Curry</title>
+
+	<link rel="icon" href="Images/favicon-32x32.png" />
+	<link rel="apple-touch-icon" href="Images/apple-touch-icon.png" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+	<link rel="stylesheet" href="../../Reset.css">
+	<link rel="stylesheet" href="../Recipe.css">
+	<link rel="stylesheet" href="../../header.css">
+
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+</head>
+
+<body>
+
+<header>
+	<div class="topnav" id="myTopnav">
+		<div id="headerLogo"><a href="../../index.html"><img src="../../Images/mwmHeader.png"></a></div>
+		<a href="../../index.html">Home</a>
+		<a href="../../index.html#recipes">Recipes</a>
+		<a href="../../construction.html">Tutorials</a>
+		<button id="myBtn">Contact</button>
+		<a href="../../index.html#aboutMe">About</a>
+		<a href = "https://www.instagram.com/munch_with_mae/" target="_blank" class="socialMedia"><i class="fab fa-instagram fa-2x"></i></a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+	</div>
+</header>
+
+<div id=buttonContainer>
+  <btn id="btn--back"><i class="fas fa-chevron-left"></i></btn>
+</div>
+
+<div id="content">
+	<br>
+	<br>
+	<h1>Chicken Alfredo</h1>
+
+	<div id="mainImageHolder">
+
+		<div class="mySlides fade">
+			<img src="image1.jpg" id="mainImage">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="image2.jpg" id="mainImage">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="image3.jpg" id="mainImage">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="image4.jpg" id="mainImage">
+		</div>
+
+		<!-- Next and previous buttons -->
+		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+
+	<br>
+
+	<!-- The dots/circles -->
+	<div style="text-align:center">
+	  <span class="dot" onclick="currentSlide(1)"></span>
+	  <span class="dot" onclick="currentSlide(2)"></span>
+	  <span class="dot" onclick="currentSlide(3)"></span>
+	  <span class="dot" onclick="currentSlide(4)"></span>
+	</div>
+
+	<br>
+	<br>
+
+	<section id="descriptionContainer">
+		<blockquote>You can never go wrong with a classic chicken alfredo. It comes together quick, it's nearly impossible to mess up, and it takes just about as long as heating up a jar of store bought sauce would. I love adding veggies like broccoli to mine to give it a little bit of green vibrance. Mushrooms are always a solid choice as well.</blockquote>
+	</section>
+
+	<div id="ingredientsContainer">
+		<h2>Ingredients</h2>
+
+		<div class="tableContainer">
+			<table class="tableStyle">
+				<tr>
+					<td><span class="number"><span class="fraction">¾</span></span> Cup</td>
+					<td>Freshly grated Parmesan cheese</td>
+				</tr>
+
+				<tr>
+					<td><span class="number">1 <span class="fraction">½</span></span> Cup</td>
+					<td>Heavy whipping cream</td>
+				</tr>
+
+				<tr>
+					<td><span class="number">1 <span class="fraction">½</span></span> Cups</td>
+					<td>Brown mushrooms, sliced <span class="disclaimer">optional</span></td>
+				</tr>
+
+				<tr>
+					<td><span class="number">2</span></td>
+					<td>Chicken thighs or breasts</td>
+				</tr>
+
+				<tr>
+					<td><span class="number">3</span> Cloves</td>
+					<td>Fresh garlic, minced</td>
+				</tr>
+
+				<tr>
+					<td>Seasonings</td>
+					<td>Salt, Pepper, garlic powder, Oregano, Italian seasoning</td>
+				</tr>
+
+				
+			</table>
+		</div>
+	</div>
+
+	<br>
+	<br>
+
+	<div id="directionsContainer">
+		<h2>Directions</h2>
+
+		<div class="tableContainer directions">
+		<table>
+			<tr>
+				<td><label class="container">1.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>Heat a cast iron pan over <span class="highlight">medium high heat</span>. Pour olive oil into the  pan once preheated.</td>
+			</tr>
+
+			<tr>
+				<td><label class="container">2.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>Pat your chicken breast <span class="highlight">dry</span>, <span class="highlight">season</span> with salt, pepper, garlic powder, oregano, and Italian seasoning.</td>
+			</tr>
+
+			<tr>
+				<td><label class="container">3.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>Place chicken <span class="highlight">skin side down</span> into the pan, cooking for about <span class="highlight">six minutes on each side</span> or <span class="highlight">until they don’t stick to the pan anymore</span> and have a nice caramelized crust on the outside.</td>
+			</tr>
+
+			<tr>
+				<td><label class="container">4.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>Melt a generous amount of <span class="highlight">butter</span> in a <span class="highlight">different pan at medium - high heat</span> and put in your <span class="highlight">mushrooms</span>. Let them cook for about <span class="highlight">3-4 minutes</span> until soft and browned.</td>
+			</tr>
+
+			<tr>
+				<td><label class="container">5.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>Add in your <span class="highlight">garlic</span> and cook for <span class="highlight">30 seconds</span> or until fragrant.</td>
+			</tr>
+
+			<tr>
+				<td><label class="container">6.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>Add in your <span class="highlight">heavy cream</span> and let it <span class="highlight">simmer</span> and reduce for about <span class="highlight">5 - 7 minutes</span>.</td>
+			</tr>
+
+			<tr>
+				<td><label class="container">7.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>Slowly sprinkle in your <span class="highlight">Parmesan cheese</span> while constantly stirring with a whisk to avoid clumps.</td>
+			</tr>
+
+			<tr>
+				<td><label class="container">8.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>Let the sauce melt and <span class="highlight">mix in the pan for a few minutes until combined</span>.</td>
+			</tr>
+
+			<tr>
+				<td><label class="container">9.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td><span class="highlight">Enjoy</span> over a fresh bed / nest of pasta paired with a nice salad.</td>
+			</tr>
+
+		</table>
+		</div>
+	</div>
+
+
+
+</div>
+
+	<div id="myModal" class="modal">
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      	<h1><span class="ornament">[</span>Munch With Mae<span class="ornament">]</span></h1>
+
+	      <div class="interogContainer">
+	      	<p id="interog">Want to contact me? I'd love to hear from you! I'll do my best to reply as soon as possible.</p>
+	      </div>
+	  </div>
+      		<form class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdVltpRtA5Px1BWiOWcNkcp-qGlkLy6v1TzBYLzgWVKA7763g/formResponse">	
+      			<div class="formQuestions">
+	      			<div class="basicInfo">
+		      			<div class="question">
+		      				<label class="required">Name</label>
+		      				<input id="name" name="entry.1332748456" type="text" required /><br>
+		      			</div>
+
+		      			<div class="question">
+		      				<label class="required">Email Address</label>
+		      				<input id="email" name="entry.783225938" type="email" required /><br>
+		      			</div>
+	      			</div>
+
+	      			<div class="inquiryContainer">
+		      			<div class="question inquiry">
+		      				<label>Inquiry</label>
+		      				<textarea id="inquiry" name="entry.360545800" type="textarea" required/></textarea><br>
+		      			</div>
+		      		</div>
+	      		</div>
+
+
+	      		<div id="actionButtons">
+		      		<div id="cancelButton">
+	      				<input type="button" value="cancel" />
+	      			</div>
+
+	      			<div id="sendButton">
+	      				<input type="submit" value="Send" />
+	      			</div>
+      			</div>
+
+          	</form>
+
+
+	    </div>
+	    <div class="modal-body">
+	    
+	  
+	  </div>
+	</div>
+
+<footer>
+	<button class="scrollToTopBtn"><i class="fas fa-chevron-up"></i></button>
+</footer>
+
+
+<script type="text/javascript" src="../Recipe.js"></script>
+<script type="text/javascript" src="../../Header.js"></script>
+</body>
