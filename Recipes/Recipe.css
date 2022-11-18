@@ -174,7 +174,7 @@ td:first-child
 
 .fraction
 {
-	font-size:1.2rem;
+	font-size:1rem;
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -527,12 +527,13 @@ td input {
   line-height: 48px;
   width: 48px;
   bottom: 30px;
-  right: 30px;
+  right: 20px;
   position: fixed;
  	opacity: 0;
  	transform: translateY(100px);
  	transition: all .5s ease;
  	text-shadow:  0 .1rem black;
+ 	z-index: 100;
 }
 
 .showBtn {

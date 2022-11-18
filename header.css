@@ -25,6 +25,35 @@ header
 	transition-timing-function: ease-in-out;
 	display: block;
 	text-shadow: .05rem .05rem black;
+	font-weight: bold;
+}
+
+
+.topnav button
+{
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 1.25em 1em;
+	text-decoration: none;
+	font-size: 1rem;
+	color: white;
+	transition: background-color .3s;
+	transition-timing-function: ease-in-out;
+	display: block;
+	text-shadow: .05rem .05rem black;
+	background:  transparent;
+	border: none;
+	font-weight: bold;
+	height: 56px;
+	cursor: pointer;
+}
+
+.topnav button:hover
+{
+	background:  var(--darkest);
+	transition: all .3s;
+	transition timing function:  ease-in-out;
 }
 
 /* Change the color of links on hover */
@@ -94,6 +123,246 @@ a.socialMedia
     text-align: left;
   }
 }
+
+
+.modal-content
+{
+  width: 75vw;
+  height: 80vh;
+  background:  red;
+}
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 500; /* Sit on top */
+    padding-top: 75px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #ffe6f0;
+    margin: auto;
+    padding: 0;
+    border: 1px solid red;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    height: fit-content;
+    box-shadow: inset 0em 2em 6em var(--alt);
+    min-width: 300px;
+
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: var(--main);
+    right: .125em;
+    top: .125em;
+    font-size: 40px;
+    font-weight: bold;
+    padding-right: .25em;
+    position: absolute;
+}
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header h1{
+  background:  var(--alty);
+  box-shadow: 0 .25em .5em var(--alt);
+  border-bottom: 1px solid var(--main);
+  text-align: center;
+}
+
+#interog{
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 600px)
+{
+	#interog{
+  font-size: .85rem;
+	}
+	.modal-header h1
+	{
+		line-height: 2rem;
+		font-size: 1.5rem;
+	}
+
+}
+
+
+#interog{
+  padding: 1em .5em;
+  max-width: 85%;
+  text-align: center;
+  padding-top: 2em;
+}
+
+.interogContainer
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.question
+{
+  background:  var(--alty);
+  max-width: 65%;
+  margin: 0 1em;
+  padding: 1em 3.5em;
+  padding-bottom: .25em;
+  border: 1px solid var(--main);
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 25%;
+  min-width: 200px;
+}
+
+.question label::after{
+  content: "*";
+  color: red;
+  letter-spacing: .5rem;
+  padding-left: .15rem;
+}
+
+.question label,
+.question input{
+  display: block;
+}
+
+.question label{
+  text-align: center;
+  margin-bottom: .5em;
+}
+
+
+.basicInfo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+}
+
+.basicInfo .question
+{
+  margin-top: 1em
+}
+
+.basicInfo .question input
+{
+  background:  var(--alty);
+  height: 25px;
+}
+
+
+.inquiryContainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 2em;
+}
+
+.question.inquiry{
+  max-width: 60%;
+  width: 55%;
+}
+
+.inquiry textarea
+{
+  width: 100%;
+  min-height: 75px;
+  height: 75px;
+  display: block;
+  max-width: 100%;
+  border-color: var(--main);
+}
+
+input:not(#sendButton input):not(#cancelButton input){
+  border-width: 0 0 1px 0;
+  border-color: var(--main);
+  background:  #efefef;
+  width: 100%;
+}
+
+#sendButton
+{
+  /*margin: 1em auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;*/
+  
+}
+
+#sendButton input{
+  padding: .75em 1.25em;
+  font-size: 1rem;
+  background:  var(--main);
+  color: #fff;
+  font-weight: bold;
+  text-shadow: .05em .08em black;
+  border:  1px solid var(--dark);
+  box-shadow: 0 0 1em #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#cancelButton input{
+  padding: .75em 1.25em;
+  font-size: 1rem;
+  background:  var(--alty);
+  color: var(--dark);
+  border:  1px solid var(--dark);
+  box-shadow: 0 0 1em #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#actionButtons
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin: 1em auto;
+	padding: 0 3em;
+}
+
 
 
 
