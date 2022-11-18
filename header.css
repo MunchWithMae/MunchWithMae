@@ -24,6 +24,7 @@ header
 	transition: background-color .3s;
 	transition-timing-function: ease-in-out;
 	display: block;
+	text-shadow: .05rem .05rem black;
 }
 
 /* Change the color of links on hover */

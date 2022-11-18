@@ -1,0 +1,171 @@
+:root {
+    --main: #f46fa5;
+    --almostMain: #f598be;
+    --alt: #ffbdd8;
+    --altlight: #f3eafa;
+    --dark: #eb4f8e;
+    --darker: #f9609e;
+    --darkest: #ff418e;
+    --mostdark: #6b1035;
+    --light: #ffbdd857;
+    --text: #8e217f;
+    --lightt: #45103e36;
+    --lighter: #d7b8f2;
+    --lightdark: #a91d95;
+    --opacity: #f598be8c;
+    --alty: #ffd8e8;
+    --trans:transparent;
+}
+
+@font-face 
+{
+    font-family: 'Bubblegum';
+    src: url('Fonts/Bubblegum.ttf');
+}
+
+@media screen and (min-width: 0px)
+{
+  #content
+  {
+    background:  url("Images/CherryBlossom.jpg");
+    background-size: cover;
+    background-position: right;
+  }
+
+  #text
+  {
+    font-size: .8em;
+  }
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 780px)
+{
+
+  #content
+  {
+    background:  url("Images/CherryBlossom.jpg");
+    background-size: cover;
+    background-position: right;
+  }
+
+  #text
+  {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 780px)
+{
+
+  #content
+  {
+    background-image: url("Images/CherryBlossom.jpg");
+    -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    background-position: center;
+  }
+
+#text{
+  font-size: 3em;
+}
+
+}
+
+
+body{
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background:  url("Images/CherryBlossom.jpg");
+}
+
+#content{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+
+}
+
+
+#mid{
+  position: relative;
+  margin: auto;
+  top: 30%;
+  width: 100%;
+}
+
+#container
+{
+  position: absolute;
+  top: 40%;
+}
+
+#text{
+  color: white;
+  text-align: center;
+  font-family: BubbleGum;
+  position: relative;
+  top: -92px;
+  font-weight: bold;
+  text-shadow: .05rem .05rem black;
+  
+}
+
+#textContainer
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#text
+{
+  background:  var(--alt);
+  width: fit-content;
+  padding: 1em;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border: 2px solid var(--main);
+
+}
+
+
+#text{
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.65) 30%, #000 50%, rgba(0,0,0,.65) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  from { -webkit-mask-position: 150%; }
+  to { -webkit-mask-position: -50%; }
+}
+
+
+#overlay {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%; z-index: 2;
+    opacity: 1; transition: .5s;
+    background: transparent;
+    background-image: url(http://i.imgur.com/Ue1InIS.png), url(http://i.imgur.com/r9hYuSj.png);
+    animation: petals 15s linear infinite; 
+    z-index:1;
+}
+@keyframes petals {
+  0% { background-position: 0 0, 0 0 }
+  to { background-position: 150px 300px, 300px 600px }
+}
