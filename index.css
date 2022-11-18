@@ -478,5 +478,5 @@ a
   transform: scale(1.02);
   transition: .4s;
   transition timing function:  ease-in-out;
-  box-shadow: 0 0 1.5em red;
+  box-shadow: 0 0 .75em red;
 }
