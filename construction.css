@@ -186,7 +186,7 @@ body{
   background:  var(--alt);
   width: 100px;
   height: 100px;
-  position: absolute;
+  position: fixed;
   left: 25px;
   top: 25px;
   border-radius: 150px;

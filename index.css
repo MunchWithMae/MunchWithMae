@@ -41,7 +41,7 @@
     --light: #ffbdd857;
     --text: #8e217f;
     --lightt: #45103e36;
-    --lighter: #d7b8f2;
+    --lighter: #eee1fa;
     --lightdark: #a91d95;
     --opacity: #f598be8c;
     --alty: #ffd8e8;
@@ -353,7 +353,7 @@ a
 #recipeContainer
 {
   width: 100%;
-  margin-top: 3em;
+  margin-top: 4em;
   display: flex;
   flex-direction: column;
 }
@@ -387,6 +387,7 @@ a
   overflow: scroll;
   border-bottom-right-radius: 10px;
   box-shadow: inset -2em 2em 6em var(--alt);
+  padding: 2em 0;
 
 
 
@@ -401,7 +402,6 @@ a
 {
   width: 300px;
   height: 225px;
-  box-shadow: 0 -.25em 1em var(--darkest);
   margin-bottom: .5em;
   border: 1px solid var(--darker);
 
@@ -421,7 +421,7 @@ a
   border: .15em solid var(--main);
   max-width: 325px;
   text-align: center;
-  background:  var(--light);
+  background:  var(--altlight);
   box-shadow: inset 0 0 1em var(--alt);
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -442,7 +442,7 @@ a
   /*background:  var(--alt);*/
   padding: .25em;
   border-top: .1em solid var(--main);
-  box-shadow: inset 1em 1em 2em var(--alty);
+  box-shadow: inset -.5em -.5em 1.5em var(--alty);
   font-weight: normal;
   color: var(--mostdark);
   height: 60px;
@@ -465,4 +465,18 @@ a
 .recipe
 {
   margin: .75em;
+}
+
+.recipe:first-child
+{
+  margin-left: 2em;
+}
+
+.recipe:hover,
+.recipe:focus
+{
+  transform: scale(1.02);
+  transition: .4s;
+  transition timing function:  ease-in-out;
+  box-shadow: 0 0 1.5em red;
 }
