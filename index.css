@@ -274,9 +274,14 @@ h1
   padding: 1em;
   box-shadow: inset -1.3em -1em 2em var(--alty);
   height: 85%;
+  overflow-y: scroll;
   border-bottom-right-radius: 10px;
 
   
+}
+
+#siteDescription p::-webkit-scrollbar{
+  display:  none;
 }
 
 .contentBox h2
@@ -308,7 +313,7 @@ h1
 {
   .contentBox
 {
-  min-width: 200px;
+  min-width: 250px;
 }
 }
 
@@ -446,7 +451,7 @@ a
   box-shadow: inset -.5em -.5em 1.5em var(--alty);
   font-weight: normal;
   color: var(--mostdark);
-  height: 70px;
+  height: 80px;
   border-bottom-right-radius: 10px;
   overflow-y: hidden;
 
