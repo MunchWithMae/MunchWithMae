@@ -159,12 +159,12 @@ h1
 @media screen and (min-width: 0px) and (max-width: 600px)
 {
     .prev{
-    	left:-2%;
+    	left:-5.5%;
 
     }
 
     .next{
-    	right:-2%;
+    	right:-5.5%;
     }
 
     h1
@@ -354,6 +354,8 @@ a
 {
   width: 100%;
   margin-top: 3em;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -378,22 +380,24 @@ a
 {
   display: flex;
   flex-direction: row;
-  height: fit-content;
   border: .15em solid var(--main);
   border-top: none;
   width: 100%;
-  padding: 1em;
+  gap: .25em;
+  overflow: scroll;
+
+
 
 }
 
 
 .recipe img
 {
-  width: 175px;
-  height: 175px;
-  box-shadow: 0 -.25em 1em var(--mostdark);
+  width: 300px;
+  height: 225px;
+  box-shadow: 0 -.25em 1em var(--darkest);
   margin-bottom: .5em;
-  border: 1px solid var(--mostdark);
+  border: 1px solid var(--darker);
 
 }
 
@@ -409,27 +413,36 @@ a
 .recipe
 {
   border: .15em solid var(--main);
-  max-width: 200px;
+  max-width: 325px;
   text-align: center;
   background:  var(--light);
   box-shadow: inset 0 0 1em var(--alt);
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  min-width: 250px;
 }
 
 .recipe p
 {
+  padding: .55em;
   padding-top: .35em;
   font-size: .75rem;
   text-align: left;
+
   
 }
 
 .recipeDescription{
-  background:  var(--alt);
+  /*background:  var(--alt);*/
   padding: .25em;
   border-top: .1em solid var(--main);
   box-shadow: inset 1em 1em 2em var(--alty);
   font-weight: normal;
   color: var(--mostdark);
+  height: 60px;
+  border-bottom-right-radius: 10px;
+  overflow-y: hidden;
+
 }
 
 .recipeContent
@@ -441,4 +454,9 @@ a
 
 .recipe a{
   text-decoration: none;
+}
+
+.recipe
+{
+  margin: .75em;
 }

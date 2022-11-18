@@ -58,13 +58,6 @@ function showSlides(n) {
 }
 
 
-let recipe = {
-  name : "",
-  link : "",
-  description : "",
-  image : ""
-}
-
 function recipeObject(name, link, description, image) {
   this.name = name;
   this.link = link;
@@ -84,14 +77,14 @@ for (let i = 0; i < recipeNames.length; i++)
 {
   let linky = recipeNames[i].replace(/ /g,"_");;
   recipeLink[i] = "Recipes\\"+recipeNames[i]+"\\"+linky+".html";
-  console.log(recipeLink[i]);
+  //console.log(recipeLink[i]);
 }
 
 for (let i = 0; i < recipeNames.length; i++)
 {
   let linky2 = recipeNames[i].replace(/ /g,"_");;
-  recipeImage[i] = "Recipes\\"+recipeNames[i]+"\\"+linky2+"\\image1.jpg";
-  console.log(recipeImage[i]);
+  recipeImage[i] = "Recipes\\"+recipeNames[i]+"\\image1.jpg";
+  //console.log(recipeImage[i]);
 }
 
 
@@ -101,5 +94,66 @@ for (let i = 0; i < recipeNames.length; i++)
 }
 
 
+for (let i = 0; i < recipeNames.length; i++)
+{
+  let recipeBox = document.getElementById("recipeBox");
 
-console.log(recipeObject[1])
+  let newDivRecipe = document.createElement("div");
+  newDivRecipe.classList.add("recipe");
+
+  recipeBox.appendChild(newDivRecipe);
+
+  let newDivRecipeContent = document.createElement("div");
+  newDivRecipeContent.classList.add("recipeContent");
+
+  newDivRecipe.appendChild(newDivRecipeContent);
+
+  let a = document.createElement('a');
+
+  let recipeLinkText = document.createTextNode("");
+  a.appendChild(recipeLinkText);
+
+  a.title = recipeObject[i].name
+
+  a.href = String(recipeObject[i].link);
+
+  newDivRecipeContent.appendChild(a);
+
+
+  let newDivLinkParent = a;
+
+  let recipeTitle = document.createElement('h3');
+
+  let recipeTitleText = document.createTextNode(recipeObject[i].name);
+
+  recipeTitle.appendChild(recipeTitleText);
+
+  newDivLinkParent.appendChild(recipeTitle);
+
+  recipeTitle.appendChild(recipeTitleText);
+
+  newDivLinkParent.appendChild(recipeTitle);
+
+  let recipeImage = document.createElement('img');
+  //console.log(recipeObject[i].image);
+  recipeImage.src = (String(recipeObject[i].image));
+  newDivLinkParent.appendChild(recipeImage);
+
+  let newRecipeDescription = document.createElement('div');
+  newRecipeDescription.classList.add("recipeDescription")
+  let newRecipeDescriptionInner = document.createElement('p');
+  let newRecipeDescriptionInnerText = document.createTextNode(recipeObject[i].description)
+
+  newRecipeDescriptionInner.appendChild(newRecipeDescriptionInnerText);
+  newRecipeDescription.appendChild(newRecipeDescriptionInner);
+
+
+  newDivRecipe.appendChild(newRecipeDescription)
+
+
+}
+
+
+
+
+//console.log(recipeObject[1])
