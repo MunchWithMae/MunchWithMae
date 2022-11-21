@@ -593,8 +593,19 @@ a
   top:2em;
   right:2.5em;
   z-index: 999;
-  padding:1em;
-  background: var(--alty);
+  padding: 1em;
+  background: #fff;
+  border: 2px solid var(--main);
+  box-shadow: .25em .25em .5em var(--main);
+  font-family: "comfortaa";
+  font-weight: bold;
+  color:var(--dark);
+  border-radius:5px;
+}
+
+#btn--collapse:hover
+{
+  cursor:pointer;
 }
 
 @media screen and (max-width: 600px)
