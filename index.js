@@ -1,5 +1,11 @@
 let slideIndex = 1;
 var timer;
+
+const $e = document.getElementById.bind(document);
+const $$ = document.querySelector.bind(document);
+const $$$ = document.querySelectorAll.bind(document);
+
+
 showSlides(slideIndex);
 
 // Next/previous controls
@@ -129,6 +135,21 @@ for (let i = 0; i < recipeNames.length; i++)
 
   recipeTitle.appendChild(recipeTitleText);
 
+  let recipeCollapseContainer = document.createElement('button');
+
+  let recipeCollapse = document.createElement('span');
+
+  recipeCollapseContainer.innerHTML = "[-]";
+
+
+  //let recipeCollapseText = document.createTextNode("[-]");
+
+  //recipeCollapse.appendChild(recipeCollapseText);
+
+  recipeCollapseContainer.appendChild(recipeCollapse);
+
+  newDivRecipeContent.appendChild(recipeCollapseContainer)
+
   newDivLinkParent.appendChild(recipeTitle);
 
   recipeTitle.appendChild(recipeTitleText);
@@ -139,6 +160,13 @@ for (let i = 0; i < recipeNames.length; i++)
   //console.log(recipeObject[i].image);
   recipeImage.src = (String(recipeObject[i].image));
   newDivLinkParent.appendChild(recipeImage);
+
+  recipeCollapseContainer.onclick = function() {
+    recipeImage.classList.toggle("collapsed");
+    newDivRecipe.classList.toggle("collpasedHeight");
+
+  };
+
 
   let newRecipeDescription = document.createElement('div');
   newRecipeDescription.classList.add("recipeDescription")
@@ -153,6 +181,17 @@ for (let i = 0; i < recipeNames.length; i++)
 
 
 }
+
+let collapseButton = $e("btn--collapse")
+collapseButton.onclick = function() { 
+  //alert("test");
+  //alert(recipeNames.length)
+  recipeCollaped = $$$(".recipeContent img");
+  for (let i = 0; i < recipeNames.length; i++)
+  {
+    recipeCollaped[i].classList.toggle("collapsed");
+  }
+};
 
 var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
 var rootElement = document.documentElement;

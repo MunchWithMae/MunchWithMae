@@ -445,16 +445,21 @@ a
 }
 
 .recipeDescription{
-  /*background:  var(--alt);*/
+  background:  var(--alty);
   padding: .25em;
   border-top: .1em solid var(--main);
-  box-shadow: inset -.5em -.5em 1.5em var(--alty);
+  box-shadow: inset -.5em -.5em 1.5em var(--alt);
   font-weight: normal;
   color: var(--mostdark);
-  height: 80px;
+  height: 4.5em;
   border-bottom-right-radius: 10px;
   overflow-y: hidden;
 
+}
+
+@media screen and (max-width:600px)
+{
+  .recipeDescription p{ font-size:.7rem; }
 }
 
 .recipeContent
@@ -476,7 +481,7 @@ a
 .recipe:hover,
 .recipe:focus
 {
-  transform: scale(1.02);
+  transform: scale(1.04);
   transition: .4s;
   transition timing function:  ease-in-out;
   box-shadow: 0 0 .75em red;
@@ -542,3 +547,90 @@ a
   border-radius: 5px;
 }
 
+.recipeContent h3{
+  position: relative;
+  display: flex;
+  justify-content: left;
+}
+
+
+.recipeContent button
+{
+  border:none;
+  position: absolute;
+  top:.5em;
+  right:0;
+  font-weight:bold;
+  color:red;
+  letter-spacing: .25em;
+  background: transparent;
+  font-size:1.15rem;
+}
+
+.recipeContent button:hover
+{
+  cursor: pointer;
+}
+
+.collapsed
+{
+  display: none; 
+}
+
+.collpasedHeight
+{
+   height: fit-content!important;
+}
+
+#recipeContainer
+{
+  position: relative;
+}
+
+#btn--collapse
+{
+  position: absolute;
+  top:2em;
+  right:2.5em;
+  z-index: 999;
+  padding:1em;
+  background: var(--alty);
+}
+
+@media screen and (max-width: 600px)
+{
+  #btn--collapse
+{
+  position: relative;
+  top:0;
+  right:0;
+  background: var(--alty);
+  margin-top:1em;
+}
+}
+
+
+
+
+.recipeContent img{
+  transition: all 1.5s;
+  transition-timing-function: ease-in-out;
+}
+
+
+.recipe{transform: scale(1.02);}
+
+.note
+{
+  font-family: "comfortaa";
+  text-shadow: none;
+  padding-top:1.25em;
+}
+
+.disclaimer
+{
+  color:red;
+  font-size:.75rem;
+  font-style: italic;
+  font-weight:bold;
+}
