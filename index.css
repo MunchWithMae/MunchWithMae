@@ -75,6 +75,8 @@ img
 
 #mainImageHolder{
 	position:relative;
+  min-height:75vh;
+  max-height:75vh;
 }
 
 /* Next & previous buttons */
@@ -415,11 +417,16 @@ a
 
 .recipe h3
 {
-  text-align: center;
   margin-bottom: .5em;
   font-size: 1.25rem;
   font-weight: bold;
   color: var(--darkest);
+  width:85%;
+  position: relative;
+  display: flex;
+  justify-content: left;
+  
+
 }
 
 .recipe
@@ -504,6 +511,7 @@ a
   transform: translateY(100px);
   transition: all .5s ease;
   text-shadow:  0 .1rem black;
+  z-index: 999;
 }
 
 .showBtn {
@@ -547,14 +555,22 @@ a
   border-radius: 5px;
 }
 
-.recipeContent h3{
-  position: relative;
-  display: flex;
-  justify-content: left;
+.eapps-instagram-feed-header-stats,
+a.eapps-instagram-feed-header-follow-button
+{
+  background: #fff;
+  border: 2px solid var(--main);
+  box-shadow: .15em .15em .35em var(--main);
+  font-family: "comfortaa";
+  font-weight: bold;
+  color:var(--dark);
+  border-radius:5px;
 }
 
 
-.recipeContent button
+
+
+.collapseRecipe
 {
   border:none;
   position: absolute;
@@ -567,7 +583,7 @@ a
   font-size:1.15rem;
 }
 
-.recipeContent button:hover
+collapseRecipe:hover
 {
   cursor: pointer;
 }
@@ -592,7 +608,7 @@ a
   position: absolute;
   top:2em;
   right:2.5em;
-  z-index: 999;
+  z-index: 400;
   padding: 1em;
   background: #fff;
   border: 2px solid var(--main);
@@ -601,6 +617,9 @@ a
   font-weight: bold;
   color:var(--dark);
   border-radius:5px;
+  font-size:.75rem;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
 }
 
 #btn--collapse:hover
@@ -615,12 +634,10 @@ a
   position: relative;
   top:0;
   right:0;
-  background: var(--alty);
+  background: #fff;
   margin-top:1em;
 }
 }
-
-
 
 
 .recipeContent img{
@@ -644,4 +661,121 @@ a
   font-size:.75rem;
   font-style: italic;
   font-weight:bold;
+}
+
+
+
+
+#instagram{
+  z-index: 1!important;
+}
+
+.iframeBox{
+    display: none;
+    width:150%;
+    height:80vh;
+    position: fixed;
+    z-index: 999!important;
+    margin-top:-365px;
+    top:10%;
+    left:-25%;
+    border:2px solid var(--darkest);
+}
+
+.iframeOpen{
+    display: block;
+    position: fixed;
+    z-index: 998!important;
+}
+
+.recipe:hover{
+  z-index: 600;
+}
+
+.recipe{
+  z-index: 600;
+}
+
+.recipe{
+  transition: all .6s;
+}
+
+.zIndexPush
+{
+  z-index: 600;
+}
+
+.pushRight
+{
+  margin-right:6em;
+  transition-timing-function: ease-in;
+}
+
+
+.modalBg {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    padding-top: 75px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modalBg:hover
+{
+  z-index: 1;
+}
+
+.visible
+{
+  display: block;
+}
+
+.hidden
+{
+  display: none; 
+}
+
+.previewRecipe{
+  background: #fff;
+  color:var(--dark);
+  border: none;
+  position: absolute;
+  top: 47px;
+  left:17px;
+  margin: auto;
+  font-size:.75rem;
+  padding:.25em .5em;
+  border-bottom-right-radius: 10px;
+  font-family: 'comfortaa';
+  font-weight: bold;
+  letter-spacing: .025rem;
+  border: solid var(--main);
+  border-width: 0 1px 1px 0;
+  box-shadow: 1px 1px 2px rgba(169, 168, 169, 0.4);
+  z-index
+
+}
+
+.previewRecipe:hover{
+  cursor: pointer;
+  
+  transform:scale(1.02);
+  transition: all .3s;
+  box-shadow: 2px 2px 4px rgba(169, 168, 169, 0.8)
+}
+
+
+
+@media screen and (max-width:600px)
+{
+  .previewRecipe{ 
+    top: 42px;
+    left:14px;
+     }
 }

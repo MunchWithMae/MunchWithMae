@@ -113,6 +113,8 @@ for (let i = 0; i < recipeNames.length; i++)
   let newDivRecipeContent = document.createElement("div");
   newDivRecipeContent.classList.add("recipeContent");
 
+
+
   newDivRecipe.appendChild(newDivRecipeContent);
 
   let a = document.createElement('a');
@@ -124,7 +126,13 @@ for (let i = 0; i < recipeNames.length; i++)
 
   a.href = String(recipeObject[i].link);
 
+  a.classList.add("recipeLink")
+
+  
+
   newDivRecipeContent.appendChild(a);
+
+
 
 
   let newDivLinkParent = a;
@@ -137,18 +145,16 @@ for (let i = 0; i < recipeNames.length; i++)
 
   let recipeCollapseContainer = document.createElement('button');
 
-  let recipeCollapse = document.createElement('span');
-
   recipeCollapseContainer.innerHTML = "[-]";
 
+  let recipePreviewContainer = document.createElement('button');
+  recipePreviewContainer.classList.add("previewRecipe")
+  recipeCollapseContainer.classList.add("collapseRecipe")
 
-  //let recipeCollapseText = document.createTextNode("[-]");
-
-  //recipeCollapse.appendChild(recipeCollapseText);
-
-  recipeCollapseContainer.appendChild(recipeCollapse);
+  recipePreviewContainer.innerHTML = "Preview";
 
   newDivRecipeContent.appendChild(recipeCollapseContainer)
+  newDivRecipeContent.appendChild(recipePreviewContainer)
 
   newDivLinkParent.appendChild(recipeTitle);
 
@@ -165,32 +171,97 @@ for (let i = 0; i < recipeNames.length; i++)
     recipeImage.classList.toggle("collapsed");
     newDivRecipe.classList.toggle("collpasedHeight");
 
+
+    if (recipeImage.classList.contains("collapsed"))
+    {
+      recipeCollapseContainer.innerHTML = "[+]";
+    }
+
+    else
+    {
+      recipeCollapseContainer.innerHTML = "[-]";
+    }
+
   };
+
+
+
 
 
   let newRecipeDescription = document.createElement('div');
   newRecipeDescription.classList.add("recipeDescription")
   let newRecipeDescriptionInner = document.createElement('p');
   let newRecipeDescriptionInnerText = document.createTextNode(recipeObject[i].description)
-
   newRecipeDescriptionInner.appendChild(newRecipeDescriptionInnerText);
   newRecipeDescription.appendChild(newRecipeDescriptionInner);
-
-
   newDivRecipe.appendChild(newRecipeDescription)
+
+
+  let iframeBox = document.createElement('iframe');
+  iframeBox.src = recipeObject[i].link;
+  iframeBox.width = "800px";
+  iframeBox.height = "500px"
+  iframeBox.classList.add("iframeBox");
+  newDivRecipe.appendChild(iframeBox);
+
+  recipePreviewContainer.onclick = function() {
+    
+    iframeBox.classList.toggle("iframeOpen");
+    let modalBg = $e('myModalBg');
+    modalBg.classList.toggle('visible');
+    newDivRecipe.classList.toggle('pushRight');
+
+    // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modalBg) {
+          modalBg.classList.toggle('visible');
+          iframeBox.classList.toggle("iframeOpen");
+          newDivRecipe.classList.toggle('pushRight')
+
+      }
+  }
+
+
+  }
+  
+
 
 
 }
 
 let collapseButton = $e("btn--collapse")
 collapseButton.onclick = function() { 
+
+  
+
+
   //alert("test");
   //alert(recipeNames.length)
-  recipeCollaped = $$$(".recipeContent img");
+  recipeCollapsed = $$$(".recipeContent img");
+  recipeCollapsedButton = $$$(".recipeContent button");
   for (let i = 0; i < recipeNames.length; i++)
   {
-    recipeCollaped[i].classList.toggle("collapsed");
+    recipeCollapsed[i].classList.toggle("collapsed");
+
+    if (recipeCollapsed[i].classList.contains("collapsed"))
+    {
+      collapseButton.innerHTML = "Expand All";
+      recipeCollapsedButton[i].innerHTML = "[+]";
+    }
+
+    else
+    {
+      collapseButton.innerHTML = "Collapse All";
+      recipeCollapsedButton[i].innerHTML = "[-]";
+    }
+
+
+
   }
+
+
+
+
 };
 
 var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
@@ -218,6 +289,9 @@ function scrollToTop() {
 scrollToTopBtn.addEventListener("click", scrollToTop);
 document.addEventListener("scroll", handleScroll);
 
+
+
+let iframe = $$('iframeBox');
 
 
 
