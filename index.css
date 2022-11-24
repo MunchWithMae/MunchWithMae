@@ -608,7 +608,7 @@ collapseRecipe:hover
   position: absolute;
   top:2em;
   right:2.5em;
-  z-index: 400;
+/*  z-index: 99;*/
   padding: 1em;
   background: #fff;
   border: 2px solid var(--main);
@@ -671,46 +671,32 @@ collapseRecipe:hover
 }
 
 .iframeBox{
-    display: none;
-    width:150%;
-    height:80vh;
-    position: fixed;
-    z-index: 999!important;
-    margin-top:-365px;
-    top:10%;
-    left:-25%;
-    border:2px solid var(--darkest);
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .iframeOpen{
     display: block;
     position: fixed;
-    z-index: 998!important;
+    
 }
 
-.recipe:hover{
-  z-index: 600;
-}
+@media screen and (max-width:600px)
+{
+  .iframeBox{
+    width: 95%;
+    height:70%;
+  }
 
-.recipe{
-  z-index: 600;
 }
 
 .recipe{
   transition: all .6s;
 }
-
-.zIndexPush
-{
-  z-index: 600;
-}
-
-.pushRight
-{
-  margin-right:6em;
-  transition-timing-function: ease-in;
-}
-
 
 .modalBg {
     display: none; /* Hidden by default */
@@ -726,9 +712,11 @@ collapseRecipe:hover
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-.modalBg:hover
+.modalInner
 {
-  z-index: 1;
+  position: relative;
+  width: 100%;
+  height:100%;
 }
 
 .visible
@@ -740,8 +728,6 @@ collapseRecipe:hover
 {
   display: none; 
 }
-
-
 
 .previewRecipe{
   background: #fff;

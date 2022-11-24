@@ -186,10 +186,6 @@ for (let i = 0; i < recipeNames.length; i++)
 
   };
 
-
-
-
-
   let newRecipeDescription = document.createElement('div');
   newRecipeDescription.classList.add("recipeDescription")
   let newRecipeDescriptionInner = document.createElement('p');
@@ -198,28 +194,33 @@ for (let i = 0; i < recipeNames.length; i++)
   newRecipeDescription.appendChild(newRecipeDescriptionInner);
   newDivRecipe.appendChild(newRecipeDescription)
 
-
-  let iframeBox = document.createElement('iframe');
-  iframeBox.src = recipeObject[i].link;
-  iframeBox.width = "800px";
-  iframeBox.height = "500px"
-  iframeBox.classList.add("iframeBox");
-  newDivRecipe.appendChild(iframeBox);
-
   recipePreviewContainer.onclick = function() {
     
-    iframeBox.classList.toggle("iframeOpen");
+    //alert(recipePreviewContainer.iframeBox)
+    //iframeBox.classList.toggle("iframeOpen");
     let modalBg = $e('myModalBg');
+    let modalInner = $e('modalInner');
+    let iframeBox = document.createElement('iframe');
+    iframeBox.src = recipeObject[i].link;
+    iframeBox.classList.add("iframeBox");
+    modalInner.appendChild(iframeBox);
     modalBg.classList.toggle('visible');
-    newDivRecipe.classList.toggle('pushRight');
 
 
     // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
-      if (event.target == modalBg) {
+      if (event.target == modalBg){
           modalBg.classList.toggle('visible');
           iframeBox.classList.toggle("iframeOpen");
-          newDivRecipe.classList.toggle('pushRight')
+          iframeBox.remove();
+
+      }
+
+      if (event.target == modalInner){
+          modalBg.classList.toggle('visible');
+          iframeBox.classList.toggle("iframeOpen");
+          newDivRecipe.classList.toggle('mainRecipeOpen');
+          iframeBox.remove();
 
       }
   }
@@ -235,11 +236,6 @@ for (let i = 0; i < recipeNames.length; i++)
 let collapseButton = $e("btn--collapse")
 collapseButton.onclick = function() { 
 
-  
-
-
-  //alert("test");
-  //alert(recipeNames.length)
   recipeCollapsed = $$$(".recipeContent img");
   recipeCollapsedButton = $$$(".collapseRecipe");
   for (let i = 0; i < recipeNames.length; i++)
