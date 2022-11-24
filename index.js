@@ -170,16 +170,18 @@ for (let i = 0; i < recipeNames.length; i++)
   recipeCollapseContainer.onclick = function() {
     recipeImage.classList.toggle("collapsed");
     newDivRecipe.classList.toggle("collpasedHeight");
-
+    recipePreviewButton = $$$(".previewRecipe");
 
     if (recipeImage.classList.contains("collapsed"))
     {
       recipeCollapseContainer.innerHTML = "[+]";
+      recipePreviewButton[i].classList.toggle("pushdown");
     }
 
     else
     {
       recipeCollapseContainer.innerHTML = "[-]";
+      recipePreviewButton[i].classList.toggle("pushdown");
     }
 
   };
@@ -211,6 +213,7 @@ for (let i = 0; i < recipeNames.length; i++)
     modalBg.classList.toggle('visible');
     newDivRecipe.classList.toggle('pushRight');
 
+
     // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
       if (event.target == modalBg) {
@@ -238,21 +241,26 @@ collapseButton.onclick = function() {
   //alert("test");
   //alert(recipeNames.length)
   recipeCollapsed = $$$(".recipeContent img");
-  recipeCollapsedButton = $$$(".recipeContent button");
+  recipeCollapsedButton = $$$(".collapseRecipe");
   for (let i = 0; i < recipeNames.length; i++)
   {
+    let recipePreviewButton = $$$(".previewRecipe");
     recipeCollapsed[i].classList.toggle("collapsed");
 
     if (recipeCollapsed[i].classList.contains("collapsed"))
     {
       collapseButton.innerHTML = "Expand All";
       recipeCollapsedButton[i].innerHTML = "[+]";
+      recipePreviewButton[i].classList.toggle("pushdown");
+      
     }
 
     else
     {
       collapseButton.innerHTML = "Collapse All";
       recipeCollapsedButton[i].innerHTML = "[-]";
+      recipePreviewButton[i].classList.toggle("pushdown");
+      
     }
 
 

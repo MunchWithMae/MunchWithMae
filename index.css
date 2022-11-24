@@ -741,6 +741,8 @@ collapseRecipe:hover
   display: none; 
 }
 
+
+
 .previewRecipe{
   background: #fff;
   color:var(--dark);
@@ -772,10 +774,31 @@ collapseRecipe:hover
 
 
 
+
+
+.pushdown
+{
+  position: absolute;
+  top:108px;
+  right:2px;
+  left:2px;
+  width: 98%;
+  background: rgb(255,189,216);
+  background: linear-gradient(90deg, rgba(255,189,216,0.28820960698689957) 16%, rgba(255,255,255,1) 31%, rgba(255,255,255,1) 73%, rgba(255,189,216,0.20960698689956336) 87%);
+  border:none;
+  box-shadow:none;
+  transition: background .4s;
+}
+
+.pushdown:hover
+{
+  background: rgb(255,189,216);
+  background: linear-gradient(90deg, rgba(255,189,216,1) 16%, rgba(255,255,255,1) 31%, rgba(255,255,255,1) 73%, rgba(255,189,216,1) 87%);
+}
+
 @media screen and (max-width:600px)
 {
-  .previewRecipe{ 
-    top: 42px;
-    left:14px;
+  .pushdown{ 
+    top:81px;
      }
 }
