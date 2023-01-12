@@ -73,10 +73,11 @@ function recipeObject(name, link, description, image) {
 
 
 
-let recipeNames = ["Massaman Curry", "Mushroom Celery Curry", "Chicken Alfredo"]
+let recipeNames = ["Massaman Curry", "Mushroom Celery Curry", "Chicken Alfredo", "Hoisin Stir Fry & Spicy Peanut Sauce"]
 let recipeDescriptions = ["A hearty, earthy curry that can be made in 25 minutes with minimal prep.", 
 "a hearty, stick-to-your-ribs kind of meal that will always leave you satisfied on a hungry, cold night",
-"You can never go wrong with a classic chicken alfredo. It's quick, nearly impossible to mess up, and takes just about as long as heating up a jar of store bought sauce would."]
+"You can never go wrong with a classic chicken alfredo. It's quick, nearly impossible to mess up, and takes just about as long as heating up a jar of store bought sauce would.",
+"A sweet and spicy stir fry that will never let you down with its unique flavor & texture"]
 let recipeImage = []
 let recipeLink = [];
 
@@ -130,7 +131,7 @@ for (let i = 0; i < recipeNames.length; i++)
 
   
 
-  newDivRecipeContent.appendChild(a);
+  
 
 
 
@@ -148,13 +149,15 @@ for (let i = 0; i < recipeNames.length; i++)
   recipeCollapseContainer.innerHTML = "[-]";
 
   let recipePreviewContainer = document.createElement('button');
-  recipePreviewContainer.classList.add("previewRecipe")
-  recipeCollapseContainer.classList.add("collapseRecipe")
+  recipePreviewContainer.classList.add("previewRecipe");
+  recipeCollapseContainer.classList.add("collapseRecipe");
 
   recipePreviewContainer.innerHTML = "Preview";
 
-  newDivRecipeContent.appendChild(recipeCollapseContainer)
-  newDivRecipeContent.appendChild(recipePreviewContainer)
+  
+  newDivRecipeContent.appendChild(recipePreviewContainer);
+  newDivRecipeContent.appendChild(a);
+  newDivRecipeContent.appendChild(recipeCollapseContainer);
 
   newDivLinkParent.appendChild(recipeTitle);
 

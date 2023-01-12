@@ -98,10 +98,18 @@ img
 .mySlides img
 {
 	max-width: 85%;
-  margin-bottom: -3px;
-  max-height: 70vh;
+  max-height: 75vh;
   box-shadow: 0 0 2em var(--mostdark);
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
+
+
+
 
 .mySlides{
   display: none;
@@ -109,8 +117,32 @@ img
   background:  var(--alt);
   border: .15em solid var(--main);
   box-shadow: inset 1em -1em 3em var(--almostMain), 0 .5em 1em var(--dark);
+  min-height: 75vh;
+  max-height: 75vh;
 
 }
+
+@media screen and (min-width: 0px) and (max-width: 600px)
+{
+  .mySlides{
+    min-height: 30vh;
+    max-height: 30vh;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1020px)
+{
+  .mySlides{
+    min-height: 55vh;
+    max-height: 55vh;
+  }
+}
+
+#mainImageHolder{
+  overflow: hidden;
+}
+
+
 
 
 /* Position the "next button" to the right */
@@ -154,9 +186,17 @@ h1
 }
 
 
+@media screen and (min-width: 0px) and (max-width: 450px)
+{
+  h1
+  {
+    font-size:1.75rem;
+    line-height: 4rem;
+  }
 
+}
 
-@media screen and (min-width: 0px) and (max-width: 600px)
+@media screen and (min-width: 450px) and (max-width: 600px)
 {
     .prev{
     	left:-5.5%;
@@ -244,14 +284,13 @@ h1
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 2s;
 }
 
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
 }
-
 
 
 .ornament
@@ -273,7 +312,7 @@ h1
   border-width: 0 .15em .15em .15em ;
   padding: 1em;
   box-shadow: inset -1.3em -1em 2em var(--alty);
-  height: 85%;
+  height: 90%;
   overflow-y: scroll;
   border-bottom-right-radius: 10px;
 
@@ -423,6 +462,10 @@ a
   position: relative;
   display: flex;
   justify-content: left;
+  min-height: 2.5rem;
+
+
+
   
 
 }
@@ -437,6 +480,7 @@ a
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
   min-width: 250px;
+  height: fit-content;
 }
 
 .recipe p
@@ -732,8 +776,6 @@ collapseRecipe:hover
   color:var(--dark);
   border: none;
   position: absolute;
-  top: 47px;
-  left:17px;
   margin: auto;
   font-size:.75rem;
   padding:.25em .5em;
@@ -744,21 +786,17 @@ collapseRecipe:hover
   border: solid var(--main);
   border-width: 0 1px 1px 0;
   box-shadow: 1px 1px 2px rgba(169, 168, 169, 0.4);
-  z-index
+  top:67px;
+  left:17px;
 
 }
 
 .previewRecipe:hover{
   cursor: pointer;
-  
   transform:scale(1.02);
   transition: all .3s;
   box-shadow: 2px 2px 4px rgba(169, 168, 169, 0.8)
 }
-
-
-
-
 
 .pushdown
 {
@@ -772,6 +810,7 @@ collapseRecipe:hover
   border:none;
   box-shadow:none;
   transition: background .4s;
+  display:none;
 }
 
 .pushdown:hover
@@ -786,3 +825,22 @@ collapseRecipe:hover
     top:81px;
      }
 }
+
+
+/*body {
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    opacity: 1; transition: .5s;
+    background: transparent;
+    background-image: url(http://i.imgur.com/Ue1InIS.png), url(http://i.imgur.com/r9hYuSj.png);
+    background-repeat: repeat;
+    animation: petals 15s linear infinite; 
+}
+
+@keyframes petals {
+  0% { background-position: 0 0, 0 0 }
+  to { background-position: 150px 300px, 300px 600px }
+}*/

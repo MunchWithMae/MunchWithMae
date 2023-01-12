@@ -1,0 +1,337 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hoisin Stir Fry & Spicy Peanut Sauce</title>
+
+	<link rel="icon" href="Images/favicon-32x32.png" />
+	<link rel="apple-touch-icon" href="Images/apple-touch-icon.png" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+	<link rel="stylesheet" href="../../Reset.css">
+	<link rel="stylesheet" href="../Recipe.css">
+	<link rel="stylesheet" href="../../header.css">
+
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+</head>
+
+<body>
+
+<header>
+	<div class="topnav" id="myTopnav">
+		<div id="headerLogo"><a href="../../index.html"><img src="../../Images/mwmHeader.png"></a></div>
+		<a href="../../index.html">Home</a>
+		<a href="../../index.html#aboutMe">About</a>
+		<a href="../../index.html#recipes">Recipes</a>
+		<a href="../../construction.html">Tutorials</a>
+		<button id="myBtn">Contact</button>
+		<a href = "https://www.instagram.com/munch_with_mae/" target="_blank" class="socialMedia"><i class="fab fa-instagram fa-2x"></i></a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+	</div>
+</header>
+
+<div id=buttonContainer>
+  <btn id="btn--back"><i class="fas fa-chevron-left"></i></btn>
+</div>
+
+<div id="content">
+	<br>
+	<br>
+	<h1>Hoisin Stir Fry & Spicy Peanut Sauce</h1>
+
+	<div id="mainImageHolder">
+
+		<div class="mySlides fade">
+			<img src="image1.jpg" id="mainImage">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="image2.jpg" id="mainImage">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="image3.jpg" id="mainImage">
+		</div>
+
+		<div class="mySlides fade">
+			<img src="image4.jpg" id="mainImage">
+		</div>
+
+		<!-- Next and previous buttons -->
+		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+
+	<br>
+
+	<!-- The dots/circles -->
+	<div style="text-align:center">
+	  <span class="dot" onclick="currentSlide(1)"></span>
+	  <span class="dot" onclick="currentSlide(2)"></span>
+	  <span class="dot" onclick="currentSlide(3)"></span>
+	  <span class="dot" onclick="currentSlide(4)"></span>
+	</div>
+
+	<br>
+	<br>
+
+	<section id="descriptionContainer">
+		<blockquote>This sweet and spicy stir fry is never a miss. The sweetness of the hoisin sauce mixed with the spiciness of the peanut butter sauce is the perfect combination. I've cooked this with several different proteins, usually using pork or a plant based alternative such as beyond beef. Using beyond beef, Temari sauce, and vegetarian Hoisin sauce will make this meal vegan and gluten free.</blockquote>
+	</section>
+
+	<div id="ingredientsContainer" class = "double">
+		<h2>Ingredients</h2>
+
+		<div class = "tablesContainer">
+			<div class="tableContainer">
+				<table class="tableStyle">
+
+						<th colspan="2">Filling</th>
+					<tr>
+						<td><span class="number"><span class="fraction">½</span></span> lb</td>
+						<td>Ground pork, chicken, or other protein of your choosing</td>
+					</tr>
+
+					<tr>
+						<td><span class="number">2</span> Cloves</td>
+						<td>Fresh garlic, minced</td>
+					</tr>
+
+					<tr>
+						<td><span class="number">1</span> Inch</td>
+						<td>Ginger, grated</td>
+					</tr>
+
+					<tr>
+						<td><span class="number">8</span> oz</td>
+						<td>Mushrooms, chopped into small chunks</td>
+					</tr>
+
+					<tr>
+						<td><span class="number">1</span></td>
+						<td>Carrot, shredded</td>
+					</tr>
+
+					<tr>
+						<td><span class="number">1</span></td>
+						<td>Red bell pepper, diced</td>
+					</tr>
+
+					<tr>
+						<td><span class="number">2</span> Tb</td>
+						<td>Soy sauce</td>
+					</tr>
+
+					<tr>
+						<td><span class="number">1</span> tb</td>
+						<td>Sesame oil</td>
+					</tr>
+
+					<tr>
+						<td><span class="number"><span class="fraction">⅓</span></span> Cup</td>
+						<td>Hoisin sauce</td>
+					</tr>
+
+					<tr>
+						<td>Seasonings</td>
+						<td>Salt, pepper, garlic powder, onion powder, ground ginger</td>
+					</tr>
+
+					
+				</table>
+			</div>
+
+			<div class="tableContainer">
+				<table class="tableStyle">
+
+						<th colspan="2">Spicy Peanut Sauce</th>
+					<tr>
+						<td><span class="number"><span class="fraction">¼</span></span> Cup</td>
+						<td>Peanut butter</td>
+					</tr>
+
+					<tr>
+						<td><span class="number">1</span> tb</td>
+						<td>Soy sauce</td>
+					</tr>
+
+					<tr>
+						<td><span class="number">1</span> tb</td>
+						<td>Freshly grated ginger</td>
+					</tr>
+
+					<tr>
+						<td><span class="number">1</span> tb</td>
+						<td>Brown sugar</td>
+					</tr>
+
+					<tr>
+						<td><span class="number">1</span> Tb</td>
+						<td>Sriracha sauce</td>
+					</tr>
+
+					<tr>
+						<td><span class="number">3</span> Tb</td>
+						<td>Hot water <span class="disclaimer">to soften Peanut butter</span></td>
+					</tr>
+					
+				</table>
+			</div>
+
+			<div class="tableContainer">
+				<table class="tableStyle">
+
+						<th colspan="2">Toppings & Base</th>
+					<tr>
+						<td><span class="number"><span class="fraction">¼</span></span> Cup</td>
+						<td>Peanuts, chopped</td>
+					</tr>
+
+					<tr>
+						<td><span class="number">4</span> Cups</td>
+						<td>Cooked rice</td>
+					</tr>
+
+					<tr>
+						<td><span class="number">4</span></td>
+						<td>Scallions, chopped diagonally</td>
+					</tr>
+
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<br>
+	<br>
+
+	<div id="directionsContainer">
+		<h2>Directions</h2>
+
+		<div class="tableContainer directions">
+		<table>
+			<tr>
+				<td><label class="container">1.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>Mix the <span class="highlight">Spicy peanut sauce together first</span>, adding one tablespoon of hot water at a time until the sauce has a consistency that <span class="highlight">allows it to drizzle.</span></td>
+			</tr>
+
+			<tr>
+				<td><label class="container">2.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>Heat a large pan over <span class="highlight">medium heat.</span></td>
+			</tr>
+
+			<tr>
+				<td><label class="container">3.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>Add in <span class="highlight">olive oil</span>, then add your <span class="highlight">garlic</span> and <span class="highlight">ginger</span>. Allow it to cook until fragrant, about <span class="highlight">one minute.</span></td>
+			</tr>
+
+			<tr>
+				<td><label class="container">4.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>Add in your <span class="highlight">ground meat or other protein</span>, allowing to <span class="highlight">sear</span> slightly before cooking until <span class="highlight">crumbled</span>, about <span class="highlight">five minutes.</span> Season with <span class = "highlight">salt, pepper,</span> and <span class = "highlight">garlic powder.</span></td>
+			</tr>
+
+			<tr>
+				<td><label class="container">5.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>While your protein is cooking, <span class="highlight">clean the mushrooms</span> and chop them into <span class="highlight">small chunks</span>, or mix in a food processor. <span class="disclaimer">About the same consistency as the crumbled protein.</td>
+			</tr>
+
+			<tr>
+				<td><label class="container">6.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>Add in your <span class="highlight">mushrooms</span> and cook until they've released their moisture.</td>
+			</tr>
+
+			<tr>
+				<td><label class="container">7.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td>Once the mushrooms are cooked, add in your diced <span class="highlight">bell pepper</span>, shredded <span class="highlight">carrot</span>, <span class="highlight">Hoisin</span> sauce, <span class="highlight"> sesame oil</span>, and <span class="highlight">soy sauce.</span></td>
+			</tr>
+
+			<tr>
+				<td><label class="container">8.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td><span class="highlight">Season</span> with salt, pepper, garlic powder, onion powder, and ground ginger.</td>
+			</tr>
+
+			<tr>
+				<td><label class="container">9.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td><span class="highlight">cook</span> until everything is <span class="highlight">heated and mixed thoroughly.</span></td>
+			</tr>
+
+			<tr>
+				<td><label class="container">10.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
+				<td><span class="highlight">Assemble bowls</span> with a bed of rice, the protein mixture laid over the top and drizzle the spicy peanut sauce over nicely. Then, garnish with <span class="highlight">chopped peanuts</span>, <span class="highlight">sliced scallions</span>, and <span class="highlight">sesame seeds.</span></td>
+			</tr>
+
+		</table>
+		</div>
+	</div>
+
+
+
+</div>
+
+	<div id="myModal" class="modal">
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      	<h1><span class="ornament">[</span>Munch With Mae<span class="ornament">]</span></h1>
+
+	      <div class="interogContainer">
+	      	<p id="interog">Want to contact me? I'd love to hear from you! I'll do my best to reply as soon as possible.</p>
+	      </div>
+	  </div>
+      		<form class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdVltpRtA5Px1BWiOWcNkcp-qGlkLy6v1TzBYLzgWVKA7763g/formResponse">	
+      			<div class="formQuestions">
+	      			<div class="basicInfo">
+		      			<div class="question">
+		      				<label class="required">Name</label>
+		      				<input id="name" name="entry.1332748456" type="text" required /><br>
+		      			</div>
+
+		      			<div class="question">
+		      				<label class="required">Email Address</label>
+		      				<input id="email" name="entry.783225938" type="email" required /><br>
+		      			</div>
+	      			</div>
+
+	      			<div class="inquiryContainer">
+		      			<div class="question inquiry">
+		      				<label>Inquiry</label>
+		      				<textarea id="inquiry" name="entry.360545800" type="textarea" required/></textarea><br>
+		      			</div>
+		      		</div>
+	      		</div>
+
+
+	      		<div id="actionButtons">
+		      		<div id="cancelButton">
+	      				<input type="button" value="cancel" />
+	      			</div>
+
+	      			<div id="sendButton">
+	      				<input type="submit" value="Send" />
+	      			</div>
+      			</div>
+
+          	</form>
+
+
+	    </div>
+	    <div class="modal-body">
+	    
+	  
+	  </div>
+	</div>
+
+<footer>
+	<button class="scrollToTopBtn"><i class="fas fa-chevron-up"></i></button>
+</footer>
+
+
+<script type="text/javascript" src="../Recipe.js"></script>
+<script type="text/javascript" src="../../Header.js"></script>
+</body>
