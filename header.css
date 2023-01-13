@@ -448,6 +448,7 @@ input:not(#sendButton input):not(#cancelButton input){
       #descriptionContainer #cookTime *
       {
         color:var(--main);
+        border:none!important;
         
         
       }
@@ -461,6 +462,17 @@ input:not(#sendButton input):not(#cancelButton input){
       {
         text-shadow: none!important;
         box-shadow: none!important;
+      }
+
+      #timeTime
+      {
+        margin-bottom:30px;
+      }
+
+      #extrasContainer button:not(:nth-child(odd))
+      {
+          margin-bottom: 30px;
+          
       }
 
 }
