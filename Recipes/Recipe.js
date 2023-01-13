@@ -413,6 +413,10 @@ let estimated = document.getElementById("ETA");
 estimated.innerHTML = etaString;
 
 
+var element = document.getElementById('content');
+html2pdf().from(element).save();;
+
+
 
 
   
