@@ -233,12 +233,12 @@ td:first-child
 /* Next & previous buttons */
 .prev, .next {
 	cursor: pointer;
-	position: absolute;
+	/*position: absolute;
 	top: 50%;
 	width: auto;
 	margin-top: -1.3750em;
-	padding: 1em;
-	color: var(--darkest);
+	padding: 1em;*/
+	color: var(--alt);
 	font-weight: bold;
 	font-size: 2rem;
 	transition: 0.6s ease;
@@ -262,23 +262,27 @@ td:first-child
 .next {
   right: 2%;
   border-radius: 50%;
+  margin-left:2em;
+
 }
 
 .prev
 {
 	left: 2%;
 	border-radius: 50%;
+	margin-right:2em;
+
 }
 
 @media screen and (min-width: 0px) and (max-width: 600px)
 {
     .prev{
-    	left:-17%;
+    	margin-right:1em;
 
     }
 
     .next{
-    	right:-17%;
+    	margin-left:1em;
     }
 
     h1
@@ -295,62 +299,11 @@ td:first-child
 
 }
 
-@media screen and (min-width: 600px) and (max-width: 800px)
-{
-    .prev{
-    	left:-10%;
-
-    }
-
-    .next{
-    	right: -10%;
-    }
-
-}
-
-@media screen and (min-width: 800px) and (max-width: 1100px)
-{
-    .prev{
-    	left:-5%;
-
-    }
-
-    .next{
-    	right: -5%;
-    }
-
-}
-
-@media screen and (min-width: 1100px) 
-{
-    .prev{
-    	left:-2%;
-
-    }
-
-    .next{
-    	right: -2%;
-    }
-
-}
-
-@media screen and (max-width: 408px) 
-{
-    .prev{
-    	left:-22%;
-
-    }
-
-    .next{
-    	right: -22%;
-    }
-
-}
 
 .prev:hover, .next:hover,
 .prev:focus, .next:focus {
-  background-color: rgba(235, 79, 142, .5);
-  color:white;
+  color:var(--darkest);
+ 
 
 }
 
@@ -738,6 +691,44 @@ td input {
 	cursor: pointer;
 }
 
+.collapseIngredients::after,
+.collapseDirections::after{
+	content:"Click to toggle this list.";
+	position: absolute;
+	width:100px;
+	font-size:.6em;
+	background:var(--alty);
+	padding:.5rem;
+	top:-2.75rem;
+	left:2.8rem;
+	font-family: "comfortaa";
+	letter-spacing: 1px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	padding:.4rem 1.25rem;
+	padding-top:.8rem;
+	opacity: 0;
+	transition: .4s;
+	transition-timing-function: ease-in-out;
+	border:1px solid var(--almostMain);
+	box-shadow:.15rem .15rem .3rem #FF0000, inset .2rem .2rem .75rem #FF6666;
+}
+
+.collapseIngredients:hover::after,
+.collapseDirections:hover::after{
+opacity:100%;
+}
+
+@media screen and (min-width: 0px) and (max-width: 800px)
+{
+	.collapseIngredients:hover::after,
+	.collapseDirections:hover::after
+	{
+		opacity: 0;
+	}
+}
+
 #ingredientsContainer,
 #directionsContainer
 {
@@ -786,7 +777,6 @@ td input {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 500; /* Sit on top */
-    padding-top: 75px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -857,7 +847,7 @@ td input {
   width: 40%;
   height: 20vh;
   background:#fff;
-  margin: auto;
+/*  margin: auto;*/
   position: relative;
   padding: 1em;
   border: 1px solid var(--main);
@@ -869,6 +859,13 @@ td input {
   height: fit-content;
   box-shadow: inset 0em .25em .75em var(--alt);
   min-width: 300px;
+
+
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin:0;
 }
 
 #linkHolder
@@ -1095,10 +1092,10 @@ a#downloadLink
 
 #cookTime button:first-child
 {
-	background-color: var(--dark);
+	background-color: var(--main);
 	color:#fff;
 	text-shadow: .05rem .05rem #000;
-	box-shadow: -.125em 0 1em var(--main), inset -.5em .5em 3em rgba(0, 0, 0, .2) ;
+	box-shadow: -.125em 0 1em var(--main), inset -.5em .5em 3em rgba(0, 0, 0, .15) ;
 	font-size:1rem;
 	padding:0 2em;
 

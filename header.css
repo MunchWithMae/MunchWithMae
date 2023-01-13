@@ -138,6 +138,11 @@ a.socialMedia
   width: 75vw;
   height: 80vh;
   background:  red;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin:0;
 }
 
 
@@ -148,7 +153,6 @@ a.socialMedia
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 500; /* Sit on top */
-    padding-top: 75px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -164,7 +168,6 @@ a.socialMedia
 .modal-content {
     position: relative;
     background-color: #ffe6f0;
-    margin: auto;
     padding: 0;
     border: 1px solid red;
     width: 80%;
