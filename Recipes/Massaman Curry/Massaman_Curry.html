@@ -47,7 +47,7 @@
 	<br>
 	<h1>Thai Massaman Curry</h1>
 
-	<div id="mainImageHolder">
+	<div id="mainImageHolder" view-image>
 
 		<div class="mySlides fade">
 			<img src="image1.jpg" id="mainImage">
@@ -96,31 +96,21 @@
 		
 		<div id = "cookTime">
 			<button id="timeTitle">Cooking Time</button>
-			<button id="timeTime"><div id="circleContainer"><span class = "circle">35</span></div>Minutes</button>
+			<button id="timeTime">
+				<div id="circleContainer">
+					<span class = "circle">35</span>
+				</div>
+				Minutes
+			</button>
 		</div>
 
 		<div id = "actions">
-			<a id="downloadLink" onclick="this.href='data:text/html;charset=UTF-8,'+encodeURIComponent(document.documentElement.outerHTML)" href="#" download="page.html"><button>Download</button></a>
+			<a id="downloadLink" onclick="this.href='data:text/html;charset=UTF-8,'+encodeURIComponent(document.documentElement.outerHTML)" href="#" download="page.html"><button>Save</button></a>
 			<button onclick="window.print()">Print</button>
 			<button onclick="shareModal()">Share</button>
 		</div>
 
-		<!-- <div id = "cookTime">
-			<button id="timeTitle">Cooking Time</button>
-			<button id="timeTime"><span class = "circle">35</span> Minutes</button>
-		</div> -->
-
 	</section>
-
-	
-
-
-
-
-
-
-
-
 
 	<div id="ingredientsContainer">
 		<h2>Ingredients</h2>
@@ -326,4 +316,8 @@
 
 <script type="text/javascript" src="../Recipe.js"></script>
 <script type="text/javascript" src="../../Header.js"></script>
+<script src="../../view-image.js"></script>
+<script>	
+	window.ViewImage && ViewImage.init('#mainImageHolder img');
+</script>
 </body>
