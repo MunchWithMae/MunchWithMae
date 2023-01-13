@@ -964,7 +964,7 @@ td input {
 	font-family: "comfortaa";
 	color:#fff;
 	text-shadow: .05rem .05rem #000;
-	transition:.6s;
+	transition:.4s;
 	transition-timing-function: ease-out;
 	letter-spacing: .065em;
 }
@@ -990,10 +990,22 @@ td input {
 #actions button:hover
 {
 	background-color: var(--almostMain);
-	color:var(--mostdark);
 	cursor: pointer;
-	box-shadow: 0 0 1em var(--main), inset -.5em .5em 3em var(--main);
+	box-shadow: 0 0 1em var(--main), inset -.75em 0 2.5em rgba(100, 100, 100, .2);, inset .35em 0 1em var(--main);
+	
+	
 }
+
+
+/*#actions button:not(#saveButton):hover
+{
+	transform: translateX(-3px) rotateY(-15deg);
+}
+
+#actions a:hover
+{
+	transform: translateX(-3px) rotateY(-15deg);
+}*/
 
 
 #actions a:first-child{
@@ -1125,10 +1137,11 @@ a#downloadLink
 {
 	background-color: #ff73a2;
 	color:#fff;
-	text-shadow: .05rem .05rem #000;
+	text-shadow: .06rem .06rem #000;
 	box-shadow: -.125em 0 1em var(--main), inset 1.5em .5em 3em rgba(50, 50, 50, .2) ;
 	font-size:1rem;
 	padding:0 2em;
+	font-family: "MilkyBoba";
 
 
 }
@@ -1269,7 +1282,7 @@ a#downloadLink
 
 @media screen and (min-width: 1020px)
 {
-	
+
 	#timeTime:hover #ETA{
 		opacity: 100;
 		background:#fff;
@@ -1288,6 +1301,3 @@ a#downloadLink
 }
 
 
-#ETA{
-	
-}

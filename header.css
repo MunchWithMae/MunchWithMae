@@ -378,3 +378,89 @@ input:not(#sendButton input):not(#cancelButton input){
 
 
 
+
+@media print {
+   header,
+   #buttonContainer,
+   #photoControls,
+   #actions,
+   .scrollToTopBtn,
+   .collapseIngredients,
+   .collapseDirections
+   {
+    display:none!important;
+   }
+
+    #content
+    {
+      margin: 0!important;
+      padding:0!important;
+      width:100%!important;
+      box-shadow:none!important;
+      border:none!important;
+    }
+
+    img
+    {
+      max-width: 80%!important;
+      outline:1px solid var(--main);
+    }
+
+    #ingredientsContainer
+    {
+      page-break-after: always;
+    }
+    
+    #ingredientsContainer h2,
+    #descriptionContainer h2
+    {
+      padding-left: 0px!important;
+    }
+
+    #descriptionContainer blockquote
+    {
+        box-shadow:none!important;
+        border:none!important;
+        page-break-after: always;
+        order:2!important;
+        width:60%!important;
+        font-size:.875rem;
+    }
+
+
+    #descriptionContainer #cookTime
+    {
+        padding-top:1em;
+        border:none;
+        flex-direction: column!important;
+        /*position: absolute!important;
+        top:0!important;
+        left:0!important;*/
+
+    }
+
+    #descriptionContainer #cookTime button:first-child
+    {
+/*      display:none!important;*/
+        border:none!important;
+    }
+
+      #descriptionContainer #cookTime *
+      {
+        color:var(--main);
+        
+        
+      }
+
+      #descriptionContainer #cookTime button
+      {
+        border-left:1px solid var(--main);
+      }
+
+      *
+      {
+        text-shadow: none!important;
+        box-shadow: none!important;
+      }
+
+}

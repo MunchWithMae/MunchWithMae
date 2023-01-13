@@ -77,7 +77,7 @@
 	<br>
 
 	<!-- The dots/circles -->
-	<div style="text-align:center">
+	<div id = "photoControls" style="text-align:center">
 		<a class="prev" onclick="plusSlides(-1)"><i class="fa fa-arrow-circle-left"></i></a>
 	  <span class="dot" onclick="currentSlide(1)"></span>
 	  <span class="dot" onclick="currentSlide(2)"></span>
@@ -111,7 +111,7 @@
 		</div>
 
 		<div id = "actions">
-			<a id="downloadLink" onclick="this.href='data:text/html;charset=UTF-8,'+encodeURIComponent(document.documentElement.outerHTML)" href="#" download="page.html"><button>Save</button></a>
+			<a id="downloadLink" onclick="this.href='data:text/html;charset=UTF-8,'+encodeURIComponent(document.documentElement.outerHTML)" href="#" download="page.html"><button id="saveButton">Save</button></a>
 			<button onclick="window.print()">Print</button>
 			<button onclick="shareModal()">Share</button>
 		</div>
