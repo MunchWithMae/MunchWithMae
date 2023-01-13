@@ -387,6 +387,31 @@ function shareModal()
 
 }
 
+var cookingTime = document.querySelector(".circle").innerHTML
+var oldDateObj = new Date();
+var newDateObj = new Date();
+newDateObj.setTime(oldDateObj.getTime() + (cookingTime * 60 * 1000));
+
+let hours = newDateObj.getHours();
+let minutes = newDateObj.getMinutes();
+
+if(hours < 10)
+{
+    hours = "0" + hours;
+}
+
+if (minutes < 10)
+{
+    minutes = "0" + minutes;
+}
+console.log(newDateObj);
+console.log("ETA: "+hours+":"+minutes);
+
+let etaString = "If you began cooking now, you would finish around "+hours+":"+minutes;
+
+let estimated = document.getElementById("ETA");
+estimated.innerHTML = etaString;
+
 
 
 

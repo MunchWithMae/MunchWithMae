@@ -1257,3 +1257,37 @@ a#downloadLink
 .fa-arrow-circle-right{
 	filter: drop-shadow(0px 0px 5px #fff);
 }
+
+#ETA{
+	opacity:0;
+	height:0px;
+	position: absolute;
+	transition: opacity .75s, height .75s;
+	color:transparent;
+	transition-timing-function: ease-in-out;
+}
+
+@media screen and (min-width: 1020px)
+{
+	
+	#timeTime:hover #ETA{
+		opacity: 100;
+		background:#fff;
+		width:230px;
+		height:fit-content;
+		font-size:.875rem;
+		padding:1em;
+		top:-45%;
+		left:-50%;
+		border:1px solid var(--main);
+		box-shadow: .125em .125em .5em rgba(27 27, 27, .7), inset .35em .35em 1.35em var(--alt);
+		color:red;
+		line-height: 1.25rem;
+	}
+
+}
+
+
+#ETA{
+	
+}
