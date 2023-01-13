@@ -13,8 +13,9 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
 	<link rel="stylesheet" href="../../Reset.css">
-	<link rel="stylesheet" href="../Recipe.css">
 	<link rel="stylesheet" href="../../header.css">
+	<link rel="stylesheet" href="../Recipe.css"> <!--2023 switched header and recipe files so  recipe loads after-->
+	
 
 
 	<meta charset="UTF-8">
@@ -89,7 +90,16 @@
 
 	<section id="descriptionContainer">
 		<blockquote>This is one of my absolute favorite meals to cook. It's an earthy, umami-packed curry that can be paired with almost any protein or vegetable. I've made it with pork, chicken thighs, amd beef & it has come out spectacular every time. When i've made it without protein, my usual go-to vegetables are broccoli, corn, potato, and onion. If you accidentally get it too spicy, you can save it by adding a little more brown sugar to balance it out. Don't skip out on the coriander ; It really brightens up the flavor and gives it the necessary flavor profile to combat the spiciness.</blockquote>
+	
+		<div id = "actions">
+			<a id="downloadLink" onclick="this.href='data:text/html;charset=UTF-8,'+encodeURIComponent(document.documentElement.outerHTML)" href="#" download="page.html"><button>Download</button></a>
+			<button onclick="window.print()">Print</button>
+			<button onclick="shareModal()">Share</button>
+		</div>
+
 	</section>
+
+	
 
 	<div id="ingredientsContainer">
 		<h2>Ingredients</h2>
@@ -203,7 +213,8 @@
 
 
 </div>
-
+	
+	<!-- contact modal -->
 	<div id="myModal" class="modal">
 	  <div class="modal-content">
 	    <div class="modal-header">
@@ -255,6 +266,37 @@
 	  
 	  </div>
 	</div>
+
+
+
+		<!-- congratulations modal -->
+		<div id="myModalCG" class="modalCG">
+		  <div class="modal-contentCG">
+		    <div class="modal-headerCG">
+		      	<h1><span class="ornament">[ </span>Congratulations<span class="ornament"> ]</span></h1>
+		      	<p>You've completed this recipe!</p>
+		      	<br>
+		      	<p>I hope it's delicious!</p>
+		      	<br>
+		      	<p>If you enjoy this recipe, please share it with your friends!</p>
+
+		      	<div id = "linkHolder">
+		      		<div id = "urlFill">
+		      		</div>
+		      		<div id = "copyLink">
+		      			<button id="copyLinkButton" onclick="copyLinkFunc()">Copy Link</button>
+		      		</div>
+
+
+		      	</div>
+
+		  </div>
+		    </div>
+		    <div class="modal-body">
+		    
+		  
+		  </div>
+		</div>
 
 <footer>
 	<button class="scrollToTopBtn"><i class="fas fa-chevron-up"></i></button>

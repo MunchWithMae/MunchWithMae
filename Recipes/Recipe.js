@@ -65,9 +65,69 @@ function showSlides(n) {
   //timer = setTimeout(() => plusSlides(1), 10000);
 }
 
+let directionsLength = document.querySelectorAll(".directions tr").length;
 
 function boxChecked(element){
-  element.closest("tr").classList.toggle("completed")
+  element.closest("tr").classList.toggle("completed");
+
+  let numberChecked = document.getElementsByClassName("completed").length;
+
+  if(numberChecked == directionsLength)
+  {
+    console.log("completed");
+
+    // Get the modal
+    var modalCG = document.getElementById('myModalCG');
+    let pHead = document.querySelector('.modal-headerCG h1');
+    let pOne = document.querySelector('.modal-headerCG p');
+    let pTwo = document.querySelector('.modal-headerCG p:nth-child(4)');
+    let pThree = document.querySelector('.modal-headerCG p:nth-child(6)');
+
+    modalCG.style.display = "block";
+    pHead.innerHTML = '<span class="ornament">[ </span>Congratulations<span class="ornament"> ]</span>';
+    pOne.innerHTML = "You've completed this recipe!";
+    pTwo.innerHTML = "I hope it's delicious!";
+    pThree.innerHTML = "If you enjoy this recipe, please share it with your friends!"
+    modalCG.style.display = "block";
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modalCG) {
+            modalCG.style.display = "none";
+        }
+    }
+
+
+  }
+}
+
+
+
+// Get the modal
+var modalCG = document.getElementById('myModalCG');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementById("cancelButton");
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
 
 
@@ -124,6 +184,7 @@ let ingredientsCollapseContainer = document.createElement('button');
         {
           //console.log(ingredientsTableHeightDub);
             var div = document.querySelector("#ingredientsContainer div");
+            div.style.overflow = "hidden";
             let size = 0;
 
             var func = function () 
@@ -282,6 +343,49 @@ let ingredientsCollapseContainer = document.createElement('button');
 
     };
     }, 500);
+
+
+let url = document.getElementById("urlFill");
+url.innerHTML = window.location.href;
+url.style.overflow = "hidden";
+
+function copyLinkFunc()
+{
+  navigator.clipboard.writeText(window.location.href);
+}
+
+
+let recipeName = document.querySelector("#content h1").innerHTML;
+let downloadLink = document.getElementById("downloadLink");
+downloadLink.setAttribute("download", recipeName);
+
+
+function shareModal()
+{
+  let modalCG = document.getElementById('myModalCG');
+  let pHead = document.querySelector('.modal-headerCG h1');
+  let pOne = document.querySelector('.modal-headerCG p');
+  let pTwo = document.querySelector('.modal-headerCG p:nth-child(4)');
+  let pThree = document.querySelector('.modal-headerCG p:nth-child(6)');
+
+  modalCG.style.display = "block";
+  pHead.innerHTML = '<span class="ornament">[ </span>SHARE RECIPE<span class="ornament"> ]</span>';
+  pOne.innerHTML = "Thank you for checking out this recipe!";
+  pTwo.innerHTML = "If you liked it, please share it with your friends with the link below!";
+  pThree.innerHTML = ""
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modalCG) {
+          modalCG.style.display = "none";
+      }
+
+      if (event.target == modal) {
+        modal.style.display = "none";
+    }
+  }
+
+}
 
   
 
