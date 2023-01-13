@@ -460,9 +460,9 @@ td input {
 #descriptionContainer
 {
 	width: 100%;
-	
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 #descriptionContainer blockquote
@@ -870,7 +870,7 @@ td input {
 {
 	display: flex;
 	position: relative;
-	justify-content: space-between;
+	justify-content: space-around;
 	flex-direction: column;
 }
 
@@ -901,6 +901,7 @@ td input {
 {
 	height:100%;
 	border-bottom: none;
+	width:100%;
 }
 
 
@@ -941,7 +942,52 @@ a#downloadLink
 
 
 
+@media screen and (min-width: 0px) and (max-width: 970px)
+{
+	#descriptionContainer blockquote{
+		margin-bottom:2em;
+	}
 
+	#actions a:first-child
+	{
+		border-top:none;
+		border-right:none;
+	}
+
+	#actions a{
+		box-shadow:none;
+	}
+
+	#actions button:first-child
+	{
+		border-bottom: 1px solid var(--main);
+	}
+
+	#actions button:last-child
+	{
+		border-top: 1px solid var(--main);
+	}
+
+	#actions button
+	{
+		border-left:1px solid var(--main);
+		width:25%;
+		height: fit-content;
+		box-shadow: none;
+		padding:1em .5em;
+		
+	}
+
+
+	#actions a{
+		height: fit-content;
+	}
+
+	#actions{
+		width:100%;
+		flex-direction: row;
+	}
+}
 
 #timeTitle
 {
