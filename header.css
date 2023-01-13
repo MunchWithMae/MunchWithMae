@@ -1,59 +1,59 @@
 
 header
 {
-	text-align: center;
-	background:  var(--almostMain);
-	position: fixed;
-	top: 0;
-	z-index: 100;
-	width: 100%;
-	border-bottom: 1px solid var(--main);
-	box-shadow: 0 0 1em  var(--darkest);
-	overflow: hidden;
+  text-align: center;
+  background:  var(--almostMain);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  border-bottom: 1px solid var(--main);
+  box-shadow: 0 0 1em  var(--darkest);
+  overflow: hidden;
 }
 
 
 .topnav a {
-	float: left;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 1.25em 1em;
-	text-decoration: none;
-	font-size: 1rem;
-	color: white;
-	transition: background-color .3s;
-	transition-timing-function: ease-in-out;
-	display: block;
-	text-shadow: .05rem .05rem black;
-	font-weight: bold;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 1.25em 1em;
+  text-decoration: none;
+  font-size: 1rem;
+  color: white;
+  transition: background-color .3s;
+  transition-timing-function: ease-in-out;
+  display: block;
+  text-shadow: .05rem .05rem black;
+  font-weight: bold;
 }
 
 
 .topnav button
 {
-	float: left;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 1.25em 1em;
-	text-decoration: none;
-	font-size: 1rem;
-	color: white;
-	transition: background-color .3s;
-	transition-timing-function: ease-in-out;
-	display: block;
-	text-shadow: .05rem .05rem black;
-	background:  transparent;
-	border: none;
-	font-weight: bold;
-	height: 56px;
-	cursor: pointer;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 1.25em 1em;
+  text-decoration: none;
+  font-size: 1rem;
+  color: white;
+  transition: background-color .3s;
+  transition-timing-function: ease-in-out;
+  display: block;
+  text-shadow: .05rem .05rem black;
+  background:  transparent;
+  border: none;
+  font-weight: bold;
+  height: 56px;
+  cursor: pointer;
 }
 
 .topnav button:hover
 {
-	background:  var(--darkest);
-	transition: all .3s;
-	transition timing function:  ease-in-out;
+  background:  var(--darkest);
+  transition: all .3s;
+  transition timing function:  ease-in-out;
 }
 
 /* Change the color of links on hover */
@@ -70,27 +70,27 @@ header
 
 #headerLogo img
 {
-	height: 49px;
-	
+  height: 49px;
+  
 }
 
 #headerLogo a
 {
-	padding-top: 2px;
-	padding-bottom: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .topnav
 {
-	position: relative;
+  position: relative;
 }
 
 a.socialMedia
 {
-	padding: 0px;
-	position: absolute;
-	right: 10px;
-	top: 10px;
+  padding: 0px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -98,7 +98,7 @@ a.socialMedia
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 .topnav > *:not(:first-child) {display: none;}
 
   .topnav a.icon {
@@ -125,7 +125,7 @@ a.socialMedia
 
   .topnav.responsive button
   {
-  	float: none;
+    float: none;
     display: block;
     text-align: left;
     width: 100%;
@@ -223,14 +223,14 @@ a.socialMedia
 
 @media screen and (max-width: 600px)
 {
-	#interog{
+  #interog{
   font-size: .85rem;
-	}
-	.modal-header h1
-	{
-		line-height: 2rem;
-		font-size: 1.5rem;
-	}
+  }
+  .modal-header h1
+  {
+    line-height: 2rem;
+    font-size: 1.5rem;
+  }
 
 }
 
@@ -365,15 +365,14 @@ input:not(#sendButton input):not(#cancelButton input){
 
 #actionButtons
 {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	align-items: flex-start;
-	justify-content: space-evenly;
-	margin: 1em auto;
-	padding: 0 3em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  margin: 1em auto;
+  padding: 0 3em;
 }
-
 
 
 
