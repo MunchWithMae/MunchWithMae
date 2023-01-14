@@ -773,6 +773,10 @@ td input {
 #directionsContainer h2{
 	display:flex;
 	justify-content: center;
+}
+
+#ingredientsContainer h2,
+#directionsContainer h2{
 	padding-left:56px;
 }
 

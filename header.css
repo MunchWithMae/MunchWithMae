@@ -391,6 +391,31 @@ input:not(#sendButton input):not(#cancelButton input){
     display:none!important;
    }
 
+   *{
+    background:#fff;
+   }
+
+   #cookTime #timeTime
+   {
+    background-color: var(--alt)!important;
+/*    border: 1px solid var(--dark)!important;*/
+   }
+
+   @page 
+   {
+     size: A4;
+   }
+
+   @page :left 
+   {
+     margin-left: 1cm;
+   }
+
+   @page :right 
+   {
+     margin-right: 1cm;
+   }
+
     #content
     {
       margin: 0!important;
@@ -398,6 +423,19 @@ input:not(#sendButton input):not(#cancelButton input){
       width:100%!important;
       box-shadow:none!important;
       border:none!important;
+      background: #fff!important;
+      margin-top:-2rem!important;
+    }
+
+    .tableContainer *{
+/*      background:blue!important;*/
+    }
+
+    .number,
+    .fraction,
+    label,
+    #timeLabel{
+      background: transparent;!important;
     }
 
     img
@@ -425,12 +463,20 @@ input:not(#sendButton input):not(#cancelButton input){
         order:2!important;
         width:60%!important;
         font-size:.875rem;
+        border:3px solid var(--dark)!important;
+        height:fit-content!important;
+        
+    }
+
+    #circleContainer
+    {
+      background:#fff!important;
     }
 
 
     #descriptionContainer #cookTime
     {
-        padding-top:1em;
+/*        padding-top:1em;*/
         border:none;
         flex-direction: column!important;
         /*position: absolute!important;
@@ -442,20 +488,31 @@ input:not(#sendButton input):not(#cancelButton input){
     #descriptionContainer #cookTime button:first-child
     {
 /*      display:none!important;*/
-        border:none!important;
+/*        border:none!important;*/
     }
 
       #descriptionContainer #cookTime *
       {
         color:var(--main);
-        border:none!important;
+/*        border:none!important;*/
         
         
       }
 
+      #cookTime
+      {
+        margin-right: 50px!important;
+      }
+
       #descriptionContainer #cookTime button
       {
-        border-left:1px solid var(--main);
+        border:1px solid var(--dark);
+        
+      }
+
+      #timeTime button
+      {
+        background:red!important;
       }
 
       *
@@ -474,5 +531,12 @@ input:not(#sendButton input):not(#cancelButton input){
           margin-bottom: 30px;
           
       }
+
+      #extrasContainer button
+      {
+        padding:10px 0!important;
+      }
+
+
 
 }
