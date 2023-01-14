@@ -391,7 +391,7 @@ input:not(#sendButton input):not(#cancelButton input){
     display:none!important;
    }
 
-   *{
+   *:not(table *){
     background:transparent!important;
    }
 
@@ -437,13 +437,14 @@ input:not(#sendButton input):not(#cancelButton input){
     .fraction,
     label,
     #timeLabel{
-      background: transparent;!important;
+      background: transparent!important;
     }
 
     img
     {
       max-width: 80%!important;
-      outline:1px solid var(--main);
+      outline:3px solid var(--dark);
+      border-radius: 0px!important;
     }
 
     #ingredientsContainer
@@ -467,7 +468,14 @@ input:not(#sendButton input):not(#cancelButton input){
         font-size:.875rem;
         border:3px solid var(--dark)!important;
 /*        height:fit-content!important;*/
+        background:var(--alty)!important;
         
+    }
+
+    #levelTitle,
+    #servingsTitle
+    {
+      background:var(--alty)!important;
     }
 
     #circleContainer
