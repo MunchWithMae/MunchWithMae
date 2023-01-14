@@ -392,8 +392,10 @@ input:not(#sendButton input):not(#cancelButton input){
    }
 
    *{
-    background:#fff;
+    background:transparent!important;
    }
+
+  
 
    #cookTime #timeTime
    {
@@ -464,7 +466,7 @@ input:not(#sendButton input):not(#cancelButton input){
         width:60%!important;
         font-size:.875rem;
         border:3px solid var(--dark)!important;
-        height:fit-content!important;
+/*        height:fit-content!important;*/
         
     }
 
