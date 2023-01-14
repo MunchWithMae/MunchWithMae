@@ -414,7 +414,16 @@ estimated.innerHTML = etaString;
 
 
 var element = document.getElementById('content');
-html2pdf().from(element).save();;
+html2pdf().from(element).save();
+
+function download(url) {
+  const a = document.createElement('a')
+  a.href = url
+  a.download = url.split('/').pop()
+  document.body.appendChild(a)
+  a.click()
+  document.body.removeChild(a)
+}
 
 
 

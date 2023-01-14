@@ -1455,9 +1455,10 @@ hr
 
 }
 
-#levelTitle
+.directions tr td:first-child,
+.container
 {
-
+	cursor: pointer;
 }
 
 
