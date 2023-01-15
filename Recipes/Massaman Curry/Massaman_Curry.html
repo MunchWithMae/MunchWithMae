@@ -1,339 +1,473 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Massaman Curry</title>
-
-	<link rel="icon" href="Images/favicon-32x32.png" />
-	<link rel="apple-touch-icon" href="Images/apple-touch-icon.png" />
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-
-	<link rel="stylesheet" href="../../Reset.css">
-	<link rel="stylesheet" href="../../header.css">
-	<link rel="stylesheet" href="../Recipe.css"> <!--2023 switched header and recipe files so  recipe loads after-->
-	
-
-
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-</head>
-
-<body>
-
-<header>
-	<div class="topnav" id="myTopnav">
-		<div id="headerLogo"><a href="../../index.html"><img src="../../Images/mwmHeader.png"></a></div>
-		<a href="../../index.html">Home</a>
-		<a href="../../index.html#aboutMe">About</a>
-		<a href="../../index.html#recipes">Recipes</a>
-		<a href="../../construction.html">Tutorials</a>
-		<button id="myBtn">Contact</button>
-		<a href = "https://www.instagram.com/munch_with_mae/" target="_blank" class="socialMedia"><i class="fab fa-instagram fa-2x"></i></a>
-		<a href="javascript:void(0);" class="icon" onclick="headerDrop()"><i class="fa fa-bars"></i></a>
-	</div>
-</header>
-
-<div id=buttonContainer>
-  <btn id="btn--back"><i class="fas fa-chevron-left"></i></btn>
-</div>
-
-<div id="content">
-	<br>
-	<br>
-	<h1>Thai Massaman Curry</h1>
-
-	<div id="mainImageHolder" view-image>
-
-		<div class="mySlides fade">
-			<img src="image1.jpg" id="mainImage">
-		</div>
-
-		<div class="mySlides fade">
-			<img src="image2.jpg" id="mainImage">
-		</div>
-
-		<div class="mySlides fade">
-			<img src="image3.jpg" id="mainImage">
-		</div>
-
-		<div class="mySlides fade">
-			<img src="image4.jpg" id="mainImage">
-		</div>
-
-		<div class="mySlides fade">
-			<img src="image5.jpg" id="mainImage">
-		</div>
-
-		<!-- Next and previous buttons -->
-		  
-		  
-	</div>
-
-	<br>
-
-	<!-- The dots/circles -->
-	<div id = "photoControls" style="text-align:center">
-		<a class="prev" onclick="plusSlides(-1)"><i class="fa fa-arrow-circle-left"></i></a>
-	  <span class="dot" onclick="currentSlide(1)"></span>
-	  <span class="dot" onclick="currentSlide(2)"></span>
-	  <span class="dot" onclick="currentSlide(3)"></span>
-	  <span class="dot" onclick="currentSlide(4)"></span>
-	  <span class="dot" onclick="currentSlide(5)"></span>
-	  <a class="next" onclick="plusSlides(1)"><i class="fa fa-arrow-circle-right"></i></a>
-	</div>
-
-	<br>
-	<br>
-
-	<section id="descriptionContainer">
-
-		
-
-		<blockquote>This is one of my absolute favorite meals to cook. It's an earthy, umami-packed curry that can be paired with almost any protein or vegetable. I've made it with pork, chicken thighs, and beef & it has come out spectacular every time.
-			<br>
-			<br> 
-		When i've made it without protein, my usual go-to vegetables are broccoli, corn, potato, and onion. If you accidentally get it too spicy, you can save it by adding a little more brown sugar to balance it out. Don't skip out on the coriander ; It really brightens up the flavor and gives it the necessary flavor profile to combat the spiciness.</blockquote>
-		
-		<div id = "cookTime">
-			
-			<button id="timeTime">
-
-				<div id="circleContainer">
-					<span class = "circle">35</span>
-				</div>
-				<span id="timeLabel">Minutes</span>
-				<span id="ETA"></span>
-			</button>
-
-			<div id="extrasContainer">
-				<button id="levelTitle">Skill Level</button>
-				<button id="levelLevel">Easy</button>
-				<button id="servingsTitle">Servings</button>
-				<button id="servingsLevel">6</button>
-			</div>
-
-		</div>
-
-		<div id = "actions">
-			<!-- <a id="downloadLink" onclick="this.href='data:text/html;charset=UTF-8,'+encodeURIComponent(document.documentElement.outerHTML)" href="#" download="page.html"><button id="saveButton">Save</button></a> -->
-			<a id="downloadLink" href="Massaman_Curry.pdf" download target="_blank"><button id="saveButton">Save</button></a>
-			<button onclick="window.print()">Print</button>
-			<button onclick="shareModal()">Share</button>
-		</div>
-
-	</section>
-
-	<div id="ingredientsContainer">
-		<h2>Ingredients</h2>
-
-		<div class="tableContainer">
-			<table class="tableStyle">
-				<tr>
-					<td><span class="number">2</span></td>
-					<td>Small - medium chicken thighs  <span class="disclaimer">or other protein</span> - cut into small cubes</td>
-				</tr>
-
-				<tr>
-					<td><span class="number">2</span> Cups</td>
-					<td>Cooked Jasmine or Basmati rice</td>
-				</tr>
-
-				<tr>
-					<td><span class="number">2 <span class="fraction">½</span></span> &nbspTb</td>
-					<td>Maesri Massaman curry paste</td>
-				</tr>
-
-				<tr>
-					<td><span class="number">3</span></td>
-					<td>Small Yukon gold potatoes <span class="disclaimer">Russet works fine, too</span></td>
-				</tr>
-
-				<tr>
-					<td><span class="number">1</span></td>
-					<td>Medium yellow onion, cut in half horizontally, then sliced into 1 in wedges</td>
-				</tr>
-
-				<tr>
-					<td><span class="number">2</span> Tb</td>
-					<td>Fish sauce</td>
-				</tr>
-
-				<tr>
-					<td><span class="number">2</span> Cans</td>
-					<td>Coconut milk</td>
-				</tr>
-
-				<tr>
-					<td><span class="number"><span class="fraction">½</span></span> &nbspCup</td>
-					<td>Peanuts, chopped</td>
-				</tr>
-
-				<tr>
-					<td><span class="number"><span class="fraction">¼</span></span> &nbspCup</td>
-					<td>Peanut butter</td>
-				</tr>
-
-				<tr>
-					<td><span class="number">1</span> Tb</td>
-					<td>Cayenne pepper</td>
-				</tr>
-
-				<tr>
-					<td><span class="number">2</span> tsp</td>
-					<td>Brown sugar</td>
-				</tr>
-
-				<tr>
-					<td>Seasonings</td>
-					<td>Black pepper, Garlic powder, Coriander, Ground ginger</td>
-				</tr>
-
-				
-			</table>
-		</div>
-	</div>
-
-	<br>
-	<br>
-
-	<div id="directionsContainer">
-		<h2>Directions</h2>
-
-		<div class="tableContainer directions">
-		<table>
-			<tr>
-				<td><label class="container">1.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
-				<td>Heat a cast iron pan on <span class="highlight">medium high heat</span>. Pour <span class="highlight">vegetable oil</span> into the  pan, let heat, and add your curry paste. Cook for <span class="highlight">one minute</span>. <span class="disclaimer">Don’t use olive oil, it will burn</span></td>
-			</tr>
-
-			<tr>
-				<td><label class="container">2.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
-				<td><span class="highlight">Par cook your potatoes</span> for <span class="highlight">five minutes</span> in the microwave</td>
-			</tr>
-
-			<tr>
-				<td><label class="container">3.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
-				<td>Add in your <span class="highlight">chicken</span> and <span class="highlight">peanuts</span>, toss to combine with the sauce. Add in garlic and onion powder to taste, about <span class="highlight">1 Tb</span> of <span class="highlight">cayenne</span> for the right amount of spice. Cook for about <span class="highlight">2 - 3 minutes</span>.  <span class="disclaimer">Do not add salt at this point, the curry paste is very salty</span></td>
-			</tr>
-
-			<tr>
-				<td><label class="container">4.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
-				<td>Add in your coconut milk, stir to combine, deglaze, and cover & cook for <span class="highlight">10 minutes</span>.</td>
-			</tr>
-
-			<tr>
-				<td><label class="container">5.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
-				<td>Add your <span class="highlight">onion</span>, <span class="highlight">potatoes</span>, <span class="highlight">brown sugar</span>, <span class="highlight">fish sauce</span>, and <span class="highlight">peanut butter</span>. Stir and simmer over medium heat for another <span class="highlight">12-15 minutes</span> uncovered.</td>
-			</tr>
-
-			<tr>
-				<td><label class="container">6.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
-				<td><span class="highlight">Serve</span> over Jasmine rice, garnished with cilantro and a side of toasted Naan bread</span>.</td>
-			</tr>
-
-		</table>
-
-
-</div>
-	
-	<!-- contact modal -->
-	<div id="myModal" class="modal">
-	  <div class="modal-content">
-	    <div class="modal-header">
-	      	<h1><span class="ornament">[</span>Munch With Mae<span class="ornament">]</span></h1>
-
-	      <div class="interogContainer">
-	      	<p id="interog">Want to contact me? I'd love to hear from you! I'll do my best to reply as soon as possible.</p>
-	      </div>
-	  </div>
-      		<form class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdVltpRtA5Px1BWiOWcNkcp-qGlkLy6v1TzBYLzgWVKA7763g/formResponse">	
-      			<div class="formQuestions">
-	      			<div class="basicInfo">
-		      			<div class="question">
-		      				<label class="required">Name</label>
-		      				<input id="name" name="entry.1332748456" type="text" required /><br>
-		      			</div>
-
-		      			<div class="question">
-		      				<label class="required">Email Address</label>
-		      				<input id="email" name="entry.783225938" type="email" required /><br>
-		      			</div>
-	      			</div>
-
-	      			<div class="inquiryContainer">
-		      			<div class="question inquiry">
-		      				<label>Inquiry</label>
-		      				<textarea id="inquiry" name="entry.360545800" type="textarea" required/></textarea><br>
-		      			</div>
-		      		</div>
-	      		</div>
-
-
-	      		<div id="actionButtons">
-		      		<div id="cancelButton">
-	      				<input type="button" value="cancel" />
-	      			</div>
-
-	      			<div id="sendButton">
-	      				<input type="submit" value="Send" />
-	      			</div>
-      			</div>
-
-          	</form>
-
-
-	    </div>
-	    <div class="modal-body">
-	    
-	  
-	  </div>
-	</div>
-
-
-
-		<!-- congratulations modal -->
-		<div id="myModalCG" class="modalCG">
-		  <div class="modal-contentCG">
-		    <div class="modal-headerCG">
-		      	<h1><span class="ornament">[ </span>Congratulations<span class="ornament"> ]</span></h1>
-		      	<p>You've completed this recipe!</p>
-		      	<br>
-		      	<p>I hope it's delicious!</p>
-		      	<br>
-		      	<p>If you enjoy this recipe, please share it with your friends!</p>
-
-		      	<div id = "linkHolder">
-		      		<div id = "urlFill">
-		      		</div>
-		      		<div id = "copyLink">
-		      			<button id="copyLinkButton" onclick="copyLinkFunc()">Copy Link</button>
-		      		</div>
-
-
-		      	</div>
-
-		  </div>
-		    </div>
-		    <div class="modal-body">
-		    
-		  
-		  </div>
-		</div>
-
-<footer>
-	<button class="scrollToTopBtn"><i class="fas fa-chevron-up"></i></button>
-</footer>
-
-
-<script type="text/javascript" src="../Recipe.js"></script>
-<script type="text/javascript" src="../../Header.js"></script>
-<script src="../../view-image.js"></script>
-<script>	
-	window.ViewImage && ViewImage.init('#mainImageHolder img');
-</script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Massaman Curry</title>
+
+    <link rel="icon" href="Images/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="Images/apple-touch-icon.png" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../../Reset.css" />
+    <link rel="stylesheet" href="../../header.css" />
+    <link rel="stylesheet" href="../Recipe.css" />
+    <!--2023 switched header and recipe files so  recipe loads after-->
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  </head>
+
+  <body>
+    <header>
+      <div class="topnav" id="myTopnav">
+        <div id="headerLogo">
+          <a href="../../index.html"
+            ><img src="../../Images/mwmHeader.png"
+          /></a>
+        </div>
+        <a href="../../index.html">Home</a>
+        <a href="../../index.html#aboutMe">About</a>
+        <a href="../../index.html#recipes">Recipes</a>
+        <a href="../../construction.html">Tutorials</a>
+        <button id="myBtn">Contact</button>
+        <a
+          href="https://www.instagram.com/munch_with_mae/"
+          target="_blank"
+          class="socialMedia"
+          ><i class="fab fa-instagram fa-2x"></i
+        ></a>
+        <a href="javascript:void(0);" class="icon" onclick="headerDrop()"
+          ><i class="fa fa-bars"></i
+        ></a>
+      </div>
+    </header>
+
+    <div id="buttonContainer">
+      <btn id="btn--back"><i class="fas fa-chevron-left"></i></btn>
+    </div>
+
+    <div id="content">
+      <br />
+      <br />
+      <h1>Thai Massaman Curry</h1>
+
+      <div id="mainImageHolder" view-image>
+        <div class="mySlides fade">
+          <img src="image1.jpg" id="mainImage" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="image2.jpg" id="mainImage" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="image3.jpg" id="mainImage" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="image4.jpg" id="mainImage" />
+        </div>
+
+        <div class="mySlides fade">
+          <img src="image5.jpg" id="mainImage" />
+        </div>
+
+        <!-- Next and previous buttons -->
+      </div>
+
+      <br />
+
+      <!-- The dots/circles -->
+      <div id="photoControls" style="text-align: center">
+        <a class="prev" onclick="plusSlides(-1)"
+          ><i class="fa fa-arrow-circle-left"></i
+        ></a>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <a class="next" onclick="plusSlides(1)"
+          ><i class="fa fa-arrow-circle-right"></i
+        ></a>
+      </div>
+
+      <br />
+      <br />
+
+      <section id="descriptionContainer">
+        <blockquote>
+          This is one of my absolute favorite meals to cook. It's an earthy,
+          umami-packed curry that can be paired with almost any protein or
+          vegetable. I've made it with pork, chicken thighs, and beef & it has
+          come out spectacular every time.
+          <br />
+          <br />
+          When i've made it without protein, my usual go-to vegetables are
+          broccoli, corn, potato, and onion. If you accidentally get it too
+          spicy, you can save it by adding a little more brown sugar to balance
+          it out. Don't skip out on the coriander ; It really brightens up the
+          flavor and gives it the necessary flavor profile to combat the
+          spiciness.
+        </blockquote>
+
+        <div id="cookTime">
+          <button id="timeTime">
+            <div id="circleContainer">
+              <span class="circle">35</span>
+            </div>
+            <span id="timeLabel">Minutes</span>
+            <span id="ETA"></span>
+          </button>
+
+          <div id="extrasContainer">
+            <button id="levelTitle">Skill Level</button>
+            <button id="levelLevel">Easy</button>
+            <button id="servingsTitle">Servings</button>
+            <button id="servingsLevel">6</button>
+          </div>
+        </div>
+
+        <div id="actions">
+          <!-- <a id="downloadLink" onclick="this.href='data:text/html;charset=UTF-8,'+encodeURIComponent(document.documentElement.outerHTML)" href="#" download="page.html"><button id="saveButton">Save</button></a> -->
+          <a
+            id="downloadLink"
+            href="Massaman_Curry.pdf"
+            download
+            target="_blank"
+            ><button id="saveButton">Save</button></a
+          >
+          <button onclick="window.print()">Print</button>
+          <button onclick="shareModal()">Share</button>
+        </div>
+      </section>
+
+      <div id="ingredientsContainer">
+        <h2>Ingredients</h2>
+
+        <div class="tableContainer">
+          <table class="tableStyle">
+            <tr>
+              <td><span class="number">2</span></td>
+              <td>
+                Small - medium chicken thighs
+                <span class="disclaimer">or other protein</span> - cut into
+                small cubes
+              </td>
+            </tr>
+
+            <tr>
+              <td><span class="number">2</span> Cups</td>
+              <td>Cooked Jasmine or Basmati rice</td>
+            </tr>
+
+            <tr>
+              <td>
+                <span class="number">2 <span class="fraction">½</span></span>
+                &nbspTb
+              </td>
+              <td>Maesri Massaman curry paste</td>
+            </tr>
+
+            <tr>
+              <td><span class="number">3</span></td>
+              <td>
+                Small Yukon gold potatoes
+                <span class="disclaimer">Russet works fine, too</span>
+              </td>
+            </tr>
+
+            <tr>
+              <td><span class="number">1</span></td>
+              <td>
+                Medium yellow onion, cut in half horizontally, then sliced into
+                1 in wedges
+              </td>
+            </tr>
+
+            <tr>
+              <td><span class="number">2</span> Tb</td>
+              <td>Fish sauce</td>
+            </tr>
+
+            <tr>
+              <td><span class="number">2</span> Cans</td>
+              <td>Coconut milk</td>
+            </tr>
+
+            <tr>
+              <td>
+                <span class="number"><span class="fraction">½</span></span>
+                &nbspCup
+              </td>
+              <td>Peanuts, chopped</td>
+            </tr>
+
+            <tr>
+              <td>
+                <span class="number"><span class="fraction">¼</span></span>
+                &nbspCup
+              </td>
+              <td>Peanut butter</td>
+            </tr>
+
+            <tr>
+              <td><span class="number">1</span> Tb</td>
+              <td>Cayenne pepper</td>
+            </tr>
+
+            <tr>
+              <td><span class="number">2</span> tsp</td>
+              <td>Brown sugar</td>
+            </tr>
+
+            <tr>
+              <td>Seasonings</td>
+              <td>Black pepper, Garlic powder, Coriander, Ground ginger</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <br />
+      <br />
+
+      <div id="directionsContainer">
+        <h2>Directions</h2>
+        <div class="tableContainer directions">
+          <table>
+            <tr>
+              <td>
+                <label class="container"
+                  >1.<input type="checkbox" onclick="boxChecked(this)" /><span
+                    class="checkmark"
+                  ></span
+                ></label>
+              </td>
+              <td>
+                Heat a cast iron pan on
+                <span class="highlight">medium high heat</span>. Pour
+                <span class="highlight">vegetable oil</span> into the pan, let
+                heat, and add your curry paste. Cook for
+                <span class="highlight">one minute</span>.
+                <span class="disclaimer"
+                  >Don’t use olive oil, it will burn</span
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label class="container"
+                  >2.<input type="checkbox" onclick="boxChecked(this)" /><span
+                    class="checkmark"
+                  ></span
+                ></label>
+              </td>
+              <td>
+                <span class="highlight">Par cook your potatoes</span> for
+                <span class="highlight">five minutes</span> in the microwave
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label class="container"
+                  >3.<input type="checkbox" onclick="boxChecked(this)" /><span
+                    class="checkmark"
+                  ></span
+                ></label>
+              </td>
+              <td>
+                Add in your <span class="highlight">chicken</span> and
+                <span class="highlight">peanuts</span>, toss to combine with the
+                sauce. Add in garlic and onion powder to taste, about
+                <span class="highlight">1 Tb</span> of
+                <span class="highlight">cayenne</span> for the right amount of
+                spice. Cook for about
+                <span class="highlight">2 - 3 minutes</span>.
+                <span class="disclaimer"
+                  >Do not add salt at this point, the curry paste is very
+                  salty</span
+                >
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label class="container"
+                  >4.<input type="checkbox" onclick="boxChecked(this)" /><span
+                    class="checkmark"
+                  ></span
+                ></label>
+              </td>
+              <td>
+                Add in your coconut milk, stir to combine, deglaze, and cover &
+                cook for <span class="highlight">10 minutes</span>.
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label class="container"
+                  >5.<input type="checkbox" onclick="boxChecked(this)" /><span
+                    class="checkmark"
+                  ></span
+                ></label>
+              </td>
+              <td>
+                Add your <span class="highlight">onion</span>,
+                <span class="highlight">potatoes</span>,
+                <span class="highlight">brown sugar</span>,
+                <span class="highlight">fish sauce</span>, and
+                <span class="highlight">peanut butter</span>. Stir and simmer
+                over medium heat for another
+                <span class="highlight">12-15 minutes</span> uncovered.
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label class="container"
+                  >6.<input type="checkbox" onclick="boxChecked(this)" /><span
+                    class="checkmark"
+                  ></span
+                ></label>
+              </td>
+              <td>
+                <span class="highlight">Serve</span> over Jasmine rice,
+                garnished with cilantro and a side of toasted Naan bread.
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- contact modal -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1>
+              <span class="ornament">[</span>Munch With Mae<span
+                class="ornament"
+                >]</span
+              >
+            </h1>
+
+            <div class="interogContainer">
+              <p id="interog">
+                Want to contact me? I'd love to hear from you! I'll do my best
+                to reply as soon as possible.
+              </p>
+            </div>
+          </div>
+          <form
+            class="form"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdVltpRtA5Px1BWiOWcNkcp-qGlkLy6v1TzBYLzgWVKA7763g/formResponse"
+          >
+            <div class="formQuestions">
+              <div class="basicInfo">
+                <div class="question">
+                  <label class="required">Name</label>
+                  <input
+                    id="name"
+                    name="entry.1332748456"
+                    type="text"
+                    required
+                  /><br />
+                </div>
+
+                <div class="question">
+                  <label class="required">Email Address</label>
+                  <input
+                    id="email"
+                    name="entry.783225938"
+                    type="email"
+                    required
+                  /><br />
+                </div>
+              </div>
+
+              <div class="inquiryContainer">
+                <div class="question inquiry">
+                  <label>Inquiry</label>
+                  <textarea
+                    id="inquiry"
+                    name="entry.360545800"
+                    type="textarea"
+                    required
+                  ></textarea
+                  ><br />
+                </div>
+              </div>
+            </div>
+
+            <div id="actionButtons">
+              <div id="cancelButton">
+                <input type="button" value="cancel" />
+              </div>
+
+              <div id="sendButton">
+                <input type="submit" value="Send" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- congratulations modal -->
+      <div id="myModalCG" class="modalCG">
+        <div class="modal-contentCG">
+          <div class="modal-headerCG">
+            <h1>
+              <span class="ornament">[ </span>Congratulations<span
+                class="ornament"
+              >
+                ]</span
+              >
+            </h1>
+            <p>You've completed this recipe!</p>
+            <br />
+            <p>I hope it's delicious!</p>
+            <br />
+            <p>If you enjoy this recipe, please share it with your friends!</p>
+
+            <div id="linkHolder">
+              <div id="urlFill"></div>
+              <div id="copyLink">
+                <button id="copyLinkButton" onclick="copyLinkFunc()">
+                  Copy Link
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <button class="scrollToTopBtn">
+          <i class="fas fa-chevron-up"></i>
+        </button>
+      </footer>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+      <script type="text/javascript" src="../Recipe.js"></script>
+      <script type="text/javascript" src="../../Header.js"></script>
+      <script src="../../view-image.js"></script>
+      <script>
+        window.ViewImage && ViewImage.init("#mainImageHolder img");
+      </script>
+    </div>
+  </body>
+</html>

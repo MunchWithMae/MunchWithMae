@@ -1286,3 +1286,29 @@ hr {
 .container {
   cursor: pointer;
 }
+
+.modal-headerCG
+{
+  position: relative;
+}
+
+#urlFill
+{
+  width:70%
+}
+
+#linkHolder
+{
+  position: relative;
+}
+
+#linkHolder::before
+{
+  content:"✔";
+  color:green;
+  font-size: 1.7em;
+  position: relative;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-right:.5em
+}

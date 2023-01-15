@@ -571,11 +571,11 @@ a.eapps-instagram-feed-header-follow-button {
 }
 
 .collapsed {
-  display: none;
+  /* display: none; */
 }
 
 .collpasedHeight {
-  height: fit-content !important;
+  /* height: fit-content !important; */
 }
 
 #recipeContainer {
