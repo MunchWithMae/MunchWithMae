@@ -1003,9 +1003,9 @@ td input {
 
 #actions button:hover
 {
-	background-color: var(--almostMain);
+	background-color: var(--main);
 	cursor: pointer;
-	box-shadow: 0 0 1em var(--main), inset -.75em 0 1.5em var(--main), inset .35em 0 1em var(--alt);
+	box-shadow: 0 0 1em var(--main), inset -.75em 0 1em var(--darkest), inset .35em 0 1.2em var(--almostMain);
 	
 	
 }
@@ -1125,6 +1125,15 @@ a#downloadLink
 	letter-spacing: .065em;
 }*/
 
+#extrasContainer button
+{
+		
+		font-family: 'comfortaa', cursive;
+		font-size:1rem;
+		padding:.25em .1em .1em .2em;
+		
+}
+
 @media screen and (min-width: 0px) and (max-width: 600px)
 {
 	#cookTime button
@@ -1137,6 +1146,15 @@ a#downloadLink
 		padding:0 2em;
 	}
 
+	#extrasContainer button
+	{
+		padding: .5em 0;
+	}
+
+	#extrasContainer
+	{
+		box-shadow: .125em .125em 1em var(--main);
+	}
 
 }
 
@@ -1146,7 +1164,6 @@ a#downloadLink
 {
 	background-color: #ff73a2;
 	color:#fff;
-	text-shadow: .06rem .06rem #000;
 	box-shadow: -.125em 0 1em var(--main), inset 1.5em .5em 3em rgba(50, 50, 50, .2) ;
 	font-size:1rem;
 	padding:0 2em;
@@ -1176,13 +1193,7 @@ a#downloadLink
 }
 
 
-#extrasContainer button
-{
-		
-		font-family: 'comfortaa', cursive;
-		font-size:1rem;
-		
-}
+
 
 
 #extrasContainer button:not(:nth-child(even))
@@ -1287,17 +1298,19 @@ hr
 
 }
 
+
+
 @media screen and (min-width: 600px) and (max-width: 1020px)
 {
 		#circleContainer
 		{
-			width: 55px;
-			height: 55px;
+			width: 100px;
+			height: 100px;
 		}
 
 		.circle{
-			font-size: 1.55rem;
-			line-height: 2.5em;
+			font-size: 3rem;
+			line-height: 2.35em;
 		}
 
 		#cookTime
@@ -1308,6 +1321,7 @@ hr
 		#cookTime #timeTime
 		{
 			border:1px solid var(--dark);
+			padding: 0 4em;
 		}
 
 		#extrasContainer button:not(:nth-child(odd))
@@ -1323,6 +1337,16 @@ hr
 			border-right:1px solid var(--dark);
 			border-color: var(--dark);
 
+		}
+
+		#extrasContainer button
+		{
+			padding: .75em 2em;
+		}
+
+		#extrasContainer
+		{
+			box-shadow: .125em .125em 1em var(--main);
 		}
 
 		#levelTitle
@@ -1365,6 +1389,7 @@ hr
 		border-right:none;
 		border-color:var(--main);
 		border-bottom-color: rgba(191, 73, 112, .65);
+		box-shadow: -.125em 0 1em var(--darkest), inset 1.5em .5em 3em rgba(50, 50, 50, .2) ;
 	}
 
 	#cookTime button{
@@ -1377,6 +1402,11 @@ hr
 		width:120px;
 		order:1;
 
+	}
+
+	#extrasContainer
+	{
+		box-shadow: -.125em .125em 1em var(--main);
 	}
 
 	blockquote{
@@ -1432,7 +1462,8 @@ hr
 	position: absolute;
 	transition: opacity .75s, height .75s;
 	color:transparent;
-	transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in;
+
 }
 
 @media screen and (min-width: 1020px)
@@ -1451,6 +1482,7 @@ hr
 		box-shadow: .125em .125em .5em rgba(27 27, 27, .7), inset .35em .35em 1.35em var(--alt);
 		color:red;
 		line-height: 1.25rem;
+
 	}
 
 }

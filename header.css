@@ -12,6 +12,11 @@ header
   overflow: hidden;
 }
 
+#myBtn
+{
+  font-family: "comfortaa";
+}
+
 
 .topnav a {
   float: left;
@@ -429,6 +434,11 @@ input:not(#sendButton input):not(#cancelButton input){
       margin-top:-2rem!important;
     }
 
+    body
+    {
+      background: #fff!important;
+    }
+
     .tableContainer *{
 /*      background:blue!important;*/
     }
@@ -443,7 +453,7 @@ input:not(#sendButton input):not(#cancelButton input){
     img
     {
       max-width: 80%!important;
-      outline:3px solid var(--dark);
+      outline:1px solid var(--main);
       border-radius: 0px!important;
     }
 
@@ -466,7 +476,7 @@ input:not(#sendButton input):not(#cancelButton input){
         order:2!important;
         width:60%!important;
         font-size:.875rem;
-        border:3px solid var(--dark)!important;
+        border:1px solid var(--main)!important;
 /*        height:fit-content!important;*/
         background:var(--alty)!important;
         
