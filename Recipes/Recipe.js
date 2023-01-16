@@ -256,6 +256,14 @@ let etaString =
 let estimated = document.getElementById("ETA");
 estimated.innerHTML = etaString;
 
+let fbshare = document.querySelector(".fbshare");
+linkStringFB = "https://www.facebook.com/sharer/sharer.php?u=" + window.location.href;
+fbshare.setAttribute("href", linkStringFB);
+
+let twtShare = document.querySelector(".twitter-share-button");
+linkString = "https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20recipe%20I%20just%20got%20from%20https://www.munchwithmae.github.io.%0A%0AYou%20can%20find%20the%20recipe%20here!%0A" + window.location.href;
+twtShare.setAttribute("href", linkString);
+
 // var element = document.getElementById('content');
 // html2pdf().from(element).save();
 

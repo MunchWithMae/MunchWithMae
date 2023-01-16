@@ -242,7 +242,7 @@ $(document).ready(function () {
         $(recipeImageCollapse[i]).slideUp(150);
         recipeCollapsedButton[i].innerHTML = "[+]";
         collapseButton.innerHTML = "Expand All";
-        $(".collapseRecipe").css("backgroundImage","url('Images/maximize.png')")
+        $(".collapseRecipe").css("backgroundImage", "url('Images/maximize.png')");
         let toggleSwitch = document.getElementById("myonoffswitchImages");
         toggleSwitch.checked = false;
 
@@ -256,7 +256,7 @@ $(document).ready(function () {
         $(recipeImageCollapse[i]).slideDown(150);
         recipeCollapsedButton[i].innerHTML = "[-]";
         collapseButton.innerHTML = "Collapse All";
-        $(".collapseRecipe").css("backgroundImage","url('Images/collapse.png')")
+        $(".collapseRecipe").css("backgroundImage", "url('Images/collapse.png')");
         let toggleSwitch = document.getElementById("myonoffswitchImages");
         toggleSwitch.checked = true;
         $("#myonoffswitchImages").parent().find("span:nth-child(2)").removeClass("burnEgg");
@@ -348,29 +348,23 @@ $(document).ready(function () {
     collapser.click();
   });
 
-  $(".collapseRecipe").mouseenter(function(){
-    if ($(this).parents(".recipe").hasClass("collapsedHeight"))
-    {
-      $(this).parents(".recipe").css("transform","scale(1.06)")
+  $(".collapseRecipe").mouseenter(function () {
+    if ($(this).parents(".recipe").hasClass("collapsedHeight")) {
+      $(this).parents(".recipe").css("transform", "scale(1.06)");
+    } else {
+      $(this).parents(".recipe").css("transform", "scale(.95)");
     }
+  });
 
-    else
-    {
-      $(this).parents(".recipe").css("transform","scale(.95)")
-    }
-    
-  })
+  $(".collapseRecipe").mouseleave(function () {
+    $(this).parents(".recipe").css("transform", "scale(1)");
+  });
 
-  $(".collapseRecipe").mouseleave(function(){
-    $(this).parents(".recipe").css("transform","scale(1)");
-  })
+  $(".recipe").mouseenter(function () {
+    $(this).css("transform", "scale(1.04)");
+  });
 
-  $(".recipe").mouseenter(function(){
-    $(this).css("transform","scale(1.04)")
-    
-  })
-
-  $(".recipe").mouseleave(function(){
-    $(this).css("transform","scale(1)")
-  })
+  $(".recipe").mouseleave(function () {
+    $(this).css("transform", "scale(1)");
+  });
 });

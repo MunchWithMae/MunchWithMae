@@ -562,10 +562,10 @@ a.eapps-instagram-feed-header-follow-button {
   background: transparent;
   font-size: 1.15rem;
   background-size: contain;
-  background-image: url('Images/collapse.png');
+  background-image: url("Images/collapse.png");
   background-repeat: no-repeat;
   background-position: center;
-  transform: scale(.9);
+  transform: scale(0.9);
 }
 
 .collapseRecipe:hover {
@@ -1064,6 +1064,6 @@ a.eapps-instagram-feed-header-follow-button {
   display: block !important;
 }
 
-#mainImage:hover{
+#mainImage:hover {
   cursor: pointer;
 }

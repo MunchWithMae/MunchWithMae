@@ -789,6 +789,9 @@ td input {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #linkHolder {
@@ -1320,3 +1323,19 @@ hr {
   padding-right:.25em;
 }
 }
+
+.modal-footerCG{
+  font-size: 50px;
+  padding-top:1rem;
+  text-align: center;
+}
+
+.modal-footerCG a{
+  text-decoration: none;
+}
+
+
+.modal-headerCG{
+  width:100%
+}
+

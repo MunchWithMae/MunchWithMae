@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Massaman Curry</title>
 
+    <meta property="og:url" content="https://munchwithmae.github.io/Recipes/Massaman%20Curry/Massaman_Curry.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Munch With Mae" />
+    <meta property="og:description" content="Massaman Curry - A hearty, earthy curry that can be made in 25 minutes with minimal prep." />
+    <meta property="og:image" content="https://munchwithmae.github.io/Recipes/Massaman%20Curry/image1.jpg" />
+
     <link rel="icon" href="Images/favicon-32x32.png" />
     <link rel="apple-touch-icon" href="Images/apple-touch-icon.png" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -126,7 +132,9 @@
 
         <div id="actions">
           <!-- <a id="downloadLink" onclick="this.href='data:text/html;charset=UTF-8,'+encodeURIComponent(document.documentElement.outerHTML)" href="#" download="page.html"><button id="saveButton">Save</button></a> -->
-          <a id="downloadLink" href="Massaman_Curry.pdf" download target="_blank"><button id="saveButton">Save</button></a>
+          <a id="downloadLink" href="Massaman_Curry.pdf" download target="_blank"
+            ><button id="saveButton">Save</button></a
+          >
           <button onclick="window.print()">Print</button>
           <button onclick="shareModal()">Share</button>
         </div>
@@ -373,7 +381,7 @@
         </div>
       </div>
 
-      <!-- congratulations modal -->
+      <!-- Share / Congratulations modal -->
       <div id="myModalCG" class="modalCG">
         <div class="modal-contentCG">
           <div class="modal-headerCG">
@@ -385,14 +393,32 @@
             <p>If you enjoy this recipe, please share it with your friends!</p>
 
             <div id="linkHolder">
-				<span class="checkie">✔</span>
+              <span class="checkie">✔</span>
               <div id="urlFill"></div>
               <div id="copyLink">
                 <button id="copyLinkButton" onclick="copyLinkFunc()">Copy Link</button>
-				
               </div>
             </div>
           </div>
+          <div class="modal-footerCG">
+            <a
+              href="https://www.facebook.com/sharer/sharer.php?u=https://www.munchwithmae.github.io"
+              target="_blank"
+              rel="noopener"
+              class="fbshare"
+            >
+              <i class="fab fa-facebook-square"></i>
+              <!-- <img class="YOUR_FB_CSS_STYLING_CLASS" src="../../Images/egg2.png" width="22px" height="22px" alt="Share on Facebook"> -->
+            </a>
+
+            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Check%out%this%awesome%recipe%I%got%at%https://munchwithmae.github.io/.%" target="_blank" data-size="large"><i class="fab fa-twitter"></i></a>
+            
+            <a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonPin" data-pin-config="beside" data-pin-color="red" data-pin-height="28"><img src='../../Images/pinIt.png' alt='Pin it'></a>
+          <script type="text/javascript" async defer src="../../pinit.js"></script>
+          
+          </div>
+
+          
         </div>
       </div>
 
@@ -409,6 +435,7 @@
       <script>
         window.ViewImage && ViewImage.init("#mainImageHolder img");
       </script>
+      
     </div>
   </body>
 </html>
