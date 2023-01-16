@@ -242,7 +242,7 @@ $(document).ready(function () {
         $(recipeImageCollapse[i]).slideUp(150);
         recipeCollapsedButton[i].innerHTML = "[+]";
         collapseButton.innerHTML = "Expand All";
-
+        $(".collapseRecipe").css("backgroundImage","url('Images/maximize.png')")
         let toggleSwitch = document.getElementById("myonoffswitchImages");
         toggleSwitch.checked = false;
 
@@ -256,6 +256,7 @@ $(document).ready(function () {
         $(recipeImageCollapse[i]).slideDown(150);
         recipeCollapsedButton[i].innerHTML = "[-]";
         collapseButton.innerHTML = "Collapse All";
+        $(".collapseRecipe").css("backgroundImage","url('Images/collapse.png')")
         let toggleSwitch = document.getElementById("myonoffswitchImages");
         toggleSwitch.checked = true;
         $("#myonoffswitchImages").parent().find("span:nth-child(2)").removeClass("burnEgg");
