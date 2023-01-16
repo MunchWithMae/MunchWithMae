@@ -264,22 +264,6 @@ $(document).ready(function () {
         }
         
       }
-
-      // $(recipeImageCollapse[i]).slideToggle(150);
-
-      // //recipeImageCollapse[i].classList.toggle("collapsed");
-
-      // if (recipeImageCollapse[i].classList.contains("collapsed")) {
-      //   collapseButton.innerHTML = "Expand All";
-      //   recipeImageCollapse[i].innerHTML = "[+]";
-      //   $(recipePreviewButton[i]).toggle(300);
-      // }
-
-      // else {
-      //   collapseButton.innerHTML = "Collapse All";
-      //   recipeCollapsedButton[i].innerHTML = "[-]";
-      //   $(recipePreviewButton[i]).toggle(300);
-      //}
     }
 
     collapseButton.classList.toggle("expanded");
@@ -312,45 +296,6 @@ $(document).ready(function () {
   document.addEventListener("scroll", handleScroll);
 
   let iframe = $$("iframeBox");
-
-  // $("#overlayBottom").css("height", document.getElementById("content").offsetHeight)
-
-  // $("#recipeSettingsImage").click(function(){
-  //   $("#settingsContainer").slideToggle(700);
-  //   $("#settingsContainer").toggleClass("settingsExpanded");
-  //   $("#BackDrop").toggle(700);
-  //   $("#overlayBottom").show(700);
-  // })
-
-  // $(".closeButton").click(function(){
-  //   $("#settingsContainer").slideUp(700);
-  //   $("#settingsContainer").toggleClass("settingsExpanded");
-  //   $("#overlayBottom").hide(700);
-  // });
-
-  // $("#backDrop").click(function(){
-  //   if ($("#settingsContainer").hasClass("settingsExpanded")){
-  //     $("#settingsContainer").slideUp(700);
-  //     $("#settingsContainer").toggleClass("settingsExpanded");
-  //     $("#overlayBottom").slideUp(700);
-  //   }
-  // })
-
-  // $("#overlayBottom").click(function(){
-  //   if ($("#settingsContainer").hasClass("settingsExpanded")){
-  //     $("#settingsContainer").slideUp(700);
-  //     $("#settingsContainer").toggleClass("settingsExpanded");
-  //     $("#overlayBottom").slideUp(700);
-  //   }
-  // })
-
-  // $("#recipeBox").click(function(){
-  //   if ($("#settingsContainer").hasClass("settingsExpanded")){
-  //     $("#settingsContainer").slideUp(700);
-  //     $("#settingsContainer").toggleClass("settingsExpanded");
-  //     $("#overlayBottom").slideUp(700);
-  //   }
-  // })
 
   // Get the modal
   var modal = document.getElementById("settingsModal");
@@ -391,58 +336,15 @@ $(document).ready(function () {
     $(".collapseRecipe").fadeToggle();
   });
 
-  // ! $("#myonoffswitchPreview").click(function () {
-
-  //   //$(".previewRecipe").toggleClass(".previewHide")
-
-  //   $("#myonoffswitchPreview").parent().find("span:nth-child(2)").toggleClass("burnEgg");
-
-  //   if ($("#myonoffswitchPreview").parent().find("span:nth-child(2)").hasClass("burnEgg")){
-  //     $(".previewRecipe").hide();//addClass("previewHide")
-  //   } else
-  //   {
-  //     $(".previewRecipe").toggle();//toggleClass("previewHide")
-  //   }
-
-  //     //! document query select all, loop through each recipe, hide preview if recipe expanded
-  //   // if ($("#myonoffswitchImages").parent().find("span:nth-child(2)").hasClass("burnEgg")) {
-  //   //   return;
-  //   // } else {
-  //   //   $(".previewRecipe").toggle(500);
-  //   // }
-  // });
+  $("#myonoffswitchPreview").click(function () {
+    $("#myonoffswitchPreview").parent().find("span:nth-child(2)").toggleClass("burnEgg");
+    $(".previewRecipe").toggle(500);
+  });
 
   $("#myonoffswitchImages").click(function () {
     $("#myonoffswitchImages").parent().find("span:nth-child(2)").toggleClass("burnEgg");
-
     let collapser = document.getElementById("btn--collapse");
     collapser.click();
-
-    // let inner = document.querySelector(".recipeContent .collapseRecipe").innerHTML;
-    // if (inner == "[-]") {
-    //   $(".collapseRecipe").html("[+]");
-    // } else {
-    //   $(".collapseRecipe").html("[-]");
-    // }
-
-    // if ($("#myonoffswitchPreview").parent().find("span:nth-child(2)").hasClass("burnEgg")) {
-    //   if (!$("#myonoffswitchImages").parent().find("span:nth-child(2)").hasClass("burnEgg")) {
-    //     $(".recipeLink img").slideDown(600);
-    //   } else {
-    //     $(".recipeLink img").slideUp(600);
-    //   }
-    //   return;
-    // } else {
-    //   $(".previewRecipe").toggle(200);
-    //   if (!$("#myonoffswitchImages").parent().find("span:nth-child(2)").hasClass("burnEgg")) {
-    //     $(".recipeLink img").slideDown(600);
-    //   } else {
-    //     $(".recipeLink img").slideUp(600);
-    //   }
-    // }
   });
 });
 
-$(".testButton").click(function () {});
-
-//console.log(recipeObject[1])
