@@ -170,16 +170,20 @@ $(document).ready(function () {
     recipeCollapseContainer.onclick = function () {
       recipeImage.classList.toggle("collapsed");
       $(recipeImage).slideToggle();
-      newDivRecipe.classList.toggle("collpasedHeight");
+      newDivRecipe.classList.toggle("collapsedHeight");
       recipePreviewButton = $$$(".previewRecipe");
 
       if (recipeImage.classList.contains("collapsed")) {
         recipeCollapseContainer.innerHTML = "[+]";
+        recipeCollapseContainer.style.backgroundImage = "url('Images/maximize.png')";
+        recipeCollapseContainer.style.backgroundSize = "contain";
         if (!$("#myonoffswitchPreview").parent().find("span:nth-child(2)").hasClass("burnEgg")) {
           $(recipePreviewButton[i]).toggle(300);
         }
       } else {
         recipeCollapseContainer.innerHTML = "[-]";
+        recipeCollapseContainer.style.backgroundImage = "url('Images/collapse.png')";
+        recipeCollapseContainer.style.backgroundSize = "contain";
         if (!$("#myonoffswitchPreview").parent().find("span:nth-child(2)").hasClass("burnEgg")) {
           $(recipePreviewButton[i]).toggle(300);
         }
@@ -342,4 +346,30 @@ $(document).ready(function () {
     let collapser = document.getElementById("btn--collapse");
     collapser.click();
   });
+
+  $(".collapseRecipe").mouseenter(function(){
+    if ($(this).parents(".recipe").hasClass("collapsedHeight"))
+    {
+      $(this).parents(".recipe").css("transform","scale(1.06)")
+    }
+
+    else
+    {
+      $(this).parents(".recipe").css("transform","scale(.95)")
+    }
+    
+  })
+
+  $(".collapseRecipe").mouseleave(function(){
+    $(this).parents(".recipe").css("transform","scale(1)");
+  })
+
+  $(".recipe").mouseenter(function(){
+    $(this).css("transform","scale(1.04)")
+    
+  })
+
+  $(".recipe").mouseleave(function(){
+    $(this).css("transform","scale(1)")
+  })
 });
