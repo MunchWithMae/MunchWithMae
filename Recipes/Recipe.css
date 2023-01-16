@@ -1302,13 +1302,21 @@ hr {
   position: relative;
 }
 
-#linkHolder::before
+.checkie
 {
-  content:"✔";
   color:green;
-  font-size: 1.7em;
+  font-size: 1.7rem;
   position: relative;
   font-weight: bold;
-  padding-top: 5px;
-  padding-right:.5em
+  padding-top: .15em;
+  padding-right:.5em;
+  display: none; 
+}
+
+@media screen and (max-width: 600px) {
+  .checkie
+{
+  padding-top: .3em;
+  padding-right:.25em;
+}
 }

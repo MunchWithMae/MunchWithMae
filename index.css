@@ -280,14 +280,12 @@ h1 {
 #siteDescription p {
   padding: 1em;
   overflow-y: scroll;
-  font-size:.95em;
-  
+  font-size: 0.95em;
 }
 
-.contentBox
-{
+.contentBox {
   border: 2px solid var(--main);
-  box-shadow: inset -1.3em -1em 2em var(--alty), .1em .1em .5em var(--dark);
+  box-shadow: inset -1.3em -1em 2em var(--alty), 0.1em 0.1em 0.5em var(--dark);
   border-bottom-right-radius: 10px;
   border-top-left-radius: 10px;
   overflow: hidden;
@@ -307,7 +305,7 @@ h1 {
   padding-bottom: 0.55em;
   letter-spacing: 0.1rem;
   box-shadow: inset -0.5em -0.5em 1em var(--almostMain);
-  border-bottom:1px solid var(--main);
+  border-bottom: 1px solid var(--main);
   text-shadow: 0.075rem 0.075rem black;
   border-top-left-radius: 10px;
 }
@@ -361,11 +359,10 @@ a {
   margin-top: 4em;
   display: flex;
   flex-direction: column;
-  box-shadow:.1em .1em .5em var(--dark);
+  box-shadow: 0.1em 0.1em 0.5em var(--dark);
   border: 0.15em solid var(--main);
   border-bottom-right-radius: 10px;
   border-top-left-radius: 10px;
-  
 }
 
 #recipeContainer h2 {
@@ -443,7 +440,7 @@ a {
   padding-top: 0.35em;
   font-size: 0.75rem;
   text-align: left;
-  line-height:1.4;
+  line-height: 1.4;
 }
 
 .recipeDescription {
@@ -575,7 +572,7 @@ a.eapps-instagram-feed-header-follow-button {
 }
 
 .collpasedHeight {
-  /* height: fit-content !important; */
+  height: fit-content !important;
 }
 
 #recipeContainer {
@@ -586,10 +583,10 @@ a.eapps-instagram-feed-header-follow-button {
   position: absolute;
   top: 1.5em;
   right: 2.5em;
-  padding: .6em 1em;
+  padding: 0.6em 1em;
   background: #fff;
   border: 2px solid var(--dark);
-  box-shadow: 0.25em 0.25em 0.5em var(--main), inset -.15em -.15em .5em var(--alt);
+  box-shadow: 0.25em 0.25em 0.5em var(--main), inset -0.15em -0.15em 0.5em var(--alt);
   font-family: "comfortaa";
   font-weight: bold;
   color: var(--darkest);
@@ -597,19 +594,19 @@ a.eapps-instagram-feed-header-follow-button {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
-  transition: .2s;
-  transition-timing-function: ease-in-out; 
+  transition: 0.2s;
+  transition-timing-function: ease-in-out;
   font-family: "RedHands";
-  font-size:1rem;
-  letter-spacing: .2rem;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
 }
 
 #btn--collapse:hover {
   cursor: pointer;
   /* background: var(--alt); */
-  color:var(--darkest);
-  border-color:#d55286;
-  box-shadow: 0.15em 0.15em .25em #d55286, inset -.15em -.15em .55em var(--dark);
+  color: var(--darkest);
+  border-color: #d55286;
+  box-shadow: 0.15em 0.15em 0.25em #d55286, inset -0.15em -0.15em 0.55em var(--dark);
 }
 
 @media screen and (max-width: 1050px) {
@@ -619,19 +616,19 @@ a.eapps-instagram-feed-header-follow-button {
     right: 0;
     background: #fff;
     margin-top: 1em;
-    font-size:1rem;
-    padding: .5em 1.5em;
+    font-size: 1rem;
+    padding: 0.5em 1.5em;
   }
 }
 
-#btn--listView
-{
-  display: none; 
+#btn--listView {
+  display: none;
 }
 
 .recipeContent img {
-  transition: all 1.5s;
-  transition-timing-function: ease-in-out;
+  /* ! transition: all 1.5s; */
+  /* * Changed to jquery */
+  /* transition-timing-function: ease-in-out; */
 }
 
 .recipe {
@@ -700,13 +697,13 @@ a.eapps-instagram-feed-header-follow-button {
   height: 100%;
 }
 
-.visible {
+/* .visible {
   display: block;
 }
 
 .hidden {
   display: none;
-}
+} */
 
 .previewRecipe {
   background: #fff;
@@ -734,9 +731,8 @@ a.eapps-instagram-feed-header-follow-button {
   box-shadow: 2px 2px 4px rgba(169, 168, 169, 0.8);
 }
 
-@media screen and (min-width:450px) and (max-width:600px) {
-  .previewRecipe
-  {
+@media screen and (min-width: 450px) and (max-width: 600px) {
+  .previewRecipe {
     top: 63px;
     left: 13px;
   }
@@ -779,20 +775,283 @@ a.eapps-instagram-feed-header-follow-button {
   }
 }
 
-/*body {
-    position: absolute; 
-    top: 0; 
-    left: 0;
-    width: 100%; 
-    height: 100%;
-    opacity: 1; transition: .5s;
-    background: transparent;
-    background-image: url(http://i.imgur.com/Ue1InIS.png), url(http://i.imgur.com/r9hYuSj.png);
-    background-repeat: repeat;
-    animation: petals 15s linear infinite; 
+#recipeSettingsImage {
+  background-image: url("Images/egg2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  transform: scale(0.8);
+  width: 9%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.8s;
 }
 
-@keyframes petals {
-  0% { background-position: 0 0, 0 0 }
-  to { background-position: 150px 300px, 300px 600px }
-}*/
+#recipeSettingsImage:hover {
+  transform: rotate(180deg);
+}
+
+#recipeSettingsImage:hover {
+  cursor: pointer;
+}
+
+#settingsContainer {
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#settingsTable th {
+  color: #fff;
+  margin-bottom: 0.75em;
+  padding: 1.25rem 0;
+  padding-bottom: 0.75rem;
+  font-size: 1.5rem;
+  background-color: var(--almostMain);
+  font-family: "MilkyBoba";
+  text-shadow: 0.05rem 0.05rem var(--mostdark);
+}
+
+#settingsTable th {
+  box-shadow: inset 0 -7px 10px var(--main), inset 0 7px 10px var(--main);
+  border-bottom: 1px solid var(--darker);
+}
+
+#settingsTable {
+  margin: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+#settingsTable td p {
+  font-family: "comfortaa";
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--darkest);
+  text-shadow: none;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 700px) {
+  #settingsTable td p {
+    white-space: normal;
+  }
+}
+
+#settingsTable td {
+  /* border: 1px solid var(--mostdark); */
+  vertical-align: middle;
+  padding: 0.5em 1em;
+}
+
+#settingsTable tr td:first-child {
+  background: #f2f2f2;
+}
+
+#settingsTable tr td:nth-child(2) {
+  background: var(--alty);
+}
+
+#settingsTable tr:nth-child(1) th:first-child {
+  border-top-left-radius: 25px;
+}
+
+#settingsTable tr:nth-child(1) th:last-child {
+  border-top-right-radius: 25px;
+}
+
+#settingsTable tr:last-child td:first-child {
+  border-bottom-left-radius: 25px;
+}
+
+#settingsTable tr:last-child td:last-child {
+  border-bottom-right-radius: 25px;
+}
+
+#settingsTable {
+  border-radius: 50px;
+}
+
+#recipes h2 {
+  position: relative;
+}
+
+.onoffswitch {
+  position: relative;
+  width: 90px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid var(--darkerest);
+  border-radius: 20px;
+}
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  font-family: "comfortaa";
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+  content: "";
+  padding-left: 10px;
+  background-color: #f46fa5;
+  color: #ffffff;
+}
+.onoffswitch-inner:after {
+  content: "OFF";
+  padding-right: 10px;
+  background-color: #eeeeee;
+  color: #f53f88;
+  text-align: right;
+}
+.onoffswitch-switch {
+  display: block;
+  width: 18px;
+  margin: 6px;
+  background: #fce0eb;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 56px;
+  padding-right: 5px;
+  border: none;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+  background: url("Images/egg2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: scale(1.4);
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+
+.closeButton {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-image: url("Images/exitOG.png");
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  top: 12px;
+  right: 10px;
+}
+
+.closeButton:hover {
+  transform: rotateY("90deg");
+}
+
+.closeButton:hover,
+.closeButton:focus {
+  cursor: pointer;
+}
+
+/* #overlayBottom
+{
+  background: red;
+  position: absolute;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 500px;
+  display: none; 
+}
+
+#backDrop
+{
+  background: blue;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+} */
+
+/* The Modal (background) */
+.modalSettings {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 900; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modalSettingsContent {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.burnEgg {
+  filter: invert(1) sepia(100%);
+}
+
+.previewHide
+{
+  display: none!important;
+}
+
+.previewShow
+{
+  display: block!important;
+}
