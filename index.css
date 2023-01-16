@@ -792,11 +792,9 @@ a.eapps-instagram-feed-header-follow-button {
 @media screen and (min-width: 750px) {
   #recipeSettingsImage:hover {
     transform-origin: center;
-    transform: rotate(180deg) scale(.8);
+    transform: rotate(180deg) scale(0.8);
   }
 }
-
-
 
 #recipeSettingsImage:hover {
   cursor: pointer;
@@ -1051,12 +1049,10 @@ a.eapps-instagram-feed-header-follow-button {
   filter: invert(1) sepia(100%);
 }
 
-.previewHide
-{
-  display: none!important;
+.previewHide {
+  display: none !important;
 }
 
-.previewShow
-{
-  display: block!important;
+.previewShow {
+  display: block !important;
 }

@@ -175,13 +175,12 @@ $(document).ready(function () {
 
       if (recipeImage.classList.contains("collapsed")) {
         recipeCollapseContainer.innerHTML = "[+]";
-        if(!$("#myonoffswitchPreview").parent().find("span:nth-child(2)").hasClass("burnEgg")){
+        if (!$("#myonoffswitchPreview").parent().find("span:nth-child(2)").hasClass("burnEgg")) {
           $(recipePreviewButton[i]).toggle(300);
         }
-        
       } else {
         recipeCollapseContainer.innerHTML = "[-]";
-        if(!$("#myonoffswitchPreview").parent().find("span:nth-child(2)").hasClass("burnEgg")){
+        if (!$("#myonoffswitchPreview").parent().find("span:nth-child(2)").hasClass("burnEgg")) {
           $(recipePreviewButton[i]).toggle(300);
         }
       }
@@ -240,29 +239,26 @@ $(document).ready(function () {
         recipeCollapsedButton[i].innerHTML = "[+]";
         collapseButton.innerHTML = "Expand All";
 
-        let toggleSwitch = document.getElementById("myonoffswitchImages")
+        let toggleSwitch = document.getElementById("myonoffswitchImages");
         toggleSwitch.checked = false;
 
-        $("#myonoffswitchImages").parent().find("span:nth-child(2)").addClass("burnEgg")
+        $("#myonoffswitchImages").parent().find("span:nth-child(2)").addClass("burnEgg");
 
-        if (!$("#myonoffswitchPreview").parent().find("span:nth-child(2)").hasClass("burnEgg")){
+        if (!$("#myonoffswitchPreview").parent().find("span:nth-child(2)").hasClass("burnEgg")) {
           $(recipePreviewButton[i]).hide(300);
         }
-        
       } // * IF RECIPES ARE NOT CURRENTLY EXPANDED
       else {
         $(recipeImageCollapse[i]).slideDown(150);
         recipeCollapsedButton[i].innerHTML = "[-]";
         collapseButton.innerHTML = "Collapse All";
-        let toggleSwitch = document.getElementById("myonoffswitchImages")
+        let toggleSwitch = document.getElementById("myonoffswitchImages");
         toggleSwitch.checked = true;
-        $("#myonoffswitchImages").parent().find("span:nth-child(2)").removeClass("burnEgg")
+        $("#myonoffswitchImages").parent().find("span:nth-child(2)").removeClass("burnEgg");
 
-        
-        if (!$("#myonoffswitchPreview").parent().find("span:nth-child(2)").hasClass("burnEgg")){
+        if (!$("#myonoffswitchPreview").parent().find("span:nth-child(2)").hasClass("burnEgg")) {
           $(recipePreviewButton[i]).show(300);
         }
-        
       }
     }
 
@@ -347,4 +343,3 @@ $(document).ready(function () {
     collapser.click();
   });
 });
-
