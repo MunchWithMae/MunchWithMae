@@ -52,7 +52,7 @@
           <img src="Images/mwmHeader.png" id="imgTwo" />
         </div>
 
-        <section id="mainImageHolder">
+        <section id="mainImageHolder" view-image>
           <div class="mySlides fade">
             <img src="Images\HomeCarousel\image1.jpg" id="mainImage" />
           </div>
@@ -391,6 +391,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="Header.js"></script>
+    <script src="view-image.js"></script>
+    <script>
+      window.ViewImage && ViewImage.init("#mainImageHolder img");
+    </script>
   </body>
 
   <!-- <div class="recipe">

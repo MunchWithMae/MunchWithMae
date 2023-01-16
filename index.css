@@ -1056,3 +1056,7 @@ a.eapps-instagram-feed-header-follow-button {
 .previewShow {
   display: block !important;
 }
+
+#mainImage:hover{
+  cursor: pointer;
+}
