@@ -264,13 +264,6 @@ linkStringReddit =
 "https://www.reddit.com/submit?url=" + window.location.href + "/&title=Check%20out%20this%20awesome%20recipe%20I%20found%20on%20munchwithmae.github.io"
 redditShare.setAttribute("href", linkStringReddit);
 
-let tumblrShare = document.querySelector(".tumblr-share-button");
-let postTitle = document.querySelector("h1").innerHTML
-let postImage = postTitle + "%2Fimage1.png&photo-clickthru=" + window.location.href + "&canonicalUrl=" + window.location.href + "&shareSource=tumblr_share_button";
-linkStringTumblr =
-"https://www.tumblr.com/widgets/share/tool/preview?posttype=photo&title=Massaman+Curry&caption=Massaman+Curry" + postTitle + "&caption=" + postTitle +"+-+A+hearty%2C+earthy+curry+that+can+be+made+in+25+minutes+with+minimal+prep.&content=" + postImage
-
-tumblrShare.setAttribute("href", linkStringTumblr);
 
 
 // var element = document.getElementById('content');
