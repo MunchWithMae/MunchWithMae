@@ -86,8 +86,7 @@ function boxChecked(element) {
       '<span class="ornament">[ </span>Congratulations<span class="ornament"> ]</span>';
     pOne.innerHTML = "You've completed this recipe!";
     pTwo.innerHTML = "I hope it's delicious!";
-    pThree.innerHTML =
-      "If you enjoy this recipe, please share it with your friends!";
+    pThree.innerHTML = "If you enjoy this recipe, please share it with your friends!";
     modalCG.style.display = "block";
 
     // When the user clicks anywhere outside of the modal, close it
@@ -136,9 +135,7 @@ ingredientsCollapseContainer.classList.add("collapseIngredients");
 ingredientsCollapse.appendChild(ingredientsCollapseContainer);
 
 $(ingredientsCollapse).click(function () {
-  let ingredientsTable = document.querySelector(
-    "#ingredientsContainer .tableContainer"
-  );
+  let ingredientsTable = document.querySelector("#ingredientsContainer .tableContainer");
   ingredientsTable.classList.toggle("collapsed");
 
   if (ingredientsTable.classList.contains("collapsed")) {
@@ -148,10 +145,6 @@ $(ingredientsCollapse).click(function () {
   }
   $(ingredientsTable).slideToggle("slow");
 });
-
-
-
-
 
 let directionsCollapse = document.querySelector("#directionsContainer h2");
 
@@ -164,9 +157,7 @@ directionsCollapseContainer.classList.add("collapseDirections");
 directionsCollapse.appendChild(directionsCollapseContainer);
 
 $(directionsCollapse).click(function () {
-  let directionsTable = document.querySelector(
-    "#directionsContainer .tableContainer"
-  );
+  let directionsTable = document.querySelector("#directionsContainer .tableContainer");
   directionsTable.classList.toggle("collapsed");
 
   if (directionsTable.classList.contains("collapsed")) {
@@ -188,12 +179,12 @@ function copyLinkFunc() {
   $(".checkie").toggle(500);
 
   let pagewidth = document.body.offsetWidth;
-  if (pagewidth > 1200){
+  if (pagewidth > 1200) {
     url.innerHTML = "Link copied! Thank you for sharing!";
-  }else{
+  } else {
     url.innerHTML = "Link copied!";
   }
-  
+
   timeout2 = setTimeout(changeLink, 3000);
   function changeLink() {
     url.innerHTML = window.location.href;
@@ -213,11 +204,9 @@ function shareModal() {
   let pThree = document.querySelector(".modal-headerCG p:nth-child(6)");
 
   modalCG.style.display = "block";
-  pHead.innerHTML =
-    '<span class="ornament">[ </span>SHARE RECIPE<span class="ornament"> ]</span>';
+  pHead.innerHTML = '<span class="ornament">[ </span>SHARE RECIPE<span class="ornament"> ]</span>';
   pOne.innerHTML = "Thank you for checking out this recipe!";
-  pTwo.innerHTML =
-    "If you liked it, please share it with your friends with the link below!";
+  pTwo.innerHTML = "If you liked it, please share it with your friends with the link below!";
   pThree.innerHTML = "";
 
   // When the user clicks anywhere outside of the modal, close it
@@ -250,8 +239,7 @@ if (minutes < 10) {
 console.log(newDateObj);
 console.log("ETA: " + hours + ":" + minutes);
 
-let etaString =
-  "If you began cooking now, you would finish around " + hours + ":" + minutes;
+let etaString = "If you began cooking now, you would finish around " + hours + ":" + minutes;
 
 let estimated = document.getElementById("ETA");
 estimated.innerHTML = etaString;
@@ -261,8 +249,29 @@ linkStringFB = "https://www.facebook.com/sharer/sharer.php?u=" + window.location
 fbshare.setAttribute("href", linkStringFB);
 
 let twtShare = document.querySelector(".twitter-share-button");
-linkString = "https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20recipe%20I%20just%20got%20from%20https://www.munchwithmae.github.io.%0A%0AYou%20can%20find%20the%20recipe%20here!%0A" + window.location.href;
-twtShare.setAttribute("href", linkString);
+linkStringTWT =
+  "https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20recipe%20I%20just%20got%20from%20https://www.munchwithmae.github.io.%0A%0AYou%20can%20find%20the%20recipe%20here!%0A" +
+  window.location.href;
+twtShare.setAttribute("href", linkStringTWT);
+
+let waShare = document.querySelector(".whatsApp-share-button");
+linkStringWA =
+"https://api.whatsapp.com/send/?text=" + window.location.href + "%2F&type=custom_url&app_absent=0"
+waShare.setAttribute("href", linkStringWA);
+
+let redditShare = document.querySelector(".reddit-share-button");
+linkStringReddit =
+"https://www.reddit.com/submit?url=" + window.location.href + "/&title=Check%20out%20this%20awesome%20recipe%20I%20found%20on%20munchwithmae.github.io"
+redditShare.setAttribute("href", linkStringReddit);
+
+let tumblrShare = document.querySelector(".tumblr-share-button");
+let postTitle = document.querySelector("h1").innerHTML
+let postImage = postTitle + "%2Fimage1.png&photo-clickthru=" + window.location.href + "&canonicalUrl=" + window.location.href + "&shareSource=tumblr_share_button";
+linkStringTumblr =
+"https://www.tumblr.com/widgets/share/tool/preview?posttype=photo&title=Massaman+Curry&caption=Massaman+Curry" + postTitle + "&caption=" + postTitle +"+-+A+hearty%2C+earthy+curry+that+can+be+made+in+25+minutes+with+minimal+prep.&content=" + postImage
+
+tumblrShare.setAttribute("href", linkStringTumblr);
+
 
 // var element = document.getElementById('content');
 // html2pdf().from(element).save();

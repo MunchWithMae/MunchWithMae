@@ -450,8 +450,7 @@ td input {
 
 #buttonContainer:hover {
   transform: scale(1.01);
-  box-shadow: inset 0.5em 0.5em 1em var(--main), 0 0 2em #fff,
-    0.2em 0 0.35em var(--mostdark);
+  box-shadow: inset 0.5em 0.5em 1em var(--main), 0 0 2em #fff, 0.2em 0 0.35em var(--mostdark);
 }
 
 #buttonContainer {
@@ -462,8 +461,7 @@ td input {
   left: 25px;
   top: 75px;
   border-radius: 150px;
-  box-shadow: inset 0.5em 0.5em 1em var(--main), 0 0 2em #fff,
-    0.1em 0 0.25em var(--mostdark);
+  box-shadow: inset 0.5em 0.5em 1em var(--main), 0 0 2em #fff, 0.1em 0 0.25em var(--mostdark);
   border: 1px solid var(--main);
   cursor: pointer;
   user-select: none;
@@ -474,8 +472,7 @@ td input {
 .scrollToTopBtn {
   background-color: var(--alt);
   border: 1px solid var(--main);
-  box-shadow: inset 0.25em 0.25em 0.5em var(--main), 0 0 2em #fff,
-    0.1em 0 0.25em var(--mostdark);
+  box-shadow: inset 0.25em 0.25em 0.5em var(--main), 0 0 2em #fff, 0.1em 0 0.25em var(--mostdark);
   border-radius: 50%;
   color: white;
   cursor: pointer;
@@ -501,8 +498,7 @@ td input {
 }
 
 .scrollToTopBtn:hover {
-  box-shadow: inset 0.25em 0.25em 0.5em var(--main), 0 0 2em #fff,
-    0.2em 0 0.35em var(--mostdark);
+  box-shadow: inset 0.25em 0.25em 0.5em var(--main), 0 0 2em #fff, 0.2em 0 0.35em var(--mostdark);
 }
 
 .showBtn {
@@ -635,8 +631,7 @@ td input {
   transition: opacity 0.4s, width 0.3s, color 1.2s;
   transition-timing-function: ease-out;
   border: 1px solid var(--almostMain);
-  box-shadow: 0.15rem 0.15rem 0.3rem #ff0000,
-    inset 0.2rem 0.2rem 0.75rem #ff6666;
+  box-shadow: 0.15rem 0.15rem 0.3rem #ff0000, inset 0.2rem 0.2rem 0.75rem #ff6666;
   color: transparent;
 }
 
@@ -1011,8 +1006,7 @@ a#downloadLink {
 #cookTime #timeTime {
   background-color: #ff73a2;
   color: #fff;
-  box-shadow: -0.125em 0 1em var(--main),
-    inset 1.5em 0.5em 3em rgba(50, 50, 50, 0.2);
+  box-shadow: -0.125em 0 1em var(--main), inset 1.5em 0.5em 3em rgba(50, 50, 50, 0.2);
   font-size: 1rem;
   padding: 0 2em;
   font-family: "MilkyBoba";
@@ -1119,8 +1113,7 @@ hr {
   margin: 0.25em auto;
   border-radius: 100%;
   border: 2px solid #fff;
-  box-shadow: inset 0 0 0.3em var(--alt), 0 0 0.3em rgba(0, 0, 0, 0.1),
-    0 0 0.25em #fff;
+  box-shadow: inset 0 0 0.3em var(--alt), 0 0 0.3em rgba(0, 0, 0, 0.1), 0 0 0.25em #fff;
   background: var(--alty);
   margin-bottom: 0.35em;
 }
@@ -1202,8 +1195,7 @@ hr {
     border-right: none;
     border-color: var(--main);
     border-bottom-color: rgba(191, 73, 112, 0.65);
-    box-shadow: -0.125em 0 1em var(--darkest),
-      inset 1.5em 0.5em 3em rgba(50, 50, 50, 0.2);
+    box-shadow: -0.125em 0 1em var(--darkest), inset 1.5em 0.5em 3em rgba(50, 50, 50, 0.2);
   }
 
   #cookTime button {
@@ -1278,8 +1270,7 @@ hr {
     top: -45%;
     left: -50%;
     border: 1px solid var(--main);
-    box-shadow: 0.125em 0.125em 0.5em rgba(27 27, 27, 0.7),
-      inset 0.35em 0.35em 1.35em var(--alt);
+    box-shadow: 0.125em 0.125em 0.5em rgba(27 27, 27, 0.7), inset 0.35em 0.35em 1.35em var(--alt);
     color: red;
     line-height: 1.25rem;
   }
@@ -1290,52 +1281,50 @@ hr {
   cursor: pointer;
 }
 
-.modal-headerCG
-{
+.modal-headerCG {
   position: relative;
 }
 
-#urlFill
-{
-  width:70%
+#urlFill {
+  width: 70%;
 }
 
-#linkHolder
-{
+#linkHolder {
   position: relative;
 }
 
-.checkie
-{
-  color:green;
+.checkie {
+  color: green;
   font-size: 1.7rem;
   position: relative;
   font-weight: bold;
-  padding-top: .15em;
-  padding-right:.5em;
-  display: none; 
+  padding-top: 0.15em;
+  padding-right: 0.5em;
+  display: none;
 }
 
 @media screen and (max-width: 600px) {
-  .checkie
-{
-  padding-top: .3em;
-  padding-right:.25em;
-}
+  .checkie {
+    padding-top: 0.3em;
+    padding-right: 0.25em;
+  }
 }
 
-.modal-footerCG{
+.modal-footerCG {
   font-size: 50px;
-  padding-top:1rem;
+  padding-top: 1rem;
   text-align: center;
 }
 
-.modal-footerCG a{
+.modal-footerCG a {
   text-decoration: none;
 }
 
-
-.modal-headerCG{
-  width:100%
+.modal-headerCG {
+  width: 100%;
 }
 
+.tumblr-share-button{
+  width:50px;
+  height:50px;
+}
