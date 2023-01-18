@@ -259,10 +259,14 @@ $( document ).ready(function() {
 
 
 //* Action buttons image text functions
+
   $("#downloadLink").mouseenter(function(){
     $(".actionText").css("display","none");
     // $(this).find("span").fadeIn(600);
     // $(this).find("button").css("width", "150%");
+    var width = $(window).width();
+    if(width > 1020)
+    {
     $(this).find("button").animate({
       width: "150%"
       },
@@ -270,11 +274,15 @@ $( document ).ready(function() {
       function (){
         $(this).find("span").fadeIn(500);
       });
+    }
   });
 
   $("#downloadLink").mouseleave(function(){
     // $(this).find("span").fadeOut(400);
     // $(this).find("button").css("width", "100%");
+    var width = $(window).width();
+    if(width > 1020)
+    {
     $(this).find("button").animate({
       width: "100%"
       },
@@ -282,9 +290,13 @@ $( document ).ready(function() {
       function (){
         $(this).find("span").fadeOut(200);
       });
+    }
   });
 
   $("#printButton").mouseenter(function(){
+    var width = $(window).width();
+    if(width > 1020)
+    {
     $(".actionText").css("display","none");
     $(this).animate({
       width: "150%"
@@ -293,9 +305,13 @@ $( document ).ready(function() {
       function (){
         $(this).find("span").fadeIn(500);
       });
+    }
   });
 
   $("#printButton").mouseleave(function(){
+    var width = $(window).width();
+    if(width > 1020)
+    {
     $(this).animate({
       width: "100%"
       },
@@ -303,9 +319,13 @@ $( document ).ready(function() {
       function (){
         $(this).find("span").fadeOut(200);
       });
+    }
   });
 
   $("#sharebutton").mouseenter(function(){
+    var width = $(window).width();
+    if(width > 1020)
+    {
     $(".actionText").css("display","none");
     $(this).animate({
       width: "150%"
@@ -314,9 +334,13 @@ $( document ).ready(function() {
       function (){
         $(this).find("span").fadeIn(500);
       });
+    }
   });
 
   $("#sharebutton").mouseleave(function(){
+    var width = $(window).width();
+    if(width > 1020)
+    {
     $(this).animate({
       width: "100%"
       },
@@ -324,8 +348,8 @@ $( document ).ready(function() {
       function (){
         $(this).find("span").fadeOut(200);
       });
+    }
   });
-
   
 
 

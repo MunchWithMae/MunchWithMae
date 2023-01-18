@@ -948,7 +948,7 @@ a#downloadLink {
   }
 
   .actionText{
-    display: block;
+    display: block!important;
     position: relative;
     padding-top:.5em;
     transform: none;
@@ -968,7 +968,7 @@ a#downloadLink {
 
 @media screen and (min-width: 0px) and (max-width: 600px) {
   .actionText{
-    display: none;
+    display: none!important;
   }
 
   #actions button:hover i{
@@ -1334,6 +1334,12 @@ hr {
     color: red;
     line-height: 1.25rem;
   }
+
+  #extrasContainer button{
+    padding: .25em 0;
+  }
+
+  
 }
 
 .directions tr td:first-child,
@@ -1442,3 +1448,4 @@ hr {
 .fa-arrow-circle-down:visited {
   color: var(--darkest);
 }
+
