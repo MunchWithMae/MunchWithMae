@@ -574,9 +574,6 @@ a.eapps-instagram-feed-header-follow-button {
   border-radius: 50px;
 }
 
-.collapsed {
-  /* display: none; */
-}
 
 .collpasedHeight {
   height: fit-content !important;
@@ -630,12 +627,6 @@ a.eapps-instagram-feed-header-follow-button {
 
 #btn--listView {
   display: none;
-}
-
-.recipeContent img {
-  /* ! transition: all 1.5s; */
-  /* * Changed to jquery */
-  /* transition-timing-function: ease-in-out; */
 }
 
 .recipe {
@@ -899,6 +890,7 @@ a.eapps-instagram-feed-header-follow-button {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  user-select: none;
 }
 .onoffswitch-checkbox {
   position: absolute;

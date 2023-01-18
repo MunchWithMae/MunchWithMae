@@ -58,7 +58,7 @@ header
 {
   background:  var(--darkest);
   transition: all .3s;
-  transition timing function:  ease-in-out;
+  transition-timing-function:  ease-in-out;
 }
 
 /* Change the color of links on hover */
@@ -138,7 +138,7 @@ a.socialMedia
 }
 
 
-.modal-content
+.modalContact-content
 {
   width: 75vw;
   height: 80vh;
@@ -154,7 +154,7 @@ a.socialMedia
 
 
 /* The Modal (background) */
-.modal {
+.modalContact {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 500; /* Sit on top */
@@ -170,32 +170,17 @@ a.socialMedia
 }
 
 /* Modal Content */
-.modal-content {
+.modalContact-content {
     position: relative;
     background-color: #ffe6f0;
     padding: 0;
     border: 1px solid red;
     width: 80%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s;
     height: fit-content;
     box-shadow: inset 0em 2em 6em var(--alt);
     min-width: 300px;
 
-}
-
-/* Add Animation */
-@-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
-    to {top:0; opacity:1}
-}
-
-@keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
 }
 
 /* The Close Button */
@@ -215,7 +200,7 @@ a.socialMedia
     cursor: pointer;
 }
 
-.modal-header h1{
+.modalContact-header h1{
   background:  var(--alty);
   box-shadow: 0 .25em .5em var(--alt);
   border-bottom: 1px solid var(--main);
@@ -231,7 +216,7 @@ a.socialMedia
   #interog{
   font-size: .85rem;
   }
-  .modal-header h1
+  .modalContact-header h1
   {
     line-height: 2rem;
     font-size: 1.5rem;

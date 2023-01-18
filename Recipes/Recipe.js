@@ -1,4 +1,4 @@
-document.getElementById("buttonContainer").addEventListener("click", () => {
+document.getElementById("backButtonContainer").addEventListener("click", () => {
   history.back();
 });
 
@@ -97,32 +97,6 @@ function boxChecked(element) {
     };
   }
 }
-
-// Get the modal
-var modalCG = document.getElementById("myModalCG");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementById("cancelButton");
-
-// When the user clicks the button, open the modal
-btn.onclick = function () {
-  modal.style.display = "block";
-};
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
 
 let ingredientsCollapse = document.querySelector("#ingredientsContainer h2");
 
@@ -256,15 +230,17 @@ twtShare.setAttribute("href", linkStringTWT);
 
 let waShare = document.querySelector(".whatsApp-share-button");
 linkStringWA =
-"https://api.whatsapp.com/send/?text=" + window.location.href + "%2F&type=custom_url&app_absent=0"
+  "https://api.whatsapp.com/send/?text=" +
+  window.location.href +
+  "%2F&type=custom_url&app_absent=0";
 waShare.setAttribute("href", linkStringWA);
 
 let redditShare = document.querySelector(".reddit-share-button");
 linkStringReddit =
-"https://www.reddit.com/submit?url=" + window.location.href + "/&title=Check%20out%20this%20awesome%20recipe%20I%20found%20on%20munchwithmae.github.io"
+  "https://www.reddit.com/submit?url=" +
+  window.location.href +
+  "/&title=Check%20out%20this%20awesome%20recipe%20I%20found%20on%20munchwithmae.github.io";
 redditShare.setAttribute("href", linkStringReddit);
-
-
 
 // var element = document.getElementById('content');
 // html2pdf().from(element).save();
@@ -277,3 +253,80 @@ redditShare.setAttribute("href", linkStringReddit);
 //   a.click()
 //   document.body.removeChild(a)
 // }
+
+//! jquery loaded
+$( document ).ready(function() {
+
+
+//* Action buttons image text functions
+  $("#downloadLink").mouseenter(function(){
+    $(".actionText").css("display","none");
+    // $(this).find("span").fadeIn(600);
+    // $(this).find("button").css("width", "150%");
+    $(this).find("button").animate({
+      width: "150%"
+      },
+      500,
+      function (){
+        $(this).find("span").fadeIn(500);
+      });
+  });
+
+  $("#downloadLink").mouseleave(function(){
+    // $(this).find("span").fadeOut(400);
+    // $(this).find("button").css("width", "100%");
+    $(this).find("button").animate({
+      width: "100%"
+      },
+      0,
+      function (){
+        $(this).find("span").fadeOut(200);
+      });
+  });
+
+  $("#printButton").mouseenter(function(){
+    $(".actionText").css("display","none");
+    $(this).animate({
+      width: "150%"
+      },
+      500,
+      function (){
+        $(this).find("span").fadeIn(500);
+      });
+  });
+
+  $("#printButton").mouseleave(function(){
+    $(this).animate({
+      width: "100%"
+      },
+      0,
+      function (){
+        $(this).find("span").fadeOut(200);
+      });
+  });
+
+  $("#sharebutton").mouseenter(function(){
+    $(".actionText").css("display","none");
+    $(this).animate({
+      width: "150%"
+      },
+      500,
+      function (){
+        $(this).find("span").fadeIn(500);
+      });
+  });
+
+  $("#sharebutton").mouseleave(function(){
+    $(this).animate({
+      width: "100%"
+      },
+      0,
+      function (){
+        $(this).find("span").fadeOut(200);
+      });
+  });
+
+  
+
+
+}); //! end document.ready

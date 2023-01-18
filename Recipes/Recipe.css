@@ -422,13 +422,13 @@ td input {
     display: none;
   }
 
-  #buttonContainer {
+  #backButtonContainer {
     display: none;
   }
 }
 
 @media screen and (min-width: 0px) and (max-width: 750px) {
-  #buttonContainer {
+  #backButtonContainer {
     display: none;
   }
 }
@@ -444,16 +444,16 @@ td input {
   transition: 0.2s;
 }
 
-#buttonContainer:hover #btn--back {
+#backButtonContainer:hover #btn--back {
   transform: translateX(-3px);
 }
 
-#buttonContainer:hover {
+#backButtonContainer:hover {
   transform: scale(1.01);
   box-shadow: inset 0.5em 0.5em 1em var(--main), 0 0 2em #fff, 0.2em 0 0.35em var(--mostdark);
 }
 
-#buttonContainer {
+#backButtonContainer {
   background: var(--alt);
   width: 75px;
   height: 75px;
@@ -598,7 +598,7 @@ td input {
   letter-spacing: 0.25em;
   background: transparent;
   font-size: 1.15rem;
-  padding-left: 1em;
+  padding-left:2em;
   transform: translateY(-4px);
 }
 
@@ -837,6 +837,7 @@ td input {
   position: relative;
   justify-content: space-around;
   flex-direction: column;
+  
 }
 
 #actions button,
@@ -855,6 +856,37 @@ td input {
   transition: 0.4s;
   transition-timing-function: ease-out;
   letter-spacing: 0.065em;
+  line-height: 1.6;
+}
+
+.actionText{
+  display: none;
+  position: absolute; 
+  top:50%;
+  left:50%;
+  transform: translate(-50%,50%);
+}
+
+#actions hr{
+  border: none;
+}
+
+i{
+  transition:.5s;
+}
+
+#actions button:hover i{
+  transform: translate(-50%,-75%);
+}
+
+#actions a i,
+#actions i{
+  font-size:2rem;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  text-shadow:1px 1px black;
 }
 
 #actions a {
@@ -877,16 +909,6 @@ td input {
   box-shadow: 0 0 1em var(--main), inset -0.75em 0 1em var(--darkest),
     inset 0.35em 0 1.2em var(--almostMain);
 }
-
-/*#actions button:not(#saveButton):hover
-{
-	transform: translateX(-3px) rotateY(-15deg);
-}
-
-#actions a:hover
-{
-	transform: translateX(-3px) rotateY(-15deg);
-}*/
 
 #actions a:first-child {
   border-bottom: none;
@@ -920,6 +942,44 @@ a#downloadLink {
     border-top: none;
     border-right: none;
   }
+
+  #actions button:hover i{
+    transform: none;
+  }
+
+  .actionText{
+    display: block;
+    position: relative;
+    padding-top:.5em;
+    transform: none;
+    top:0;
+    left:0;
+  }
+
+  #actions a i,
+  #actions i{
+  font-size:2rem;
+  position: relative;
+  top:0%;
+  left:0%;
+  /* transform: translate(-50%,-50%); */
+  transform: none;
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+  .actionText{
+    display: none;
+  }
+
+  #actions button:hover i{
+    transform: none;
+  }
+
+  #actions button {
+    min-width: 30px;
+  }
+
+}
 
   #actions a {
     box-shadow: none;
@@ -1324,61 +1384,61 @@ hr {
   width: 100%;
 }
 
-.download-share-button{
+.download-share-button {
   padding-left: 20px;
 }
 
-.sharebutton{
+.sharebutton {
   line-height: 1.6;
-  letter-spacing: .75rem;
-  filter: drop-shadow(1px 1px 1px rgba(20,20,20,.5));
+  letter-spacing: 0.75rem;
+  filter: drop-shadow(1px 1px 1px rgba(20, 20, 20, 0.5));
 }
 
 .fa-facebook-square,
 .fa-facebook-square:hover,
 .fa-facebook-square:focus,
-.fa-facebook-square:visited{
-  color:#4267B2;
+.fa-facebook-square:visited {
+  color: #4267b2;
 }
 
 .fa-twitter,
 .fa-twitter:hover,
 .fa-twitter:focus,
-.fa-twitter:visited{
-  color:#1DA1F2;
+.fa-twitter:visited {
+  color: #1da1f2;
 }
 
 .fa-whatsapp,
 .fa-whatsapp:hover,
 .fa-whatsapp:focus,
-.fa-whatsapp:visited{
-  color:#25D366;
+.fa-whatsapp:visited {
+  color: #25d366;
 }
 
 .fa-reddit-square,
 .fa-reddit-square:hover,
 .fa-reddit-square:focus,
-.fa-reddit-square:visited{
-  color: #FF4500;
+.fa-reddit-square:visited {
+  color: #ff4500;
 }
 
 .fa-reddit-square,
 .fa-reddit-square:hover,
 .fa-reddit-square:focus,
-.fa-reddit-square:visited{
-  color: #FF4500;
+.fa-reddit-square:visited {
+  color: #ff4500;
 }
 
 .fa-tumblr-square,
 .fa-tumblr-square:hover,
 .fa-tumblr-square:focus,
-.fa-tumblr-square:visited{
+.fa-tumblr-square:visited {
   color: #2d5276;
 }
 
 .fa-arrow-circle-down,
 .fa-arrow-circle-down:hover,
 .fa-arrow-circle-down:focus,
-.fa-arrow-circle-down:visited{
+.fa-arrow-circle-down:visited {
   color: var(--darkest);
 }
