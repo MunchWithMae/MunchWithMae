@@ -322,10 +322,34 @@ $(document).ready(function () {
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function (event) {
     if (event.target == modal) {
+      alert("test");
       // modal.style.display = "none";
       $(modal).fadeOut(300);
     }
   };
+
+  // Get the contact modal
+  var modal = document.getElementById("myModalContact");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+
+  // When the user clicks on the button, open the modal
+  btn.onclick = function () {
+    $(modal).fadeIn(500);
+  };
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      $(modal).fadeOut(300);
+      // alert("test");
+    }
+  };
+
+  $("#cancelButton").click(function () {
+    $(modal).fadeOut(300);
+  });
 
   $("#myonoffswitchDescriptions").click(function () {
     $("#myonoffswitchDescriptions").parent().find("span:nth-child(2)").toggleClass("burnEgg");

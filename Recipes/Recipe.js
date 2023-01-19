@@ -81,18 +81,21 @@ function boxChecked(element) {
     let pTwo = document.querySelector(".modal-headerCG p:nth-child(4)");
     let pThree = document.querySelector(".modal-headerCG p:nth-child(6)");
 
-    modalCG.style.display = "block";
+    //modalCG.style.display = "block";
+    $(modalCG).fadeIn();
     pHead.innerHTML =
       '<span class="ornament">[ </span>Congratulations<span class="ornament"> ]</span>';
     pOne.innerHTML = "You've completed this recipe!";
     pTwo.innerHTML = "I hope it's delicious!";
     pThree.innerHTML = "If you enjoy this recipe, please share it with your friends!";
-    modalCG.style.display = "block";
+    //modalCG.style.display = "block";
+    $(modalCG).fadeIn();
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
       if (event.target == modalCG) {
-        modalCG.style.display = "none";
+        // modalCG.style.display = "none";
+        $(modalCG).fadeOut();
       }
     };
   }
@@ -102,7 +105,7 @@ let ingredientsCollapse = document.querySelector("#ingredientsContainer h2");
 
 let ingredientsCollapseContainer = document.createElement("button");
 
-ingredientsCollapseContainer.innerHTML = "[-]";
+ingredientsCollapseContainer.innerHTML = "<i class='fa-solid fa-angles-up'></i>";
 
 ingredientsCollapseContainer.classList.add("collapseIngredients");
 
@@ -110,12 +113,24 @@ ingredientsCollapse.appendChild(ingredientsCollapseContainer);
 
 $(ingredientsCollapse).click(function () {
   let ingredientsTable = document.querySelector("#ingredientsContainer .tableContainer");
+  var width = $(window).width();
+
   ingredientsTable.classList.toggle("collapsed");
 
   if (ingredientsTable.classList.contains("collapsed")) {
-    ingredientsCollapseContainer.innerHTML = "[+]";
+    // ingredientsCollapseContainer.innerHTML = "<i class='fa-solid fa-angles-down'></i>";
+    if (width < 600) {
+      $(ingredientsCollapseContainer).find("i").css("transform", "rotateX(180deg) translateY(25%)");
+    } else {
+      $(ingredientsCollapseContainer).find("i").css("transform", "rotateX(180deg)");
+    }
   } else {
-    ingredientsCollapseContainer.innerHTML = "[-]";
+    // ingredientsCollapseContainer.innerHTML = "<i class='fa-solid fa-angles-up'></i>";
+    if (width < 600) {
+      $(ingredientsCollapseContainer).find("i").css("transform", "rotateX(0) translateY(-25%)");
+    } else {
+      $(ingredientsCollapseContainer).find("i").css("transform", "rotateX(0)");
+    }
   }
   $(ingredientsTable).slideToggle("slow");
 });
@@ -124,7 +139,7 @@ let directionsCollapse = document.querySelector("#directionsContainer h2");
 
 let directionsCollapseContainer = document.createElement("button");
 
-directionsCollapseContainer.innerHTML = "[-]";
+directionsCollapseContainer.innerHTML = "<i class='fa-solid fa-angles-up'></i>";
 
 directionsCollapseContainer.classList.add("collapseDirections");
 
@@ -132,12 +147,23 @@ directionsCollapse.appendChild(directionsCollapseContainer);
 
 $(directionsCollapse).click(function () {
   let directionsTable = document.querySelector("#directionsContainer .tableContainer");
+  var width = $(window).width();
   directionsTable.classList.toggle("collapsed");
 
   if (directionsTable.classList.contains("collapsed")) {
-    directionsCollapseContainer.innerHTML = "[+]";
+    // directionsCollapseContainer.innerHTML = "<i class='fa-solid fa-angles-down'></i>";
+    if (width < 600) {
+      $(directionsCollapseContainer).find("i").css("transform", "rotateX(180deg) translateY(25%)");
+    } else {
+      $(directionsCollapseContainer).find("i").css("transform", "rotateX(180deg)");
+    }
   } else {
-    directionsCollapseContainer.innerHTML = "[-]";
+    // directionsCollapseContainer.innerHTML = "<i class='fa-solid fa-angles-up'></i>";
+    if (width < 600) {
+      $(directionsCollapseContainer).find("i").css("transform", "rotateX(0) translateY(-25%)");
+    } else {
+      $(directionsCollapseContainer).find("i").css("transform", "rotateX(0)");
+    }
   }
   $(directionsTable).slideToggle("slow");
 });
@@ -177,7 +203,8 @@ function shareModal() {
   let pTwo = document.querySelector(".modal-headerCG p:nth-child(4)");
   let pThree = document.querySelector(".modal-headerCG p:nth-child(6)");
 
-  modalCG.style.display = "block";
+  // modalCG.style.display = "block";
+  $(modalCG).fadeIn();
   pHead.innerHTML = '<span class="ornament">[ </span>SHARE RECIPE<span class="ornament"> ]</span>';
   pOne.innerHTML = "Thank you for checking out this recipe!";
   pTwo.innerHTML = "If you liked it, please share it with your friends with the link below!";
@@ -186,11 +213,13 @@ function shareModal() {
   // When the user clicks anywhere outside of the modal, close it
   window.onclick = function (event) {
     if (event.target == modalCG) {
-      modalCG.style.display = "none";
+      // modalCG.style.display = "none";
+      $(modalCG).fadeOut();
     }
 
     if (event.target == modal) {
-      modal.style.display = "none";
+      // modal.style.display = "none";
+      $(modalCG).fadeOut();
     }
   };
 }
@@ -255,102 +284,112 @@ redditShare.setAttribute("href", linkStringReddit);
 // }
 
 //! jquery loaded
-$( document ).ready(function() {
+$(document).ready(function () {
+  //* Action buttons image text functions
 
-
-//* Action buttons image text functions
-
-  $("#downloadLink").mouseenter(function(){
-    $(".actionText").css("display","none");
+  $("#downloadLink").mouseenter(function () {
+    $(".actionText").css("display", "none");
     // $(this).find("span").fadeIn(600);
     // $(this).find("button").css("width", "150%");
     var width = $(window).width();
-    if(width > 1020)
-    {
-    $(this).find("button").animate({
-      width: "150%"
-      },
-      500,
-      function (){
-        $(this).find("span").fadeIn(500);
-      });
+    if (width > 1020) {
+      $(this)
+        .find("button")
+        .animate(
+          {
+            width: "150%",
+          },
+          500,
+          function () {
+            $(this).find("span").fadeIn(500);
+          }
+        );
     }
   });
 
-  $("#downloadLink").mouseleave(function(){
+  $("#downloadLink").mouseleave(function () {
     // $(this).find("span").fadeOut(400);
     // $(this).find("button").css("width", "100%");
     var width = $(window).width();
-    if(width > 1020)
-    {
-    $(this).find("button").animate({
-      width: "100%"
-      },
-      0,
-      function (){
-        $(this).find("span").fadeOut(200);
-      });
+    if (width > 1020) {
+      $(this)
+        .find("button")
+        .animate(
+          {
+            width: "100%",
+          },
+          0,
+          function () {
+            $(this).find("span").fadeOut(200);
+          }
+        );
     }
   });
 
-  $("#printButton").mouseenter(function(){
+  $("#printButton").mouseenter(function () {
     var width = $(window).width();
-    if(width > 1020)
-    {
-    $(".actionText").css("display","none");
-    $(this).animate({
-      width: "150%"
-      },
-      500,
-      function (){
-        $(this).find("span").fadeIn(500);
-      });
+    if (width > 1020) {
+      $(".actionText").css("display", "none");
+      $(this).animate(
+        {
+          width: "150%",
+        },
+        500,
+        function () {
+          $(this).find("span").fadeIn(500);
+        }
+      );
     }
   });
 
-  $("#printButton").mouseleave(function(){
+  $("#printButton").mouseleave(function () {
     var width = $(window).width();
-    if(width > 1020)
-    {
-    $(this).animate({
-      width: "100%"
-      },
-      0,
-      function (){
-        $(this).find("span").fadeOut(200);
-      });
+    if (width > 1020) {
+      $(this).animate(
+        {
+          width: "100%",
+        },
+        0,
+        function () {
+          $(this).find("span").fadeOut(200);
+        }
+      );
     }
   });
 
-  $("#sharebutton").mouseenter(function(){
+  $("#sharebutton").mouseenter(function () {
     var width = $(window).width();
-    if(width > 1020)
-    {
-    $(".actionText").css("display","none");
-    $(this).animate({
-      width: "150%"
-      },
-      500,
-      function (){
-        $(this).find("span").fadeIn(500);
-      });
+    if (width > 1020) {
+      $(".actionText").css("display", "none");
+      $(this).animate(
+        {
+          width: "150%",
+        },
+        500,
+        function () {
+          $(this).find("span").fadeIn(500);
+        }
+      );
     }
   });
 
-  $("#sharebutton").mouseleave(function(){
+  $("#sharebutton").mouseleave(function () {
     var width = $(window).width();
-    if(width > 1020)
-    {
-    $(this).animate({
-      width: "100%"
-      },
-      0,
-      function (){
-        $(this).find("span").fadeOut(200);
-      });
+    if (width > 1020) {
+      $(this).animate(
+        {
+          width: "100%",
+        },
+        0,
+        function () {
+          $(this).find("span").fadeOut(200);
+        }
+      );
     }
   });
-  
 
-
+  $("#resetButton").click(function () {
+    $(".container input").prop("checked", false);
+    $("#directionsContainer tr").removeClass("completed");
+  });
 }); //! end document.ready

@@ -95,7 +95,7 @@ img:hover {
 #mainImage {
   max-height: 75vh;
   border-radius: 0.5em;
-  box-shadow: 0.15em 0.15em 0.4em var(--mostdark), 0 0 2em var(--mostdark);
+  box-shadow: 0.15em 0.15em 0.4em rgba(0, 0, 0, 0.6), 0 0 2em rgba(0, 0, 0, 0.4);
 }
 
 #mainImageHolder {
@@ -598,7 +598,7 @@ td input {
   letter-spacing: 0.25em;
   background: transparent;
   font-size: 1.15rem;
-  padding-left:2em;
+  padding-left: 1em;
   transform: translateY(-4px);
 }
 
@@ -676,18 +676,9 @@ td input {
   justify-content: center;
 }
 
-#ingredientsContainer h2,
-#directionsContainer h2 {
-  padding-left: 56px;
-}
-
 @media screen and (min-width: 0px) and (max-width: 600px) {
   .collapseIngredients {
     padding-left: 0.5em;
-  }
-
-  #ingredientsContainer h2 {
-    padding-left: 40px;
   }
 }
 
@@ -837,7 +828,6 @@ td input {
   position: relative;
   justify-content: space-around;
   flex-direction: column;
-  
 }
 
 #actions button,
@@ -859,34 +849,34 @@ td input {
   line-height: 1.6;
 }
 
-.actionText{
+.actionText {
   display: none;
-  position: absolute; 
-  top:50%;
-  left:50%;
-  transform: translate(-50%,50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
 }
 
-#actions hr{
+#actions hr {
   border: none;
 }
 
-i{
-  transition:.5s;
+i {
+  transition: 0.5s;
 }
 
-#actions button:hover i{
-  transform: translate(-50%,-75%);
+#actions button:hover i {
+  transform: translate(-50%, -75%);
 }
 
 #actions a i,
-#actions i{
-  font-size:2rem;
+#actions i {
+  font-size: 2rem;
   position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  text-shadow:1px 1px black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 1px 1px black;
 }
 
 #actions a {
@@ -943,43 +933,42 @@ a#downloadLink {
     border-right: none;
   }
 
-  #actions button:hover i{
+  #actions button:hover i {
     transform: none;
   }
 
-  .actionText{
-    display: block!important;
+  .actionText {
+    display: block !important;
     position: relative;
-    padding-top:.5em;
+    padding-top: 0.5em;
     transform: none;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
   }
 
   #actions a i,
-  #actions i{
-  font-size:2rem;
-  position: relative;
-  top:0%;
-  left:0%;
-  /* transform: translate(-50%,-50%); */
-  transform: none;
-}
-
-@media screen and (min-width: 0px) and (max-width: 600px) {
-  .actionText{
-    display: none!important;
-  }
-
-  #actions button:hover i{
+  #actions i {
+    font-size: 2rem;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    /* transform: translate(-50%,-50%); */
     transform: none;
   }
 
-  #actions button {
-    min-width: 30px;
-  }
+  @media screen and (min-width: 0px) and (max-width: 600px) {
+    .actionText {
+      display: none !important;
+    }
 
-}
+    #actions button:hover i {
+      transform: none;
+    }
+
+    #actions button {
+      min-width: 30px;
+    }
+  }
 
   #actions a {
     box-shadow: none;
@@ -1295,6 +1284,15 @@ hr {
     border: 1px solid var(--dark);
     padding: 0.65em 2em;
   }
+
+  #resetButton {
+    display: none;
+  }
+
+  #ingredientsContainer h2,
+  #directionsContainer h2 {
+    font-size: 2rem;
+  }
 }
 
 .view-image-close__full {
@@ -1335,11 +1333,27 @@ hr {
     line-height: 1.25rem;
   }
 
-  #extrasContainer button{
-    padding: .25em 0;
+  #extrasContainer button {
+    padding: 0.25em 0;
   }
+}
 
-  
+#resetButton {
+  position: absolute;
+  left: 0;
+  top: 3%;
+  padding: 0.55em 0.75em;
+  font-family: "comfortaa";
+  border-radius: 5px;
+  background-color: var(--alty);
+  color: #ff0000;
+  border: 1px solid var(--main);
+  font-size: 90%;
+  box-shadow: 0.1em 0.1em 0.5em var(--dark);
+}
+
+#resetButton:hover {
+  cursor: pointer;
 }
 
 .directions tr td:first-child,
@@ -1449,3 +1463,20 @@ hr {
   color: var(--darkest);
 }
 
+.collapseIngredients i,
+.collapseDirections i {
+  background: var(--alt);
+  padding: 8px;
+  border-radius: 50px;
+  padding-left: 12px;
+  padding-top: 10px;
+  box-shadow: 0.1em 0.1em 0.5em rgba(0, 0, 0, 0.2), inset -0.15em -0.15em 0.25em var(--almostMain);
+  border: 1px solid var(--main);
+}
+
+@media screen and (max-width: 600px) {
+  .collapseIngredients i,
+  .collapseDirections i {
+    transform: translateY(-25%);
+  }
+}
