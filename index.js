@@ -298,8 +298,8 @@ $(document).ready(function () {
 
   let iframe = $$("iframeBox");
 
-  // Get the modal
-  var modal = document.getElementById("settingsModal");
+  // Get the settings modal
+  var modalSettings = document.getElementById("settingsModal");
 
   // Get the button that opens the modal
   var btn = document.getElementById("recipeSettingsImage");
@@ -309,47 +309,13 @@ $(document).ready(function () {
 
   // When the user clicks on the button, open the modal
   btn.onclick = function () {
-    $(modal).fadeIn(500);
-    // modal.style.display = "block";
+    $(modalSettings).fadeIn(500);
   };
 
-  // When the user clicks on <span> (x), close the modal
+  // When the user clicks on the close button, close the modal
   closeButton.onclick = function () {
-    // modal.style.display = "none";
-    $(modal).fadeOut(300);
+    $(modalSettings).fadeOut(300);
   };
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      alert("test");
-      // modal.style.display = "none";
-      $(modal).fadeOut(300);
-    }
-  };
-
-  // Get the contact modal
-  var modal = document.getElementById("myModalContact");
-
-  // Get the button that opens the modal
-  var btn = document.getElementById("myBtn");
-
-  // When the user clicks on the button, open the modal
-  btn.onclick = function () {
-    $(modal).fadeIn(500);
-  };
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      $(modal).fadeOut(300);
-      // alert("test");
-    }
-  };
-
-  $("#cancelButton").click(function () {
-    $(modal).fadeOut(300);
-  });
 
   $("#myonoffswitchDescriptions").click(function () {
     $("#myonoffswitchDescriptions").parent().find("span:nth-child(2)").toggleClass("burnEgg");

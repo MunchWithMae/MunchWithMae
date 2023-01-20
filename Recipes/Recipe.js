@@ -92,12 +92,12 @@ function boxChecked(element) {
     $(modalCG).fadeIn();
 
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modalCG) {
-        // modalCG.style.display = "none";
-        $(modalCG).fadeOut();
-      }
-    };
+    // !window.onclick = function (event) {
+    // !  if (event.target == modalCG) {
+    // !    // modalCG.style.display = "none";
+    // !    $(modalCG).fadeOut();
+    // !  }
+    // !};
   }
 }
 
@@ -211,17 +211,17 @@ function shareModal() {
   pThree.innerHTML = "";
 
   // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function (event) {
-    if (event.target == modalCG) {
-      // modalCG.style.display = "none";
-      $(modalCG).fadeOut();
-    }
+  // window.onclick = function (event) {
+  //   if (event.target == modalCG) {
+  //     // modalCG.style.display = "none";
+  //     $(modalCG).fadeOut();
+  //   }
 
-    if (event.target == modal) {
-      // modal.style.display = "none";
-      $(modalCG).fadeOut();
-    }
-  };
+  //   if (event.target == modal) {
+  //     // modal.style.display = "none";
+  //     $(modalCG).fadeOut();
+  //   }
+  // };
 }
 
 var cookingTime = document.querySelector(".circle").innerHTML;

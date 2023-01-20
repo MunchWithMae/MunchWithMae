@@ -9,24 +9,27 @@ function headerDrop() {
 }
 
 // Get the contact modal
-var modal = document.getElementById("myModalContact");
+var modalContact = document.getElementById("myModalContact");
 
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
 
 // When the user clicks on the button, open the modal
 btn.onclick = function () {
-  $(modal).fadeIn(500);
+  $(modalContact).fadeIn(500);
 };
 
 // When the user clicks anywhere outside of the modal, close it
+let modalObjects = document.querySelectorAll(".modal");
 window.onclick = function (event) {
-  if (event.target == modal) {
-    $(modal).fadeOut(300);
-    // alert("test");
+  let r;
+  for (r = 0; r < modalObjects.length; r++) {
+    if (event.target == modalObjects[r]) {
+      $(".modal").fadeOut(300);
+    }
   }
 };
 
 $("#cancelButton").click(function () {
-  $(modal).fadeOut(300);
+  $(modalContact).fadeOut(300);
 });
