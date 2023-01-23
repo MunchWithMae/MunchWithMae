@@ -1,18 +1,9 @@
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 
-$(document).ready(function () {
-  console.log("Ready!");
-
-  let slideIndex = 1;
+let slideIndex = 1;
   var timer;
-
-  const $e = document.getElementById.bind(document);
-  const $$ = document.querySelector.bind(document);
-  const $$$ = document.querySelectorAll.bind(document);
-
-  showSlides(slideIndex);
-
+  
   // Next/previous controls
   function plusSlides(n) {
     showSlides((slideIndex += n));
@@ -22,6 +13,8 @@ $(document).ready(function () {
   function currentSlide(n) {
     showSlides((slideIndex = n));
   }
+
+  showSlides(slideIndex);
 
   function onImagesLoaded(container, event) {
     var images = container.getElementsByTagName("img");
@@ -66,6 +59,17 @@ $(document).ready(function () {
       timer = setTimeout(() => plusSlides(1), 5000);
     });
   }
+
+$(document).ready(function () {
+  console.log("Ready!");
+
+  
+
+  const $e = document.getElementById.bind(document);
+  const $$ = document.querySelector.bind(document);
+  const $$$ = document.querySelectorAll.bind(document);
+
+
 
   function recipeObject(name, link, description, image) {
     this.name = name;

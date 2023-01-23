@@ -25,23 +25,23 @@
   </head>
 
   <body>
+    <div id="headerBG" class="HBG modal"></div>
     <header>
+      
       <div class="topnav" id="myTopnav">
         <div id="headerLogo">
           <a href="#"><img src="Images/mwmHeader.png" /></a>
         </div>
-        <a class="active" href="#">Home</a>
-        <a href="#siteDescription">About</a>
-        <a href="#recipes">Recipes</a>
+        <a class="active" href="#" onclick="headerDrop()">Home</a>
+        <a href="#siteDescription" onclick="headerDrop()">About</a>
+        <a href="#recipes" onclick="headerDrop()">Recipes</a>
         <a href="construction.html">Tutorials</a>
         <button id="myBtn">Contact</button>
-        <a href="https://www.instagram.com/munch_with_mae/" target="_blank" class="socialMedia"
-          ><i class="fab fa-instagram fa-2x"></i
-        ></a>
-        <a href="javascript:void(0);" class="icon" onclick="headerDrop()"
-          ><i class="fa fa-bars"></i
-        ></a>
+        
+        <a href="https://www.instagram.com/munch_with_mae/" target="_blank" class="socialMedia"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="javascript:void(0);" class="icon" onclick="headerDrop()"><i class="fa fa-bars"></i></a>
       </div>
+        
     </header>
 
     <div id="content">
@@ -50,6 +50,9 @@
         <h1><span class="ornament">[</span>Munch With Mae<span class="ornament">]</span></h1>
         <img src="Images/mwmHeader.png" id="imgTwo" />
       </div>
+
+      <div id="images">
+        
 
       <section id="mainImageHolder" view-image>
         <div class="mySlides fade">
@@ -128,10 +131,16 @@
           <img src="Images\HomeCarousel\image19.jpg" id="mainImage" />
         </div>
 
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
       </section>
+      <!-- Next and previous buttons -->
+      <div id = "nexPrevContainer">
+        <a class="prev" onclick="plusSlides(-1)"><i class="fa fa-arrow-circle-left"></i></a>
+        <a class="next" onclick="plusSlides(1)"><i class="fa fa-arrow-circle-right"></i></a>
+      </div>
+      </div>
+
+      
 
       <section id="siteDescription">
         <div id="descriptionContainer">
