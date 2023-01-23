@@ -111,7 +111,7 @@ ingredientsCollapseContainer.classList.add("collapseIngredients");
 
 ingredientsCollapse.appendChild(ingredientsCollapseContainer);
 
-$(ingredientsCollapse).click(function () {
+$(ingredientsCollapseContainer).click(function () {
   let ingredientsTable = document.querySelector("#ingredientsContainer .tableContainer");
   var width = $(window).width();
 
@@ -145,7 +145,7 @@ directionsCollapseContainer.classList.add("collapseDirections");
 
 directionsCollapse.appendChild(directionsCollapseContainer);
 
-$(directionsCollapse).click(function () {
+$(directionsCollapseContainer).click(function () {
   let directionsTable = document.querySelector("#directionsContainer .tableContainer");
   var width = $(window).width();
   directionsTable.classList.toggle("collapsed");

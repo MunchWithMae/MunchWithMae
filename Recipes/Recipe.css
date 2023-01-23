@@ -1352,8 +1352,11 @@ hr {
   box-shadow: 0.1em 0.1em 0.5em var(--dark);
 }
 
-#resetButton:hover {
+
+#resetButton:hover,
+#resetButton:focus {
   cursor: pointer;
+  font-weight:bold;
 }
 
 .directions tr td:first-child,

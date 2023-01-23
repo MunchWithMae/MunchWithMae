@@ -1,9 +1,14 @@
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
-
 let slideIndex = 1;
   var timer;
+
+  const $e = document.getElementById.bind(document);
+  const $$ = document.querySelector.bind(document);
+  const $$$ = document.querySelectorAll.bind(document);
+
   
+
   // Next/previous controls
   function plusSlides(n) {
     showSlides((slideIndex += n));
@@ -13,8 +18,6 @@ let slideIndex = 1;
   function currentSlide(n) {
     showSlides((slideIndex = n));
   }
-
-  showSlides(slideIndex);
 
   function onImagesLoaded(container, event) {
     var images = container.getElementsByTagName("img");
@@ -63,13 +66,9 @@ let slideIndex = 1;
 $(document).ready(function () {
   console.log("Ready!");
 
+  showSlides(slideIndex);
+
   
-
-  const $e = document.getElementById.bind(document);
-  const $$ = document.querySelector.bind(document);
-  const $$$ = document.querySelectorAll.bind(document);
-
-
 
   function recipeObject(name, link, description, image) {
     this.name = name;
