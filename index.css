@@ -75,12 +75,12 @@ img {
 
 #mainImageHolder {
   position: relative;
-  margin-bottom:2em;
-  width:100%;
+  margin-bottom: 2em;
+  width: 100%;
 }
 
-#images{
-  display:flex;
+#images {
+  display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   position: relative;
@@ -90,7 +90,7 @@ img {
 .next {
   cursor: pointer;
   width: 5%;
-  padding: 0 .25em;
+  padding: 0 0.25em;
   color: var(--darkest);
   font-weight: bold;
   font-size: 2.375rem;
@@ -99,42 +99,40 @@ img {
   user-select: none;
   text-align: center;
   position: absolute;
-  top:50%;
+  top: 50%;
   transform: translateY(-50%);
 }
 
-@media screen and (min-width: 0) and (max-width:1020px){
-  #images{
-    display:block;
+@media screen and (min-width: 0) and (max-width: 1020px) {
+  #images {
+    display: block;
   }
 
-  #nexPrevContainer{
-    width:100%;
+  #nexPrevContainer {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    gap:2em;
+    gap: 2em;
   }
 
   .prev,
-  .next{
+  .next {
     position: relative;
-    width:50%;
+    width: 50%;
     background: var(--alty);
-    opacity:.8;
-    padding-top:.15em;
-    padding-bottom:.15em;
+    opacity: 0.8;
+    padding-top: 0.15em;
+    padding-bottom: 0.15em;
   }
 
   .prev:hover,
-.next:hover,
-.prev:focus,
-.next:focus {
-  background-color: var(--main);
-  color: white;
-  text-shadow:1px 1px #000;
-}
-
-  
+  .next:hover,
+  .prev:focus,
+  .next:focus {
+    background-color: var(--main);
+    color: white;
+    text-shadow: 1px 1px #000;
+  }
 }
 
 .mySlides img {
@@ -167,10 +165,9 @@ img {
 
   #mainImageHolder {
     position: relative;
-    margin-bottom:2.5em;
-    width:100%;
+    margin-bottom: 2.5em;
+    width: 100%;
   }
-
 }
 
 @media screen and (min-width: 600px) and (max-width: 1020px) {
@@ -225,11 +222,9 @@ h1 {
     font-size: 1.75rem;
     line-height: 4rem;
   }
-
 }
 
 @media screen and (min-width: 450px) and (max-width: 600px) {
-
   h1 {
     font-size: 2rem;
     line-height: 4rem;
@@ -277,7 +272,7 @@ h1 {
 .next:focus {
   /* background-color: var(--main); */
   color: white;
-  text-shadow:1px 1px #000;
+  text-shadow: 1px 1px #000;
 }
 
 /* The dots/bullets/indicators */
@@ -1104,10 +1099,8 @@ a.eapps-instagram-feed-header-follow-button {
   cursor: pointer;
 }
 
-
-@media screen and (min-width: 0) and (max-width:1000px){
-  #siteDescription
-  {
-    margin-top:.75em;
+@media screen and (min-width: 0) and (max-width: 1000px) {
+  #siteDescription {
+    margin-top: 0.75em;
   }
 }

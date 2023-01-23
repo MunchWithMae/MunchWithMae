@@ -39,10 +39,9 @@ window.onclick = function (event) {
   }
 };
 
-$(".topnav.responsive a").click( function(){
+$(".topnav.responsive a").click(function () {
   alert("test");
   document.getElementById("myTopnav").className = "topnav";
-  
 });
 
 $("#cancelButton").click(function () {
