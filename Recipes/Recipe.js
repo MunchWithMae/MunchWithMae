@@ -1,6 +1,6 @@
-document.getElementById("backButtonContainer").addEventListener("click", () => {
-  history.back();
-});
+// document.getElementById("backButtonContainer").addEventListener("click", () => {
+//   history.back();
+// });
 
 let slideIndex = 1;
 var timer;
@@ -392,4 +392,14 @@ $(document).ready(function () {
     $(".container input").prop("checked", false);
     $("#directionsContainer tr").removeClass("completed");
   });
+
+  $("#backButtonContainer").click(function(){
+    var element = document.getElementById('content');
+    html2pdf(element);
+    //history.back();
+  });
+
+  
+  //html2pdf(element);
+
 }); //! end document.ready

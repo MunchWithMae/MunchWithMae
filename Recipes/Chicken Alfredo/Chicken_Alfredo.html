@@ -1,249 +1,467 @@
-<!doctype html>
-
 <html lang="en">
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chicken Alfredo</title>
 
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Chicken Alfredo</title>
+    <meta
+      property="og:url"
+      content="https://munchwithmae.github.io/Recipes/Chicken%20Alfredo/Chicken_Alfredo.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Munch With Mae" />
+    <meta
+      property="og:description"
+      content="Chicken Alfredo - You can never go wrong with a classic chicken alfredo. It's quick, nearly impossible to mess up, and takes just about as long as heating up a jar of store bought sauce would." />
+    <meta
+      property="og:image"
+      content="https://munchwithmae.github.io/Recipes/Chicken%20Alfredo/image1.jpg" />
 
-	<link rel="icon" href="Images/favicon-32x32.png" />
-	<link rel="apple-touch-icon" href="Images/apple-touch-icon.png" />
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="icon" href="../../Images/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="Images/apple-touch-icon.png" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous" />
 
-	<link rel="stylesheet" href="../../Reset.css">
-	<link rel="stylesheet" href="../Recipe.css">
-	<link rel="stylesheet" href="../../header.css">
+    <link rel="stylesheet" href="../../Reset.css" />
+    <link rel="stylesheet" href="../../header.css" />
+    <link rel="stylesheet" href="../Recipe.css" />
+    <!--2023 switched header and recipe files so  recipe loads after-->
 
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  </head>
 
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <body>
+    <header>
+      <div class="topnav" id="myTopnav">
+        <div id="headerLogo">
+          <a href="../../index.html"><img src="../../Images/mwmHeader.png" /></a>
+        </div>
+        <a href="../../index.html">Home</a>
+        <a href="../../index.html#aboutMe">About</a>
+        <a href="../../index.html#recipes">Recipes</a>
+        <a href="../../construction.html">Tutorials</a>
+        <button id="myBtn">Contact</button>
+        <a href="https://www.instagram.com/munch_with_mae/" target="_blank" class="socialMedia"
+          ><i class="fab fa-instagram fa-2x"></i
+        ></a>
+        <a href="javascript:void(0);" class="icon" onclick="headerDrop()"
+          ><i class="fa fa-bars"></i
+        ></a>
+      </div>
+    </header>
 
-</head>
-
-<body>
-
-<header>
-	<div class="topnav" id="myTopnav">
-		<div id="headerLogo"><a href="../../index.html"><img src="../../Images/mwmHeader.png"></a></div>
-		<a href="../../index.html">Home</a>
-		<a href="../../index.html#aboutMe">About</a>
-		<a href="../../index.html#recipes">Recipes</a>
-		<a href="../../construction.html">Tutorials</a>
-		<button id="myBtn">Contact</button>
-		<a href = "https://www.instagram.com/munch_with_mae/" target="_blank" class="socialMedia"><i class="fab fa-instagram fa-2x"></i></a>
-		<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
-	</div>
-</header>
-
-<div id=buttonContainer>
-  <btn id="btn--back"><i class="fas fa-chevron-left"></i></btn>
-</div>
-
-<div id="content">
-	<br>
-	<br>
-	<h1>Chicken Alfredo</h1>
-
-	<div id="mainImageHolder">
-
-		<div class="mySlides fade">
-			<img src="image1.jpg" id="mainImage">
-		</div>
-
-		<div class="mySlides fade">
-			<img src="image2.jpg" id="mainImage">
-		</div>
-
-		<div class="mySlides fade">
-			<img src="image3.jpg" id="mainImage">
-		</div>
-
-		<div class="mySlides fade">
-			<img src="image4.jpg" id="mainImage">
-		</div>
-
-		<!-- Next and previous buttons -->
-		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-		  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div id="backButtonContainer">
+		<btn id="btn--back"><i class="fas fa-chevron-left"></i></btn>
 	</div>
 
-	<br>
+    <div id="content">
+      <br />
+      <br />
+      <h1>Chicken Alfredo</h1>
 
-	<!-- The dots/circles -->
-	<div style="text-align:center">
-	  <span class="dot" onclick="currentSlide(1)"></span>
-	  <span class="dot" onclick="currentSlide(2)"></span>
-	  <span class="dot" onclick="currentSlide(3)"></span>
-	  <span class="dot" onclick="currentSlide(4)"></span>
-	</div>
+      <div id="mainImageHolder" view-image>
+        <div class="mySlides fade">
+          <img src="image1.jpg" id="mainImage" />
+        </div>
 
-	<br>
-	<br>
+        <div class="mySlides fade">
+          <img src="image2.jpg" id="mainImage" />
+        </div>
 
-	<section id="descriptionContainer">
-		<blockquote>You can never go wrong with a classic chicken alfredo. It comes together quick, it's nearly impossible to mess up, and it takes just about as long as heating up a jar of store bought sauce would. I love adding veggies like broccoli to mine to give it a little bit of green vibrance. Mushrooms are always a solid choice as well.</blockquote>
-	</section>
+        <div class="mySlides fade">
+          <img src="image3.jpg" id="mainImage" />
+        </div>
 
-	<div id="ingredientsContainer">
-		<h2>Ingredients</h2>
+        <div class="mySlides fade">
+          <img src="image4.jpg" id="mainImage" />
+        </div>
 
-		<div class="tableContainer">
-			<table class="tableStyle">
-				<tr>
-					<td><span class="number"><span class="fraction">¾</span></span> Cup</td>
-					<td>Freshly grated Parmesan cheese</td>
-				</tr>
+        <!-- Next and previous buttons -->
+      </div>
 
-				<tr>
-					<td><span class="number">1 <span class="fraction">½</span></span> Cup</td>
-					<td>Heavy whipping cream</td>
-				</tr>
+      <br />
 
-				<tr>
-					<td><span class="number">1 <span class="fraction">½</span></span> Cups</td>
-					<td>Brown mushrooms, sliced <span class="disclaimer">optional</span></td>
-				</tr>
+      <!-- The dots/circles -->
+      <div id="photoControls" style="text-align: center">
+        <a class="prev" onclick="plusSlides(-1)"><i class="fa fa-arrow-circle-left"></i></a>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <a class="next" onclick="plusSlides(1)"><i class="fa fa-arrow-circle-right"></i></a>
+      </div>
 
-				<tr>
-					<td><span class="number">2</span></td>
-					<td>Chicken thighs or breasts</td>
-				</tr>
+      <br />
+      <br />
 
-				<tr>
-					<td><span class="number">3</span> Cloves</td>
-					<td>Fresh garlic, minced</td>
-				</tr>
+      <section id="descriptionContainer">
+        <blockquote>
+          You can never go wrong with a classic chicken alfredo. It comes together quick, it's
+          nearly impossible to mess up, and it takes just about as long as heating up a jar of store
+          bought sauce would. I love adding veggies like broccoli to mine to give it a little bit of
+          green vibrance. Mushrooms are always a solid choice as well.
+          <br />
+		  <br>
+          If you make it with protein, I cut the protein thinly for a quicker cooking time. Make
+          sure to use a generous amount of seasonings in this dish for maximum flavor in order to
+          cut through the heaviness of the cream.
+        </blockquote>
 
-				<tr>
-					<td>Seasonings</td>
-					<td>Salt, Pepper, garlic powder, Oregano, Italian seasoning</td>
-				</tr>
+        <div id="cookTime">
+          <button id="timeTime">
+            <div id="circleContainer">
+              <span class="circle">20</span>
+            </div>
+            <span id="timeLabel">Minutes</span>
+            <span id="ETA"></span>
+          </button>
 
-				
-			</table>
-		</div>
-	</div>
+          <div id="extrasContainer">
+            <button id="levelTitle">Skill Level</button>
+            <button id="levelLevel">Very Easy</button>
+            <button id="servingsTitle">Servings</button>
+            <button id="servingsLevel">4</button>
+          </div>
+        </div>
 
-	<br>
-	<br>
+        <div id="actions">
+          <a id="downloadLink" href="Massaman_Curry.pdf" download target="_blank">
+            <button id="saveButton">
+              <i class="fa-solid fa-circle-down"></i><span class="actionText">Save</span>
+            </button>
+          </a>
+          <button id="printButton" onclick="window.print()">
+            <i class="fa-solid fa-print"></i><span class="actionText">Print</span>
+          </button>
+          <button id="sharebutton" onclick="shareModal()">
+            <i class="fa-solid fa-share"></i><span class="actionText">Share</span>
+          </button>
+        </div>
+      </section>
 
-	<div id="directionsContainer">
-		<h2>Directions</h2>
+      <div id="ingredientsContainer">
+        <h2>Ingredients</h2>
 
-		<div class="tableContainer directions">
-		<table>
-			<tr>
-				<td><label class="container">1.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
-				<td>Heat a cast iron pan over <span class="highlight">medium high heat</span>. Pour olive oil into the  pan once preheated.</td>
-			</tr>
+        <div class="tableContainer">
+          <table class="tableStyle">
+            <tr>
+              <td>
+                <span class="number"><span class="fraction">¾</span></span> Cup
+              </td>
+              <td>Freshly grated Parmesan cheese</td>
+            </tr>
 
-			<tr>
-				<td><label class="container">2.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
-				<td>Pat your chicken breast <span class="highlight">dry</span>, <span class="highlight">season</span> with salt, pepper, garlic powder, oregano, and Italian seasoning.</td>
-			</tr>
+            <tr>
+              <td>
+                <span class="number">1 <span class="fraction">½</span></span> Cup
+              </td>
+              <td>Heavy whipping cream</td>
+            </tr>
 
-			<tr>
-				<td><label class="container">3.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
-				<td>Place chicken <span class="highlight">skin side down</span> into the pan, cooking for about <span class="highlight">six minutes on each side</span> or <span class="highlight">until they don’t stick to the pan anymore</span> and have a nice caramelized crust on the outside.</td>
-			</tr>
+            <tr>
+              <td>
+                <span class="number">1 <span class="fraction">½</span></span> Cups
+              </td>
+              <td>Brown mushrooms, sliced <span class="disclaimer">optional</span></td>
+            </tr>
 
-			<tr>
-				<td><label class="container">4.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
-				<td>Melt a generous amount of <span class="highlight">butter</span> in a <span class="highlight">different pan at medium - high heat</span> and put in your <span class="highlight">mushrooms</span>. Let them cook for about <span class="highlight">3-4 minutes</span> until soft and browned.</td>
-			</tr>
+            <tr>
+              <td><span class="number">2</span></td>
+              <td>Chicken thighs or breasts, sliced thinly</td>
+            </tr>
 
-			<tr>
-				<td><label class="container">5.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
-				<td>Add in your <span class="highlight">garlic</span> and cook for <span class="highlight">30 seconds</span> or until fragrant.</td>
-			</tr>
+            <tr>
+              <td><span class="number">3</span> Cloves</td>
+              <td>Fresh garlic, minced</td>
+            </tr>
 
-			<tr>
-				<td><label class="container">6.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
-				<td>Add in your <span class="highlight">heavy cream</span> and let it <span class="highlight">simmer</span> and reduce for about <span class="highlight">5 - 7 minutes</span>.</td>
-			</tr>
+            <tr>
+              <td>Seasonings</td>
+              <td>Salt, Pepper, garlic powder, Oregano, Italian seasoning</td>
+            </tr>
+          </table>
+        </div>
+      </div>
 
-			<tr>
-				<td><label class="container">7.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
-				<td>Slowly sprinkle in your <span class="highlight">Parmesan cheese</span> while constantly stirring with a whisk to avoid clumps.</td>
-			</tr>
+      <br />
+      <br />
 
-			<tr>
-				<td><label class="container">8.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
-				<td>Let the sauce melt and <span class="highlight">mix in the pan for a few minutes until combined</span>.</td>
-			</tr>
+      <div id="directionsContainer">
+        <h2>Directions</h2>
 
-			<tr>
-				<td><label class="container">9.<input type="checkbox" onclick="boxChecked(this)"><span class="checkmark"></span></label></td>
-				<td><span class="highlight">Enjoy</span> over a fresh bed / nest of pasta paired with a nice salad.</td>
-			</tr>
+        <div class="tableContainer directions">
+          <button id="resetButton">Reset</button>
+          <table>
+            <tr>
+              <td>
+                <label class="container"
+                  >1.<input type="checkbox" onclick="boxChecked(this)" /><span
+                    class="checkmark"></span
+                ></label>
+              </td>
+              <td>
+                Heat a cast iron pan over <span class="highlight">medium high heat</span>. Pour
+                olive oil into the pan once preheated.
+              </td>
+            </tr>
 
-		</table>
-		</div>
-	</div>
+            <tr>
+              <td>
+                <label class="container"
+                  >2.<input type="checkbox" onclick="boxChecked(this)" /><span
+                    class="checkmark"></span
+                ></label>
+              </td>
+              <td>
+                Pat your chicken breast <span class="highlight">dry</span>,
+                <span class="highlight">season</span> with salt, pepper, garlic powder, oregano, and
+                Italian seasoning.
+              </td>
+            </tr>
 
+            <tr>
+              <td>
+                <label class="container"
+                  >3.<input type="checkbox" onclick="boxChecked(this)" /><span
+                    class="checkmark"></span
+                ></label>
+              </td>
+              <td>
+                Place chicken <span class="highlight">skin side down</span> into the pan, cooking
+                for about <span class="highlight">six minutes on each side</span> or
+                <span class="highlight">until they don’t stick to the pan anymore</span> and have a
+                nice caramelized crust on the outside.
+              </td>
+            </tr>
 
+            <tr>
+              <td>
+                <label class="container"
+                  >4.<input type="checkbox" onclick="boxChecked(this)" /><span
+                    class="checkmark"></span
+                ></label>
+              </td>
+              <td>
+                Melt a generous amount of <span class="highlight">butter</span> in a
+                <span class="highlight">different pan at medium - high heat</span> and put in your
+                <span class="highlight">mushrooms</span>. Let them cook for about
+                <span class="highlight">3-4 minutes</span> until soft and browned.
+              </td>
+            </tr>
 
-</div>
+            <tr>
+              <td>
+                <label class="container"
+                  >5.<input type="checkbox" onclick="boxChecked(this)" /><span
+                    class="checkmark"></span
+                ></label>
+              </td>
+              <td>
+                Add in your <span class="highlight">garlic</span> and cook for
+                <span class="highlight">30 seconds</span> or until fragrant.
+              </td>
+            </tr>
 
-	<div id="myModal" class="modal">
-	  <div class="modal-content">
-	    <div class="modal-header">
-	      	<h1><span class="ornament">[</span>Munch With Mae<span class="ornament">]</span></h1>
+            <tr>
+              <td>
+                <label class="container"
+                  >6.<input type="checkbox" onclick="boxChecked(this)" /><span
+                    class="checkmark"></span
+                ></label>
+              </td>
+              <td>
+                Add in your <span class="highlight">heavy cream</span> and let it
+                <span class="highlight">simmer</span> and reduce for about
+                <span class="highlight">5 - 7 minutes</span>.
+              </td>
+            </tr>
 
-	      <div class="interogContainer">
-	      	<p id="interog">Want to contact me? I'd love to hear from you! I'll do my best to reply as soon as possible.</p>
-	      </div>
-	  </div>
-      		<form class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdVltpRtA5Px1BWiOWcNkcp-qGlkLy6v1TzBYLzgWVKA7763g/formResponse">	
-      			<div class="formQuestions">
-	      			<div class="basicInfo">
-		      			<div class="question">
-		      				<label class="required">Name</label>
-		      				<input id="name" name="entry.1332748456" type="text" required /><br>
-		      			</div>
+            <tr>
+              <td>
+                <label class="container"
+                  >7.<input type="checkbox" onclick="boxChecked(this)" /><span
+                    class="checkmark"></span
+                ></label>
+              </td>
+              <td>
+                Slowly sprinkle in your <span class="highlight">Parmesan cheese</span> while
+                constantly stirring with a whisk to avoid clumps.
+              </td>
+            </tr>
 
-		      			<div class="question">
-		      				<label class="required">Email Address</label>
-		      				<input id="email" name="entry.783225938" type="email" required /><br>
-		      			</div>
-	      			</div>
+            <tr>
+              <td>
+                <label class="container"
+                  >8.<input type="checkbox" onclick="boxChecked(this)" /><span
+                    class="checkmark"></span
+                ></label>
+              </td>
+              <td>
+                Let the sauce melt and
+                <span class="highlight">mix in the pan for a few minutes until combined</span>.
+              </td>
+            </tr>
 
-	      			<div class="inquiryContainer">
-		      			<div class="question inquiry">
-		      				<label>Inquiry</label>
-		      				<textarea id="inquiry" name="entry.360545800" type="textarea" required/></textarea><br>
-		      			</div>
-		      		</div>
-	      		</div>
+            <tr>
+              <td>
+                <label class="container"
+                  >9.<input type="checkbox" onclick="boxChecked(this)" /><span
+                    class="checkmark"></span
+                ></label>
+              </td>
+              <td>
+                <span class="highlight">Enjoy</span> over a fresh bed / nest of pasta paired with a
+                nice salad.
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
 
+    <!-- contact modal -->
+    <div id="myModalContact" class="modalContact modal">
+      <div class="modalContact-content">
+        <div class="modalContact-header">
+          <h1><span class="ornament">[</span>Munch With Mae<span class="ornament">]</span></h1>
 
-	      		<div id="actionButtons">
-		      		<div id="cancelButton">
-	      				<input type="button" value="cancel" />
-	      			</div>
+          <div class="interogContainer">
+            <p id="interog">
+              Want to contact me? I'd love to hear from you! I'll do my best to reply as soon as
+              possible.
+            </p>
+          </div>
+        </div>
+        <form
+          class="form"
+          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdVltpRtA5Px1BWiOWcNkcp-qGlkLy6v1TzBYLzgWVKA7763g/formResponse">
+          <div class="formQuestions">
+            <div class="basicInfo">
+              <div class="question">
+                <label class="required">Name</label>
+                <input id="name" name="entry.1332748456" type="text" required /><br />
+              </div>
 
-	      			<div id="sendButton">
-	      				<input type="submit" value="Send" />
-	      			</div>
-      			</div>
+              <div class="question">
+                <label class="required">Email Address</label>
+                <input id="email" name="entry.783225938" type="email" required /><br />
+              </div>
+            </div>
 
-          	</form>
+            <div class="inquiryContainer">
+              <div class="question inquiry">
+                <label>Inquiry</label>
+                <textarea id="inquiry" name="entry.360545800" type="textarea" required></textarea
+                ><br />
+              </div>
+            </div>
+          </div>
 
+          <div id="actionButtons">
+            <div id="cancelButton">
+              <input type="button" value="cancel" />
+            </div>
 
-	    </div>
-	    <div class="modal-body">
-	    
-	  
-	  </div>
-	</div>
+            <div id="sendButton">
+              <input type="submit" value="Send" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
 
-<footer>
-	<button class="scrollToTopBtn"><i class="fas fa-chevron-up"></i></button>
-</footer>
+    <!-- Share / Congratulations modal -->
+    <div id="myModalCG" class="modalCG modal">
+      <div class="modal-contentCG">
+        <div class="modal-headerCG">
+          <h1><span class="ornament">[ </span>Congratulations<span class="ornament"> ]</span></h1>
+          <p>You've completed this recipe!</p>
+          <br />
+          <p>I hope it's delicious!</p>
+          <br />
+          <p>If you enjoy this recipe, please share it with your friends!</p>
 
+          <div id="linkHolder">
+            <span class="checkie">✔</span>
+            <div id="urlFill"></div>
+            <div id="copyLink">
+              <button id="copyLinkButton" onclick="copyLinkFunc()">Copy Link</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footerCG">
+          <a
+            href="https://www.facebook.com/sharer/sharer.php?u=https://www.munchwithmae.github.io"
+            target="_blank"
+            rel="noopener"
+            class="fbshare sharebutton">
+            <i class="fab fa-facebook-square"></i>
+            <!-- <img class="YOUR_FB_CSS_STYLING_CLASS" src="../../Images/egg2.png" width="22px" height="22px" alt="Share on Facebook"> -->
+          </a>
 
-<script type="text/javascript" src="../Recipe.js"></script>
-<script type="text/javascript" src="../../Header.js"></script>
-</body>
+          <a
+            class="twitter-share-button sharebutton"
+            href="https://twitter.com/intent/tweet?text=Check%out%this%awesome%recipe%I%got%at%https://munchwithmae.github.io/.%"
+            target="_blank"
+            data-size="large"
+            ><i class="fab fa-twitter"></i
+          ></a>
+
+          <a
+            class="whatsApp-share-button sharebutton"
+            href="https://api.whatsapp.com/send/?text=https%3A%2F%2Fmunchwithmae.github.io%2F&type=custom_url&app_absent=0"
+            target="_blank"
+            data-size="large"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+
+          <a
+            class="reddit-share-button sharebutton"
+            href="https://www.reddit.com/submit?url=https://munchwithmae.github.io/&title=Check%20out%20this%20awesome%20recipe%20website."
+            target="_blank"
+            data-size="large"
+            ><i class="fab fa-reddit-square"></i
+          ></a>
+
+          <!-- <a class=tumblrLinkHolder><i class="fab fa-tumblr-square tumbieShare"></i></a> -->
+
+          <a
+            class="tumblr-share-button sharebutton"
+            target="_blank"
+            href="https://www.tumblr.com/widgets/share/tool?posttype=photo&title=Massaman%20Curry&caption=Massaman%20Curry%20-%20A%20hearty%2C%20earthy%20curry%20that%20can%20be%20made%20in%2025%20minutes%20with%20minimal%20prep.&content=https%3A%2F%2Fmunchwithmae.github.io%2FRecipes%2FMassaman%2520Curry%2Fimage1.jpg&photo-clickthru=https%3A%2F%2Fmunchwithmae.github.io%2FRecipes%2FMassaman%2520Curry%2FMassaman_Curry.html&canonicalUrl=https%3A%2F%2Fmunchwithmae.github.io%2FRecipes%2FMassaman%2520Curry%2FMassaman_Curry.html&shareSource=tumblr_share_button"
+            ><i class="fab fa-tumblr-square tumbieShare"></i
+          ></a>
+          <!-- <script id="tumblr-js" async src="https://assets.tumblr.com/share-button.js"></script> -->
+
+          <a
+            class="download-share-button sharebutton"
+            href="Massaman_Curry.pdf"
+            target="_blank"
+            data-size="large"
+            download
+            ><i class="fas fa-arrow-circle-down"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <button class="scrollToTopBtn">
+        <i class="fas fa-chevron-up"></i>
+      </button>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../Recipe.js"></script>
+    <script type="text/javascript" src="../../Header.js"></script>
+    <script src="../../view-image.js"></script>
+    <script>
+      window.ViewImage && ViewImage.init("#mainImageHolder img");
+    </script>
+    <script src="https://kit.fontawesome.com/44fb7752e3.js" crossorigin="anonymous"></script>
+  </body>
+</html>
