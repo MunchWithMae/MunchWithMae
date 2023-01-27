@@ -113,9 +113,17 @@ ingredientsCollapse.appendChild(ingredientsCollapseContainer);
 
 $(ingredientsCollapseContainer).click(function () {
   let ingredientsTable = document.querySelector("#ingredientsContainer .tableContainer");
+  
   var width = $(window).width();
 
   ingredientsTable.classList.toggle("collapsed");
+
+  let ingredientsTableDouble = document.querySelector("#ingredientsContainer .tablesContainer")
+  if(ingredientsTableDouble)
+  {
+    ingredientsTableDouble.classList.toggle("collapsed");
+    //$(ingredientsTableDouble).slideToggle("slow");
+  }
 
   if (ingredientsTable.classList.contains("collapsed")) {
     // ingredientsCollapseContainer.innerHTML = "<i class='fa-solid fa-angles-down'></i>";
@@ -132,7 +140,40 @@ $(ingredientsCollapseContainer).click(function () {
       $(ingredientsCollapseContainer).find("i").css("transform", "rotateX(0)");
     }
   }
-  $(ingredientsTable).slideToggle("slow");
+
+  if(ingredientsTableDouble)
+  {
+    
+    $(ingredientsTableDouble).slideToggle("slow",function(){
+    var containy = $("#ingredientsContainer.double")
+    
+    if (ingredientsTableDouble.classList.contains("collapsed")) {
+    containy.animate(
+      {
+        backgroundColor: "transparent",
+      },
+      300);
+      containy.css("box-shadow", "none");
+    }
+
+    else{
+      
+      containy.animate(
+        {
+          backgroundColor: "rgba(246, 223, 233, 0.85)",
+        },
+        200);
+        containy.css("box-shadow", "inset 0 0 1em #ffbdd8, 0 0 0.25em #f598be")
+    }
+    });
+
+  }
+
+  else
+  {
+    $(ingredientsTable).slideToggle("slow");
+  }
+  
 });
 
 let directionsCollapse = document.querySelector("#directionsContainer h2");
@@ -223,29 +264,6 @@ function shareModal() {
   //   }
   // };
 }
-
-var cookingTime = document.querySelector(".circle").innerHTML;
-var oldDateObj = new Date();
-var newDateObj = new Date();
-newDateObj.setTime(oldDateObj.getTime() + cookingTime * 60 * 1000);
-
-let hours = newDateObj.getHours();
-let minutes = newDateObj.getMinutes();
-
-if (hours < 10) {
-  hours = "0" + hours;
-}
-
-if (minutes < 10) {
-  minutes = "0" + minutes;
-}
-console.log(newDateObj);
-console.log("ETA: " + hours + ":" + minutes);
-
-let etaString = "If you began cooking now, you would finish around " + hours + ":" + minutes;
-
-let estimated = document.getElementById("ETA");
-estimated.innerHTML = etaString;
 
 let fbshare = document.querySelector(".fbshare");
 linkStringFB = "https://www.facebook.com/sharer/sharer.php?u=" + window.location.href;
@@ -393,13 +411,32 @@ $(document).ready(function () {
     $("#directionsContainer tr").removeClass("completed");
   });
 
-  $("#backButtonContainer").click(function(){
-    var element = document.getElementById('content');
-    html2pdf(element);
-    //history.back();
+  $("#backButtonContainer").click(function () {
+    history.back();
   });
 
-  
-  //html2pdf(element);
+  $("#circleContainer").mouseenter(function () {
+    var cookingTime = document.querySelector(".circle").innerHTML;
+    var oldDateObj = new Date();
+    var newDateObj = new Date();
+    newDateObj.setTime(oldDateObj.getTime() + cookingTime * 60 * 1000);
 
+    let hours = newDateObj.getHours();
+    let minutes = newDateObj.getMinutes();
+
+    if (hours < 10) {
+      hours = "0" + hours;
+    }
+
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+    console.log(newDateObj);
+    console.log("ETA: " + hours + ":" + minutes);
+
+    let etaString = "If you began cooking now, you would finish around " + hours + ":" + minutes;
+
+    let estimated = document.getElementById("ETA");
+    estimated.innerHTML = etaString;
+  });
 }); //! end document.ready

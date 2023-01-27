@@ -80,10 +80,10 @@ $(document).ready(function () {
     "Hoisin Stir Fry & Spicy Peanut Sauce",
   ];
   let recipeDescriptions = [
-    "A hearty, earthy curry that can be made in 25 minutes with minimal prep.",
-    "a hearty, stick-to-your-ribs kind of meal that will always leave you satisfied on a hungry, cold night",
-    "You can never go wrong with a classic chicken alfredo. It's quick, nearly impossible to mess up, and takes just about as long as heating up a jar of store bought sauce would.",
-    "A sweet and spicy stir fry that will never let you down with its unique flavor & texture",
+    "A vibrant, earthy curry that can be made in 25 minutes with minimal prep.",
+    "A hearty, stick-to-your-ribs kind of meal that will always leave you satisfied on a hungry, cold night",
+    "You can never go wrong with a classic chicken alfredo. It's quick, nearly impossible to mess up, and takes no time at all.",
+    "A sweet and spicy stir fry that will never let you down with its unique flavor & texture.",
   ];
   let recipeImage = [];
   let recipeLink = [];
